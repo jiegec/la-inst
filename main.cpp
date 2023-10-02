@@ -131,6 +131,10 @@ int main() {
       fclose(fp);
       system("objdump -b binary -m Loongarch64 -D temp");
     }
+
+    // kill child process
+    kill(pid, SIGKILL);
+    waitpid(-1, &wstatus, 0);
   }
   return 0;
 }
