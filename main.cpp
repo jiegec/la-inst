@@ -39,7 +39,8 @@ int main() {
     unsigned int inst = rand();
     // unsigned int inst = 0x71456eea;
     memcpy(instructionPointer, &inst, 4);
-    // printf("Inst: 0x%x\n", inst);
+    printf("Inst: 0x%x\n", inst);
+    fflush(stdout);
     FILE *fp = fopen("temp", "wb");
     fwrite(&inst, 1, sizeof(inst), fp);
     fflush(fp);
