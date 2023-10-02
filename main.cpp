@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <sched.h>
 #include <unistd.h>
 #include <sys/ptrace.h>
@@ -21,6 +22,7 @@ int traceeSetup(void* ptr) {
 }
 
 int main() {
+        srand(time(NULL));
         siginfo_t sig;
         int pageSize = 16384;
         void* traceeStack = (uint8_t*)mmap(NULL, pageSize, PROT_WRITE | PROT_READ, MAP_SHARED | MAP_ANONYMOUS | MAP_NORESERVE, 0, 0) + pageSize;
