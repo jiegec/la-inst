@@ -16,7 +16,7 @@ fn examine(inst: u32) {
         la_inst::ProbeResult::RegisterUnchaged => println!("Ptrace: Registers unchanged"),
         la_inst::ProbeResult::RegisterChanged(changeset) => {
             println!("Ptrace: Register changed");
-            for (index, old, new) in changeset {
+            for (index, old, new) in changeset.changes {
                 println!(
                     "{} {}: OLD=0x{:016x} NEW=0x{:016x}",
                     if index < 32 { "GPR" } else { "FPR" },

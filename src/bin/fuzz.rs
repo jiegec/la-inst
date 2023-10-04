@@ -3,10 +3,7 @@ use la_inst::{inst_decode_binutils, inst_legal_ptrace, ProbeResult};
 use rand::Rng;
 
 fn main() {
-    let style = ProgressStyle::with_template(
-        "{bar:40} {pos:>7}/{len:7} [{per_sec}] ",
-    )
-    .unwrap();
+    let style = ProgressStyle::with_template("{bar:40} {pos:>7}/{len:7} [{per_sec}] ").unwrap();
     for _ in (0..10000).progress_with_style(style) {
         let mut rng = rand::thread_rng();
         let inst: u32 = rng.gen();
