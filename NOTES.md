@@ -27,7 +27,6 @@ vindex.w imm10=1: 0403020103020100, 0605040305040302
 0x729d2xxx: LSX
 0111 0010 1001 1101 0010 01 rj rd vfsqrtr.s
 0111 0010 1001 1101 0010 10 rj rd vfsqrtr.d
-dst = sqrt(1/src)
 
 0x754[45]xxxx: LASX
 0111 0101 0100 0100 1 rk rj rd xvf?.s
