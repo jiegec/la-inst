@@ -7,6 +7,7 @@ fn examine(inst: u32) {
 }
 
 fn main() {
-    examine(0x02ffc063);
-    examine(0x38578bbb);
+    for arg in std::env::args().skip(1) {
+        examine(u32::from_str_radix(&arg, 16).unwrap());
+    }
 }

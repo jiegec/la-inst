@@ -76,9 +76,10 @@ fn write_regs(pid: libc::c_int, mut regs: libc::user_regs_struct) -> libc::user_
 #[derive(Clone, Debug)]
 pub enum ProbeResult {
     IllegalInstruction,
+    SegmentationFault,
     RegisterUnchaged,
     // list of register changed: (index, old, new)
-    RegisterChanged(Vec<(usize, u64, u64)>)
+    RegisterChanged(Vec<(usize, u64, u64)>),
 }
 
 /* Check if instruction is legal via ptrace */
@@ -122,6 +123,9 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
     // read register set
     let mut regs = read_regs(pid);
 
+    // clear all regs
+    regs.regs.fill(0);
+
     // set pc and single step
     regs.csr_era = inst_page as u64;
     write_regs(pid, regs);
@@ -139,7 +143,10 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
     let result = if libc::WSTOPSIG(status) == libc::SIGILL {
         // illegal instruction
         ProbeResult::IllegalInstruction
-    } else {
+    } else if libc::WSTOPSIG(status) == libc::SIGSEGV {
+        // segmentation fault
+        ProbeResult::SegmentationFault
+    } else if libc::WSTOPSIG(status) == libc::SIGTRAP {
         // normal trap
 
         // check if register changed
@@ -156,6 +163,8 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
             }
             ProbeResult::RegisterChanged(changed)
         }
+    } else {
+        unimplemented!("unknown signal {:?}", libc::WSTOPSIG(status));
     };
 
     // cleanup child process
