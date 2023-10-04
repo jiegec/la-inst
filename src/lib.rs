@@ -1,4 +1,5 @@
 use anyhow;
+use rand::Rng;
 use std::io::Write;
 use std::mem::size_of;
 use std::process::Command;
@@ -62,6 +63,22 @@ fn read_regs(pid: libc::c_int) -> libc::user_regs_struct {
     regs
 }
 
+fn read_fp_regs(pid: libc::c_int) -> libc::user_fp_struct {
+    let mut regs: libc::user_fp_struct = libc::user_fp_struct {
+        fpr: [0; 32],
+        fcc: 0,
+        fcsr: 0,
+    };
+    let iovec: libc::iovec = libc::iovec {
+        iov_base: &mut regs as *mut libc::user_fp_struct as *mut libc::c_void,
+        iov_len: size_of::<libc::user_regs_struct>(),
+    };
+    unsafe {
+        libc::ptrace(libc::PTRACE_GETREGSET, pid, libc::NT_FPREGSET, &iovec);
+    }
+    regs
+}
+
 fn write_regs(pid: libc::c_int, mut regs: libc::user_regs_struct) -> libc::user_regs_struct {
     let iovec: libc::iovec = libc::iovec {
         iov_base: &mut regs as *mut libc::user_regs_struct as *mut libc::c_void,
@@ -73,10 +90,22 @@ fn write_regs(pid: libc::c_int, mut regs: libc::user_regs_struct) -> libc::user_
     regs
 }
 
+fn write_fp_regs(pid: libc::c_int, mut regs: libc::user_fp_struct) -> libc::user_fp_struct {
+    let iovec: libc::iovec = libc::iovec {
+        iov_base: &mut regs as *mut libc::user_fp_struct as *mut libc::c_void,
+        iov_len: size_of::<libc::user_regs_struct>(),
+    };
+    unsafe {
+        libc::ptrace(libc::PTRACE_SETREGSET, pid, libc::NT_FPREGSET, &iovec);
+    }
+    regs
+}
+
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub enum ProbeResult {
     IllegalInstruction,
     SegmentationFault,
+    BusError,
     RegisterUnchaged,
     // list of register changed: (index, old, new)
     RegisterChanged(Vec<(usize, u64, u64)>),
@@ -122,13 +151,22 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
 
     // read register set
     let mut regs = read_regs(pid);
+    let mut fp_regs = read_fp_regs(pid);
 
-    // clear all regs
-    regs.regs.fill(0);
+    // randomize all regs
+    let mut rng = rand::thread_rng();
+    for i in 0..32 {
+        // r0 is hardwared to zero
+        if i > 0 {
+            regs.regs[i] = rng.gen();
+        }
+        fp_regs.fpr[i] = rng.gen();
+    }
 
     // set pc and single step
     regs.csr_era = inst_page as u64;
     write_regs(pid, regs);
+    write_fp_regs(pid, fp_regs);
     unsafe {
         libc::ptrace(libc::PTRACE_SINGLESTEP, pid, 0, 0);
     }
@@ -146,19 +184,32 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
     } else if libc::WSTOPSIG(status) == libc::SIGSEGV {
         // segmentation fault
         ProbeResult::SegmentationFault
+    } else if libc::WSTOPSIG(status) == libc::SIGBUS {
+        // bus error
+        ProbeResult::BusError
     } else if libc::WSTOPSIG(status) == libc::SIGTRAP {
         // normal trap
 
         // check if register changed
         let regs_new = read_regs(pid);
-        if regs.regs == regs_new.regs {
+        let fp_regs_new = read_fp_regs(pid);
+        if regs.regs == regs_new.regs && fp_regs.fpr == fp_regs_new.fpr {
             ProbeResult::RegisterUnchaged
         } else {
             // collect changed regs
             let mut changed = vec![];
+
+            // gpr
             for i in 0..32 {
                 if regs.regs[i] != regs_new.regs[i] {
                     changed.push((i, regs.regs[i], regs_new.regs[i]));
+                }
+            }
+
+            // fpr
+            for i in 0..32 {
+                if fp_regs.fpr[i] != fp_regs_new.fpr[i] {
+                    changed.push((i + 32, fp_regs.fpr[i], fp_regs_new.fpr[i]));
                 }
             }
             ProbeResult::RegisterChanged(changed)
