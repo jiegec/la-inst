@@ -10,7 +10,7 @@ fn main() {
         .append(true)
         .open("mismatch.txt")
         .unwrap();
-    for _ in (0..10000).progress_with_style(style) {
+    for _ in (0..100000).progress_with_style(style) {
         let mut rng = rand::thread_rng();
         let inst: u32 = rng.gen();
         if inst_decode_binutils(inst).unwrap().is_none() {

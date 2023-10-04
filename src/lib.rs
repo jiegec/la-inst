@@ -208,10 +208,12 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
         unimplemented!("unknown signal {:?}", libc::WSTOPSIG(status));
     };
 
-    // cleanup child process
+    // cleanup child process and memory
     unsafe {
         libc::kill(pid, libc::SIGKILL);
         libc::waitpid(pid, &mut status, 0);
+        libc::munmap(stack_page, page_size);
+        libc::munmap(inst_page, page_size);
     }
     Ok(result)
 }
