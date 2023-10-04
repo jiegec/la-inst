@@ -1,5 +1,5 @@
 use indicatif::{ProgressIterator, ProgressStyle};
-use la_inst::{inst_decode_binutils, inst_legal_ptrace, ProbeResult};
+use la_inst::{inst_legal_binutils, inst_legal_ptrace, ProbeResult};
 use rand::Rng;
 use std::fs::OpenOptions;
 use std::io::Write;
@@ -13,7 +13,7 @@ fn main() {
     for _ in (0..100000).progress_with_style(style) {
         let mut rng = rand::thread_rng();
         let inst: u32 = rng.gen();
-        if inst_decode_binutils(inst).unwrap().is_none() {
+        if !inst_legal_binutils(inst) {
             // illegal instruction by binutils
             let result = inst_legal_ptrace(inst, &[]).unwrap();
             if result != ProbeResult::IllegalInstruction {

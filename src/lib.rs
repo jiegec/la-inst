@@ -1,4 +1,5 @@
 use anyhow;
+use opcode::OPCODES;
 use ptrace::*;
 use rand::Rng;
 use std::arch::asm;
@@ -6,7 +7,17 @@ use std::io::Write;
 use std::process::Command;
 use tempfile::NamedTempFile;
 
+pub mod opcode;
 pub mod ptrace;
+
+pub fn inst_legal_binutils(inst: u32) -> bool {
+    for (value, mask) in OPCODES {
+        if inst & *mask == *value {
+            return true;
+        }
+    }
+    false
+}
 
 /* Return decoded inst if legal */
 pub fn inst_decode_binutils(inst: u32) -> anyhow::Result<Option<String>> {

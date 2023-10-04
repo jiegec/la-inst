@@ -1,4 +1,5 @@
 build
+loongarch-opc.c
 
 # Added by cargo
 
