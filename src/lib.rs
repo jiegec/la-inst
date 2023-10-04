@@ -15,6 +15,8 @@ pub fn inst_decode_binutils(inst: u32) -> anyhow::Result<Option<String>> {
             "binary",
             "-m",
             "Loongarch64",
+            "-M",
+            "numeric,no-aliases",
             "-D",
             path.to_str().unwrap(),
         ])
@@ -26,7 +28,10 @@ pub fn inst_decode_binutils(inst: u32) -> anyhow::Result<Option<String>> {
             if part == ".word" {
                 return Ok(None);
             }
-            decoded += part;
+            if decoded.len() > 0 {
+                decoded += " ";
+            }
+            decoded += part.trim();
         }
         Ok(Some(decoded))
     } else {
@@ -42,7 +47,11 @@ mod test {
     fn test_legal() {
         assert_eq!(
             inst_decode_binutils(0x02ffc063).unwrap(),
-            Some("addi.d      $sp, $sp, -16".to_string())
+            Some("addi.d $r3, $r3, -16".to_string())
+        );
+        assert_eq!(
+            inst_decode_binutils(0x72eff00c).unwrap(),
+            Some("vpickve2gr.d $r12, $vr0, 0x0".to_string())
         );
     }
 
