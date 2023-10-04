@@ -19,6 +19,46 @@ pub fn inst_legal_binutils(inst: u32) -> bool {
     false
 }
 
+// Discovered undocumented opcodes
+pub const KNOWN_OPCODES: &[(u32, u32)] = &[
+    (0x01147400, 0xfffffc00), // frecip.s
+    (0x01147800, 0xfffffc00), // frecip.d
+    (0x01148400, 0xfffffc00), // frsqrt.s
+    (0x01148800, 0xfffffc00), // frsqrt.d
+    (0x0114c000, 0xfffffc00), // movgr2fcsr
+    (0x0114c800, 0xfffffc00), // movfcsr2gr
+    (0x38570000, 0xffff8000), // unknown memory
+    (0x38578000, 0xfffff000), // unknown memory
+    (0x38580000, 0xfffd8000), // ld.b
+    (0x38588000, 0xfffd8000), // ld.h
+    (0x38590000, 0xfffd8000), // ld.w
+    (0x38598000, 0xfffd8000), // ld.d
+    (0x385c0000, 0xfffd8000), // amswap.b
+    (0x385c8000, 0xfffd8000), // amswap.h
+    (0x385d0000, 0xfffd8000), // amadd.b
+    (0x385d8000, 0xfffd8000), // amadd.h
+    (0x71448000, 0xffff8000), // unknown lsx
+    (0x71450000, 0xffff8000), // unknown lsx
+    (0x729b8000, 0xffff8000), // lsx vindex
+    (0x729d2400, 0xfffffc00), // lsx vfrsqrt.s
+    (0x729d2800, 0xfffffc00), // lsx vfrsqrt.d
+    (0x75448000, 0xffff8000), // unknown lasx
+    (0x75450000, 0xffff8000), // unknown lasx
+    (0x769b8000, 0xffff8000), // lasx vindex
+    (0x769d2400, 0xfffffc00), // lasx vfrsqrt.s
+    (0x769d2800, 0xfffffc00), // lasx vfrsqrt.d
+];
+
+
+pub fn inst_discovered(inst: u32) -> bool {
+    for (value, mask) in KNOWN_OPCODES {
+        if inst & *mask == *value {
+            return true;
+        }
+    }
+    false
+}
+
 /* Return decoded inst if legal */
 pub fn inst_decode_binutils(inst: u32) -> anyhow::Result<Option<String>> {
     // check if instruction is legal via binutils
