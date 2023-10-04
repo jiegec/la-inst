@@ -1,3 +1,7 @@
+0x0114xxxx: ?
+0000 0001 0001 0100 1000 01 rj rd frsqrt.s
+0000 0001 0001 0100 1000 10 rj rd frsqrt.d
+
 0x0114cxxx: movgr2fcsr
 0000 0001 0001 0100 1100 00 fcsr rd movgr2fcsr
 binutils limits fcsr to 2 bits, instead of 5 bits
