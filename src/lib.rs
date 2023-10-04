@@ -66,8 +66,15 @@ pub enum ProbeResult {
     RegisterChanged(RegisterInfo),
 }
 
+/* Set register values instead of randomization */
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum RegisterPreset {
+    GeneralRegister(usize, u64),
+    LASXRegister(usize, [u64; 4]),
+}
+
 /* Check if instruction is legal via ptrace */
-pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
+pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Result<ProbeResult> {
     // setup instruction page
     let page_size = 16384;
     let inst_page = unsafe {
@@ -117,12 +124,20 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
     // randomize all regs
     let mut rng = rand::thread_rng();
     for i in 0..32 {
-        // r0 is hardwared to zero
-        if i > 0 {
-            regs.regs[i] = rng.gen();
-        }
+        regs.regs[i] = rng.gen();
         lasx_regs[i] = rng.gen();
     }
+
+    // process presets
+    for preset in presets {
+        match preset {
+            RegisterPreset::GeneralRegister(index, value) => regs.regs[*index] = *value,
+            RegisterPreset::LASXRegister(index, value) => lasx_regs[*index] = *value,
+        }
+    }
+
+    // r0 is hardwared to zero
+    regs.regs[0] = 0;
 
     // set pc
     regs.csr_era = inst_page as u64;

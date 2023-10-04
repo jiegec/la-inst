@@ -37,7 +37,7 @@ fn examine(inst: u32) {
         inst, rd, rj, rk
     );
     println!("Binutils: {:?}", inst_decode_binutils(inst));
-    match inst_legal_ptrace(inst).unwrap() {
+    match inst_legal_ptrace(inst, &[]).unwrap() {
         la_inst::ProbeResult::IllegalInstruction => println!("Ptrace: Illegal instruction"),
         la_inst::ProbeResult::SegmentationFault => println!("Ptrace: Segmentation fault"),
         la_inst::ProbeResult::BusError => println!("Ptrace: Bus error"),

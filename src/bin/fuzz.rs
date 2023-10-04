@@ -15,7 +15,7 @@ fn main() {
         let inst: u32 = rng.gen();
         if inst_decode_binutils(inst).unwrap().is_none() {
             // illegal instruction by binutils
-            let result = inst_legal_ptrace(inst).unwrap();
+            let result = inst_legal_ptrace(inst, &[]).unwrap();
             if result != ProbeResult::IllegalInstruction {
                 println!("Found hidden instruction: 0x{:08x}", inst);
                 writeln!(file, "Mismatch: {:08x}", inst).unwrap();
