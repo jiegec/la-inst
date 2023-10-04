@@ -14,16 +14,27 @@ fn examine(inst: u32) {
         la_inst::ProbeResult::SegmentationFault => println!("Ptrace: Segmentation fault"),
         la_inst::ProbeResult::BusError => println!("Ptrace: Bus error"),
         la_inst::ProbeResult::RegisterUnchaged => println!("Ptrace: Registers unchanged"),
-        la_inst::ProbeResult::RegisterChanged(changeset) => {
+        la_inst::ProbeResult::RegisterChanged(info) => {
             println!("Ptrace: Register changed");
-            for (index, old, new) in changeset.changes {
-                println!(
-                    "{} {}: OLD=0x{:016x} NEW=0x{:016x}",
-                    if index < 32 { "GPR" } else { "FPR" },
-                    index & 0x1f,
-                    old,
-                    new
-                );
+
+            // gpr
+            for i in 1..32 {
+                if info.old.gpr[i] != info.new.gpr[i] {
+                    println!(
+                        "GPR {}: OLD=0x{:016x} NEW=0x{:016x}",
+                        i, info.old.gpr[i], info.new.gpr[i]
+                    );
+                }
+            }
+
+            // lasx
+            for i in 0..32 {
+                if info.old.lasx[i] != info.new.lasx[i] {
+                    println!(
+                        "FPR {}: OLD=0x{:016x?} NEW=0x{:016x?}",
+                        i, info.old.lasx[i], info.new.lasx[i]
+                    );
+                }
             }
         }
     }

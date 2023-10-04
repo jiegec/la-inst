@@ -12,7 +12,6 @@ fn main() {
             let result = inst_legal_ptrace(inst).unwrap();
             if result != ProbeResult::IllegalInstruction {
                 println!("Found hidden instruction: 0x{:08x}", inst);
-                println!("Ptrace result: {:?}", result);
             }
         }
     }
