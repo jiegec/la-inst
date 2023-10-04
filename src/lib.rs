@@ -77,6 +77,16 @@ pub enum RegisterPreset {
 pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Result<ProbeResult> {
     // setup instruction page
     let page_size = 16384;
+    let stack_page = unsafe {
+        libc::mmap(
+            0 as *mut libc::c_void,
+            page_size,
+            libc::PROT_READ | libc::PROT_WRITE | libc::PROT_EXEC,
+            libc::MAP_PRIVATE | libc::MAP_ANONYMOUS | libc::MAP_NORESERVE,
+            0,
+            0,
+        )
+    };
     let inst_page = unsafe {
         libc::mmap(
             0 as *mut libc::c_void,
@@ -90,6 +100,13 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
     let bytes = inst.to_le_bytes();
     unsafe {
         inst_page.copy_from(&bytes as *const u8 as *const libc::c_void, 4);
+    }
+
+    // initialize stack page
+    for i in 0..page_size {
+        unsafe {
+            *(stack_page as *mut u8).add(i) = (i + 1) as u8;
+        }
     }
 
     // fork a child process
@@ -139,8 +156,9 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
     // r0 is hardwared to zero
     regs.regs[0] = 0;
 
-    // set pc
+    // set pc and sp(r3)
     regs.csr_era = inst_page as u64;
+    regs.regs[3] = stack_page as u64;
 
     // sync regs and single step
     write_gpr(pid, regs);

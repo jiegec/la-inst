@@ -98,6 +98,14 @@ fn examine(inst: u32) {
 
 fn main() {
     for arg in std::env::args().skip(1) {
-        examine(u32::from_str_radix(&arg, 16).unwrap());
+        // replace spaces
+        let arg = arg.replace(" ", "");
+
+        let inst = if arg.len() == 8 {
+            u32::from_str_radix(&arg, 16).unwrap()
+        } else {
+            u32::from_str_radix(&arg, 2).unwrap()
+        };
+        examine(inst);
     }
 }
