@@ -1,3 +1,11 @@
+0x0114cxxx: movgr2fcsr
+0000 0001 0001 0100 1100 00 fcsr rd movgr2fcsr
+binutils limits fcsr to 2 bits, instead of 5 bits
+
+0x0114cxxx: movfcsr2gr
+0000 0001 0001 0100 1100 10 fcsr rd movfcsr2gr
+binutils limits fcsr to 2 bits, instead of 5 bits
+
 0x3857xxxx: memory
 0011 1000 0101 0111 0 xxxxx rj rd ?
 0011 1000 0101 0111 1 000xx rj rd ?
