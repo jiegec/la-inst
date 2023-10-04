@@ -14,6 +14,9 @@ binutils limits fcsr to 2 bits, instead of 5 bits
 0000 0001 0001 0100 1100 10 fcsr rd movfcsr2gr
 binutils limits fcsr to 2 bits, instead of 5 bits
 
+0x06493000: ?
+0000 0110 0100 1001 0011 0000 0000 0000
+
 0x3857xxxx: memory
 0011 1000 0101 0111 0 xxxxx rj rd ?
 0011 1000 0101 0111 1 000xx rj rd ?
