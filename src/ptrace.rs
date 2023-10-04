@@ -49,6 +49,13 @@ pub fn read_lasx(pid: libc::c_int) -> [[u64; 4]; 32] {
     regs
 }
 
+const NT_LOONGARCH_LBT: libc::c_int = 0xa04;
+pub fn read_lbt(pid: libc::c_int) -> [u64; 5] {
+    let mut regs: [u64; 5] = [0; 5];
+    read_regs(pid, &mut regs, NT_LOONGARCH_LBT);
+    regs
+}
+
 fn write_regs<T>(pid: libc::c_int, mut regs: T, core_note: libc::c_int) {
     let iovec: libc::iovec = libc::iovec {
         iov_base: &mut regs as *mut T as *mut libc::c_void,

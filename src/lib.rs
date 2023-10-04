@@ -48,6 +48,7 @@ pub fn inst_decode_binutils(inst: u32) -> anyhow::Result<Option<String>> {
 pub struct RegisterSet {
     pub gpr: [u64; 32],
     pub lasx: [[u64; 4]; 32],
+    pub lbt: [u64; 5],
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Default)]
@@ -111,6 +112,7 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
     // read register set
     let mut regs = read_gpr(pid);
     let mut lasx_regs = read_lasx(pid);
+    let lbt_regs = read_lbt(pid);
 
     // randomize all regs
     let mut rng = rand::thread_rng();
@@ -154,15 +156,18 @@ pub fn inst_legal_ptrace(inst: u32) -> anyhow::Result<ProbeResult> {
         // check if register changed
         let regs_new = read_gpr(pid);
         let lasx_regs_new = read_lasx(pid);
-        if regs.regs == regs_new.regs && lasx_regs == lasx_regs_new {
+        let lbt_regs_new = read_lbt(pid);
+        if regs.regs == regs_new.regs && lasx_regs == lasx_regs_new && lbt_regs == lbt_regs_new {
             ProbeResult::RegisterUnchaged
         } else {
             // collect regs
             let mut info = RegisterInfo::default();
             info.old.gpr = regs.regs;
             info.old.lasx = lasx_regs;
+            info.old.lbt = lbt_regs;
             info.new.gpr = regs_new.regs;
             info.new.lasx = lasx_regs_new;
+            info.new.lbt = lbt_regs_new;
 
             ProbeResult::RegisterChanged(info)
         }
