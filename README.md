@@ -15,3 +15,7 @@ Ptrace: Register changed
 LBT 1: OLD=0x00007fffd2cd0c00 NEW=0x0000000000000000
 LBT 4: OLD=0x0000000000000000 NEW=0x0000000000000080
 ```
+
+## Acknowledgements
+
+The method is inspired by [RensDofferhoff/iScanU](https://github.com/RensDofferhoff/iScanU).

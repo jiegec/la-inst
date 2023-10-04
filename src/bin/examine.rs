@@ -1,4 +1,32 @@
+use colored::Colorize;
 use la_inst::{inst_decode_binutils, inst_legal_ptrace};
+use std::fmt::Debug;
+
+fn colored_output<T: Debug>(old: T, new: T) -> String {
+    let old_s = format!("{:016x?}", old);
+    let new_s = format!("{:016x?}", new);
+    assert_eq!(old_s.len(), new_s.len());
+
+    let mut res = String::new();
+    res += "OLD=";
+    for (old_c, new_c) in old_s.chars().zip(new_s.chars()) {
+        if old_c == new_c {
+            res.push(old_c);
+        } else {
+            res += &format!("{}", old_c.to_string().red());
+        }
+    }
+
+    res += " NEW=";
+    for (old_c, new_c) in old_s.chars().zip(new_s.chars()) {
+        if old_c == new_c {
+            res.push(new_c);
+        } else {
+            res += &format!("{}", new_c.to_string().red());
+        }
+    }
+    res
+}
 
 fn examine(inst: u32) {
     let rd = inst & 0x1f;
@@ -22,9 +50,11 @@ fn examine(inst: u32) {
             for i in 1..32 {
                 if info.old.gpr[i] != info.new.gpr[i] {
                     println!(
-                        "GPR {}: OLD=0x{:016x} NEW=0x{:016x}",
-                        i, info.old.gpr[i], info.new.gpr[i]
+                        "GPR {}: {}",
+                        i,
+                        colored_output(info.old.gpr[i], info.new.gpr[i])
                     );
+                    changed = true;
                 }
             }
 
@@ -32,8 +62,9 @@ fn examine(inst: u32) {
             for i in 0..32 {
                 if info.old.lasx[i] != info.new.lasx[i] {
                     println!(
-                        "FPR {}: OLD={:016x?} NEW={:016x?}",
-                        i, info.old.lasx[i], info.new.lasx[i]
+                        "FPR {}: {}",
+                        i,
+                        colored_output(info.old.lasx[i], info.new.lasx[i])
                     );
                     changed = true;
                 }
@@ -43,9 +74,11 @@ fn examine(inst: u32) {
             for i in 0..5 {
                 if info.old.lbt[i] != info.new.lbt[i] {
                     println!(
-                        "LBT {}: OLD=0x{:016x} NEW=0x{:016x}",
-                        i, info.old.lbt[i], info.new.lbt[i]
+                        "LBT {}: {}",
+                        i,
+                        colored_output(info.old.lbt[i], info.new.lbt[i])
                     );
+                    changed = true;
                 }
             }
 
