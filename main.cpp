@@ -11,7 +11,7 @@
 #include <time.h>
 #include <unistd.h>
 
-// https://github.com/RensDofferhoff/iScanU
+// Adapted from: https://github.com/RensDofferhoff/iScanU
 
 int traceeSetup(void *ptr) {
   for (;;) {
@@ -32,12 +32,8 @@ int main() {
   void *instructionPointer =
       (uint8_t *)mmap(NULL, pageSize, PROT_WRITE | PROT_READ | PROT_EXEC,
                       MAP_PRIVATE | MAP_ANONYMOUS | MAP_NORESERVE, 0, 0);
-  // addi.d          $t1, $t1, -44
-  //  unsigned int inst = 0x02ff51ad;
   for (;;) {
-    // unsigned int inst = 0x10 | 0x20 | (0b10000000 << 10);
     unsigned int inst = rand();
-    // unsigned int inst = 0x71456eea;
     memcpy(instructionPointer, &inst, 4);
     printf("Inst: 0x%x\n", inst);
     fflush(stdout);
