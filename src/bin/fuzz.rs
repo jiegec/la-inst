@@ -10,9 +10,9 @@ fn main() {
         .append(true)
         .open("mismatch.txt")
         .unwrap();
-    for _ in (0..100000).progress_with_style(style) {
-        let mut rng = rand::thread_rng();
-        let inst: u32 = rng.gen();
+    let max = u32::MAX >> 5;
+    for i in (0..max).progress_with_style(style) {
+        let inst = i << 5;
         if !inst_legal_binutils(inst) && !inst_discovered(inst) {
             // illegal instruction by binutils
             let result = inst_legal_ptrace(inst, &[]).unwrap();
