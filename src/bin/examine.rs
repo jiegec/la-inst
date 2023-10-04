@@ -1,6 +1,6 @@
 use colored::Colorize;
 use la_inst::{inst_decode_binutils, inst_legal_ptrace};
-use std::fmt::Debug;
+use std::{fmt::Debug, mem::transmute_copy};
 
 fn colored_output<T: Debug>(old: T, new: T) -> String {
     let old_s = format!("{:016x?}", old);
@@ -66,6 +66,25 @@ fn examine(inst: u32) {
                         i,
                         colored_output(info.old.lasx[i], info.new.lasx[i])
                     );
+
+                    let old_double_transmute: [f64; 4] =
+                        unsafe { transmute_copy(&info.old.lasx[i]) };
+                    let new_double_transmute: [f64; 4] =
+                        unsafe { transmute_copy(&info.new.lasx[i]) };
+                    println!(
+                        "FPR (double) {}:\n    OLD={:?}\n    NEW={:?}",
+                        i, old_double_transmute, new_double_transmute
+                    );
+
+                    let old_float_transmute: [f32; 8] =
+                        unsafe { transmute_copy(&info.old.lasx[i]) };
+                    let new_float_transmute: [f32; 8] =
+                        unsafe { transmute_copy(&info.new.lasx[i]) };
+                    println!(
+                        "FPR (float) {}:\n    OLD={:?}\n    NEW={:?}",
+                        i, old_float_transmute, new_float_transmute
+                    );
+
                     changed = true;
                 }
             }
