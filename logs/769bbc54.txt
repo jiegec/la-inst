@@ -1,0 +1,13 @@
+Inst: 0x769bbc54, rd = 20, rj = 2, rk = 15
+Binutils: Ok(None)
+Ptrace: Register changed
+FPR 20: 
+    OLD=[916633c51614badc, b8b53a605840ee0c, fcf890bea31ff91e, 8fc4c1cb7b0d9dbd]
+    NEW=[1716151416151413, 1918171618171615, 1716151416151413, 1918171618171615]
+Possible inputs:
+rd = 0xd650c977381349aa
+xrd = [916633c51614badc, b8b53a605840ee0c, fcf890bea31ff91e, 8fc4c1cb7b0d9dbd]
+rj = 0xe60966256a061436
+xrj = [dfa68f39dc2bb812, e3dd275cfd000aee, f99f8c9506350679, e28bebbfa8af4ecc]
+rk = 0xe48d5f78bb2ea6f4
+xrk = [48a345d7ec5d93b5, 325e4187c2970d9f, 9797ab0bb104463b, d183360c3d2b5858]
