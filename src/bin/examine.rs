@@ -8,7 +8,7 @@ fn colored_output<T: Debug>(old: T, new: T) -> String {
     assert_eq!(old_s.len(), new_s.len());
 
     let mut res = String::new();
-    res += "OLD=";
+    res += "\n    OLD=";
     for (old_c, new_c) in old_s.chars().zip(new_s.chars()) {
         if old_c == new_c {
             res.push(old_c);
@@ -17,7 +17,7 @@ fn colored_output<T: Debug>(old: T, new: T) -> String {
         }
     }
 
-    res += " NEW=";
+    res += "\n    NEW=";
     for (old_c, new_c) in old_s.chars().zip(new_s.chars()) {
         if old_c == new_c {
             res.push(new_c);
