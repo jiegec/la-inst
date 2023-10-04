@@ -1,18 +1,18 @@
 use indicatif::{ProgressIterator, ProgressStyle};
 use la_inst::{inst_discovered, inst_legal_binutils, inst_legal_ptrace, ProbeResult};
-use rand::Rng;
 use std::fs::OpenOptions;
 use std::io::Write;
 
 fn main() {
-    let style = ProgressStyle::with_template("{bar:40} {pos:>7}/{len:7} [{per_sec}] ").unwrap();
+    let style =
+        ProgressStyle::with_template("{bar:40} {pos:>7}/{len:7} [{per_sec}] [ETA {eta}]").unwrap();
     let mut file = OpenOptions::new()
         .append(true)
         .open("mismatch.txt")
         .unwrap();
-    let max = u32::MAX >> 5;
+    let max = u32::MAX >> 10;
     for i in (0..max).progress_with_style(style) {
-        let inst = i << 5;
+        let inst = i << 10;
         if !inst_legal_binutils(inst) && !inst_discovered(inst) {
             // illegal instruction by binutils
             let result = inst_legal_ptrace(inst, &[]).unwrap();

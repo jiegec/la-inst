@@ -27,6 +27,7 @@ pub const KNOWN_OPCODES: &[(u32, u32)] = &[
     (0x01148800, 0xfffffc00), // frsqrt.d
     (0x0114c000, 0xfffffc00), // movgr2fcsr
     (0x0114c800, 0xfffffc00), // movfcsr2gr
+    (0x06493000, 0xffffffff), // unknown
     (0x38570000, 0xffff8000), // unknown memory
     (0x38578000, 0xfffff000), // unknown memory
     (0x38580000, 0xfffd8000), // ld.b
@@ -40,15 +41,18 @@ pub const KNOWN_OPCODES: &[(u32, u32)] = &[
     (0x71448000, 0xffff8000), // unknown lsx
     (0x71450000, 0xffff8000), // unknown lsx
     (0x729b8000, 0xffff8000), // lsx vindex
+    (0x729d1400, 0xfffffc00), // lsx vfrecip.s
+    (0x729d1800, 0xfffffc00), // lsx vfrecip.d
     (0x729d2400, 0xfffffc00), // lsx vfrsqrt.s
     (0x729d2800, 0xfffffc00), // lsx vfrsqrt.d
     (0x75448000, 0xffff8000), // unknown lasx
     (0x75450000, 0xffff8000), // unknown lasx
-    (0x769b8000, 0xffff8000), // lasx vindex
-    (0x769d2400, 0xfffffc00), // lasx vfrsqrt.s
-    (0x769d2800, 0xfffffc00), // lasx vfrsqrt.d
+    (0x769b8000, 0xffff8000), // lasx xvindex
+    (0x769d1400, 0xfffffc00), // lasx xvfrsqrt.s
+    (0x769d1800, 0xfffffc00), // lasx xvfrsqrt.d
+    (0x769d2400, 0xfffffc00), // lasx xvfrsqrt.s
+    (0x769d2800, 0xfffffc00), // lasx xvfrsqrt.d
 ];
-
 
 pub fn inst_discovered(inst: u32) -> bool {
     for (value, mask) in KNOWN_OPCODES {

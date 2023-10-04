@@ -8,8 +8,7 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.75"
 colored = "2.0.4"
-indicatif = { version = "0.17.7", features = ["rayon"] }
+indicatif = "0.17.7"
 libc = "0.2.148"
 rand = "0.8.5"
-rayon = "1.8.0"
 tempfile = "3.8.0"
