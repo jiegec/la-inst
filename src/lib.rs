@@ -73,7 +73,7 @@ fn write_regs(pid: libc::c_int, mut regs: libc::user_regs_struct) -> libc::user_
     regs
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Eq, PartialEq)]
 pub enum ProbeResult {
     IllegalInstruction,
     SegmentationFault,
