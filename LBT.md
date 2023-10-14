@@ -97,7 +97,7 @@ x86dectop() {
 
 linux lbt.S:
 
-```
+```asm
 /*
  * a0: ftop
  */
@@ -294,7 +294,7 @@ some computation based on imm1, imm2 and EFLAGS?
 - x86mfflag rd, mask: read from EFLAGS
 - x86mtflag rd, mask: write to EFLAGS
 
-```
+```c
 // x86mfflag $rd, imm
 x86mfflag(rd, imm) {
     GPR[rd] = 0;
@@ -343,7 +343,7 @@ x86mtflag(rd, imm) {
 
 kernel lbt.S:
 
-```
+```asm
     ldptr.d     t1, a0, THREAD_EFLAGS   # restore eflags
     x86mtflag   t1, 0x3f
 
