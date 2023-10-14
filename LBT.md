@@ -316,7 +316,32 @@ might trigger reserved exception (according to spec, BTE, binary translation exc
 [17108.293593] Caught reserved exception 21 on pid:86379 [examine] - should not happen
 ```
 
-TODO
+
+```c
+x86settag(rd, imm1, imm2) {
+    mask = 1 << (imm2 & 0x7);
+    if (imm1 == 0) {
+        // only allow 0->1
+        if ((GPR[rd] & mask) == 0) {
+            GPR[rd] |= mask;
+        } else {
+            throw BTE();
+        }
+    } else if (imm1 == 1 || imm1 == 3) {
+        // only allow 1->0
+        if ((GPR[rd] & mask) != 0) {
+            GPR[rd] |= mask;
+        } else {
+            throw BTE();
+        }
+    } else if (imm1 == 2) {
+        // do not change rd, throw if 0
+        if ((GPR[rd] & mask) == 0) {
+            throw BTE();
+        }
+    }
+}
+```
 
 ### flag
 
