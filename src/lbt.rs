@@ -278,7 +278,7 @@ mod test {
     }
 
     #[test]
-    fn test_eflags() {
+    fn test_x86flags() {
         // test x86 mfflag/mtflag
         let eflags: u64 = 0xffffffffffffffff;
         let mut b: u64;
@@ -351,7 +351,7 @@ mod test {
                   b = out(reg) b,
                   eflags = in(reg) eflags);
         }
-        // 0x8d5 = ZF(0x040) | AF(0x010) |
+        // 0x55 = ZF(0x040) | AF(0x010) |
         // PF(0x004) | CF(0x001)
         assert_eq!(b, 0x55);
 
@@ -573,5 +573,96 @@ mod test {
         assert_eq!(setarmj!(z, 15), 1);
         assert_eq!(setarmj!(c, 15), 1);
         assert_eq!(setarmj!(v, 15), 1);
+    }
+
+    #[test]
+    fn test_armflags() {
+        // test arm mfflag/mtflag
+        let eflags: u64 = 0xffffffffffffffff;
+        let mut b: u64;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x3f
+                  armmfflag {b}, 0x3f",
+                  b = out(reg) b,
+                  eflags = in(reg) eflags);
+        }
+        // sign extension
+        // 0xf0000000 = N(0x800000000) |
+        // Z(0x40000000) | C(0x20000000) |
+        // V(0x10000000)
+        assert_eq!(b, 0xfffffffff0000000);
+
+        // different imm
+        unsafe {
+            asm!("armmfflag {b}, 0x00",
+                  b = out(reg) b);
+        }
+        assert_eq!(b, 0);
+
+        // different imm
+        unsafe {
+            asm!("armmfflag {b}, 0x01",
+                  b = out(reg) b);
+        }
+        // CF = C
+        assert_eq!(b, 0x20000000);
+
+        unsafe {
+            asm!("armmfflag {b}, 0x02",
+                  b = out(reg) b);
+        }
+        // PF has no arm counterparts
+        assert_eq!(b, 0x0);
+
+        unsafe {
+            asm!("armmfflag {b}, 0x03",
+                  b = out(reg) b);
+        }
+        // CF | PF = C
+        assert_eq!(b, 0x20000000);
+
+        unsafe {
+            asm!("armmfflag {b}, 0x07",
+                  b = out(reg) b);
+        }
+        // CF | PF | AF = C
+        assert_eq!(b, 0x20000000);
+
+        unsafe {
+            asm!("armmfflag {b}, 0x0f",
+                  b = out(reg) b);
+        }
+        // CF | PF | AF | ZF = C | Z
+        assert_eq!(b, 0x60000000);
+
+        unsafe {
+            asm!("armmfflag {b}, 0x30",
+                  b = out(reg) b);
+        }
+        // SF | OF = N(0x80000000) | V(0x10000000)
+        assert_eq!(b, 0xffffffff90000000);
+
+        // partial set
+        let eflags = 0;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x30
+                  armmfflag {b}, 0x3f",
+                  b = out(reg) b,
+                  eflags = in(reg) eflags);
+        }
+        // 0x60000000 = Z(0x40000000) | C(0x20000000)
+        assert_eq!(b, 0x60000000);
+
+        let eflags = 0x800;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x30
+                  armmfflag {b}, 0x3f",
+                  b = out(reg) b,
+                  eflags = in(reg) eflags);
+        }
+        // V(0x10000000) |
+        // Z(0x40000000)
+        // C(0x20000000)
+        assert_eq!(b, 0x70000000);
     }
 }

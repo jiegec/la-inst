@@ -382,10 +382,10 @@ mapping from arm to x86:
 - arm V: x86 OF
 
 ```c
-N = (EFLAGS & 0x080) != 0;
-Z = (EFLAGS & 0x040) != 0;
-C = (EFLAGS & 0x001) != 0;
-V = (EFLAGS & 0x800) != 0;
+N = (EFLAGS & 0x080) != 0; // same as SF
+Z = (EFLAGS & 0x040) != 0; // same as ZF
+C = (EFLAGS & 0x001) != 0; // same as CF
+V = (EFLAGS & 0x800) != 0; // same as OF
 ```
 
 ### move
@@ -483,10 +483,46 @@ writes LBT4 (FLAGS), GPR unchanged
 
 writes LBT4 (FLAGS), GPR unchanged
 
-### fflag
+### flag
 
 - armmfflag rd, imm
 - armmtflag rd, imm
+
+```c
+// armmfflag $rd, imm
+armmfflag(rd, imm) {
+    GPR[rd] = 0;
+    if ((imm & 0x01) != 0) {
+        GPR[rd] |= CF * 0x20000000;
+    }
+    if ((imm & 0x08) != 0) {
+        GPR[rd] |= ZF * 0x40000000;
+    }
+    if ((imm & 0x10) != 0) {
+        // sign extension
+        GPR[rd] |= SF * 0xffffffff80000000;
+    }
+    if ((imm & 0x20) != 0) {
+        GPR[rd] |= OF * 0x10000000;
+    }
+}
+
+// armmtflag $rd, imm
+armmtflag(rd, imm) {
+    if ((imm & 0x01) != 0) {
+        CF = (GPR[rd] & 0x20000000) != 0;
+    }
+    if ((imm & 0x08) != 0) {
+        ZF = (GPR[rd] & 0x40000000) != 0;
+    }
+    if ((imm & 0x10) != 0) {
+        SF = (GPR[rd] & 0x80000000) != 0;
+    }
+    if ((imm & 0x20) != 0) {
+        OF = (GPR[rd] & 0x10000000) != 0;
+    }
+}
+```
 
 ## mips
 
