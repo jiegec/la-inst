@@ -320,7 +320,7 @@ might trigger reserved exception (according to spec, BTE, binary translation exc
 ```c
 x86settag(rd, imm1, imm2) {
     mask = 1 << (imm2 & 0x7);
-    low = imm2 ^ 63;
+    low = imm2 & 63;
     if ((imm1 % 8) == 0) {
         // only allow 0->1
         if ((GPR[rd] & mask) == 0) {
