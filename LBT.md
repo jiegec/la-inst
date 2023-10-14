@@ -367,6 +367,27 @@ for x87 80-bit extended precision
 
 ## arm
 
+### condition flags
+
+- N: negative
+- Z: zero
+- C: carry
+- V: overflow
+
+mapping from arm to x86:
+
+- arm N: x86 SF
+- arm Z: x86 ZF
+- arm C: x86 CF
+- arm V: x86 OF
+
+```c
+N = (EFLAGS & 0x080) != 0;
+Z = (EFLAGS & 0x040) != 0;
+C = (EFLAGS & 0x001) != 0;
+V = (EFLAGS & 0x800) != 0;
+```
+
 ### move
 
 - armmove rd, rj, imm
@@ -377,7 +398,60 @@ TODO
 
 - setarmj rd, imm
 
-TODO
+```c
+setarmj(rd, imm) {
+    switch(imm) {
+        case 0:
+            GPR[rd] = Z == 1;
+            break;
+        case 1:
+            GPR[rd] = Z == 0;
+            break;
+        case 2:
+            GPR[rd] = C == 1;
+            break;
+        case 3:
+            GPR[rd] = C == 0;
+            break;
+        case 4:
+            GPR[rd] = N == 1;
+            break;
+        case 5:
+            GPR[rd] = N == 0;
+            break;
+        case 6:
+            GPR[rd] = V == 1;
+            break;
+        case 7:
+            GPR[rd] = V == 0;
+            break;
+        case 8:
+            GPR[rd] = C == 1 && Z == 0;
+            break;
+        case 9:
+            GPR[rd] = !(C == 1 && Z == 0);
+            break;
+        case 10:
+            GPR[rd] = N == V;
+            break;
+        case 11:
+            GPR[rd] = N != V;
+            break;
+        case 12:
+            GPR[rd] = Z == 0 && N == V;
+            break;
+        case 13:
+            GPR[rd] = !(Z == 0 && N == V);
+            break;
+        case 14:
+            GPR[rd] = 1;
+            break;
+        case 15:
+            GPR[rd] = 1;
+            break;
+    }
+}
+```
 
 ### add/sub/adc/sbc/and/or/xor/sll/srl/sra/rotr
 

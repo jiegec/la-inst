@@ -426,4 +426,152 @@ mod test {
         }
         assert_eq!(b, 0x4320);
     }
+
+    macro_rules! setarmj {
+        ($nzcv:expr, $condition:literal) => {
+            {
+                let mut res: usize;
+                let nzcv: usize = $nzcv;
+                unsafe {
+                    asm!(concat!("armmtflag {nzcv}, 0x39
+                        setarmj {res}, " ,$condition),
+                        nzcv = in(reg) nzcv,
+                        res = out(reg) res);
+                }
+                res
+            }
+        };
+    }
+
+    #[test]
+    fn test_setarmj() {
+        // nzcv https://developer.arm.com/documentation/ddi0595/2021-06/AArch64-Registers/NZCV--Condition-Flags
+        // A64 spec Table C1-1 Condition codes
+        let n = 0x80000000;
+        let z = 0x40000000;
+        let c = 0x20000000;
+        let v = 0x10000000;
+
+        // 0: EQ: Z == 1
+        assert_eq!(setarmj!(0, 0), 0);
+        assert_eq!(setarmj!(n, 0), 0);
+        assert_eq!(setarmj!(z, 0), 1);
+        assert_eq!(setarmj!(c, 0), 0);
+        assert_eq!(setarmj!(v, 0), 0);
+
+        // 1: NE: Z == 0
+        assert_eq!(setarmj!(0, 1), 1);
+        assert_eq!(setarmj!(n, 1), 1);
+        assert_eq!(setarmj!(z, 1), 0);
+        assert_eq!(setarmj!(c, 1), 1);
+        assert_eq!(setarmj!(v, 1), 1);
+
+        // 2: CS or HS: C == 1
+        assert_eq!(setarmj!(0, 2), 0);
+        assert_eq!(setarmj!(n, 2), 0);
+        assert_eq!(setarmj!(z, 2), 0);
+        assert_eq!(setarmj!(c, 2), 1);
+        assert_eq!(setarmj!(v, 2), 0);
+
+        // 3: CC or LO: C == 0
+        assert_eq!(setarmj!(0, 3), 1);
+        assert_eq!(setarmj!(n, 3), 1);
+        assert_eq!(setarmj!(z, 3), 1);
+        assert_eq!(setarmj!(c, 3), 0);
+        assert_eq!(setarmj!(v, 3), 1);
+
+        // 4: MI: N == 1
+        assert_eq!(setarmj!(0, 4), 0);
+        assert_eq!(setarmj!(n, 4), 1);
+        assert_eq!(setarmj!(z, 4), 0);
+        assert_eq!(setarmj!(c, 4), 0);
+        assert_eq!(setarmj!(v, 4), 0);
+
+        // 5: PL: N == 0
+        assert_eq!(setarmj!(0, 5), 1);
+        assert_eq!(setarmj!(n, 5), 0);
+        assert_eq!(setarmj!(z, 5), 1);
+        assert_eq!(setarmj!(c, 5), 1);
+        assert_eq!(setarmj!(v, 5), 1);
+
+        // 6: VS: V == 1
+        assert_eq!(setarmj!(0, 6), 0);
+        assert_eq!(setarmj!(n, 6), 0);
+        assert_eq!(setarmj!(z, 6), 0);
+        assert_eq!(setarmj!(c, 6), 0);
+        assert_eq!(setarmj!(v, 6), 1);
+
+        // 7: VC: V == 0
+        assert_eq!(setarmj!(0, 7), 1);
+        assert_eq!(setarmj!(n, 7), 1);
+        assert_eq!(setarmj!(z, 7), 1);
+        assert_eq!(setarmj!(c, 7), 1);
+        assert_eq!(setarmj!(v, 7), 0);
+
+        // 8: HI: C == 1 && Z == 0
+        assert_eq!(setarmj!(0, 8), 0);
+        assert_eq!(setarmj!(n, 8), 0);
+        assert_eq!(setarmj!(z, 8), 0);
+        assert_eq!(setarmj!(c, 8), 1);
+        assert_eq!(setarmj!(v, 8), 0);
+        assert_eq!(setarmj!(c | z, 8), 0);
+
+        // 9: LS: !(C == 1 && Z == 0)
+        assert_eq!(setarmj!(0, 9), 1);
+        assert_eq!(setarmj!(n, 9), 1);
+        assert_eq!(setarmj!(z, 9), 1);
+        assert_eq!(setarmj!(c, 9), 0);
+        assert_eq!(setarmj!(v, 9), 1);
+        assert_eq!(setarmj!(c | z, 9), 1);
+
+        // 10: GE: N == V
+        assert_eq!(setarmj!(0, 10), 1);
+        assert_eq!(setarmj!(n, 10), 0);
+        assert_eq!(setarmj!(z, 10), 1);
+        assert_eq!(setarmj!(c, 10), 1);
+        assert_eq!(setarmj!(v, 10), 0);
+        assert_eq!(setarmj!(n | v, 10), 1);
+
+        // 11: LT: N != V
+        assert_eq!(setarmj!(0, 11), 0);
+        assert_eq!(setarmj!(n, 11), 1);
+        assert_eq!(setarmj!(z, 11), 0);
+        assert_eq!(setarmj!(c, 11), 0);
+        assert_eq!(setarmj!(v, 11), 1);
+        assert_eq!(setarmj!(n | v, 11), 0);
+
+        // 12: GT: Z == 0 && N == V
+        assert_eq!(setarmj!(0, 12), 1);
+        assert_eq!(setarmj!(n, 12), 0);
+        assert_eq!(setarmj!(z, 12), 0);
+        assert_eq!(setarmj!(c, 12), 1);
+        assert_eq!(setarmj!(v, 12), 0);
+        assert_eq!(setarmj!(n | v, 12), 1);
+        assert_eq!(setarmj!(z | n | v, 12), 0);
+        assert_eq!(setarmj!(z | n, 12), 0);
+
+        // 13: LE: !(Z == 0 && N == V)
+        assert_eq!(setarmj!(0, 13), 0);
+        assert_eq!(setarmj!(n, 13), 1);
+        assert_eq!(setarmj!(z, 13), 1);
+        assert_eq!(setarmj!(c, 13), 0);
+        assert_eq!(setarmj!(v, 13), 1);
+        assert_eq!(setarmj!(n | v, 13), 0);
+        assert_eq!(setarmj!(z | n | v, 13), 1);
+        assert_eq!(setarmj!(z | n, 13), 1);
+
+        // 14: AL: 1
+        assert_eq!(setarmj!(0, 14), 1);
+        assert_eq!(setarmj!(n, 14), 1);
+        assert_eq!(setarmj!(z, 14), 1);
+        assert_eq!(setarmj!(c, 14), 1);
+        assert_eq!(setarmj!(v, 14), 1);
+
+        // 15: NV: 1
+        assert_eq!(setarmj!(0, 15), 1);
+        assert_eq!(setarmj!(n, 15), 1);
+        assert_eq!(setarmj!(z, 15), 1);
+        assert_eq!(setarmj!(c, 15), 1);
+        assert_eq!(setarmj!(v, 15), 1);
+    }
 }
