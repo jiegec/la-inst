@@ -34,6 +34,17 @@ movgr2scr(rd, scrj) {
 - jiscr0 imm
 - jiscr1 imm
 
+```
+jiscr0(imm) {
+    PC = LBT[0] + imm;
+}
+
+jiscr1(imm) {
+    PC = LBT[1] + imm;
+}
+```
+
+
 ## x86
 
 ### ftop

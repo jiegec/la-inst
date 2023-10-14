@@ -7,6 +7,7 @@ use std::io::{Read, Write};
 use std::process::Command;
 use tempfile::NamedTempFile;
 
+pub mod lbt;
 pub mod opcode;
 pub mod ptrace;
 
