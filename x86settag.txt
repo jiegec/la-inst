@@ -1,521 +1,521 @@
-x86settag $r1, 0, 0: rd ^= 1
+x86settag $r1, 0, 0: exception
 x86settag $r1, 0, 1: rd ^= 2
 x86settag $r1, 0, 2: rd ^= 4
 x86settag $r1, 0, 3: rd ^= 8
 x86settag $r1, 0, 4: rd ^= 16
-x86settag $r1, 0, 5: rd ^= 32
+x86settag $r1, 0, 5: exception
 x86settag $r1, 0, 6: rd ^= 64
 x86settag $r1, 0, 7: rd ^= 128
-x86settag $r1, 0, 8: rd ^= 1
+x86settag $r1, 0, 8: exception
 x86settag $r1, 0, 9: rd ^= 2
 x86settag $r1, 0, 10: rd ^= 4
 x86settag $r1, 0, 11: rd ^= 8
 x86settag $r1, 0, 12: rd ^= 16
-x86settag $r1, 0, 13: rd ^= 32
+x86settag $r1, 0, 13: exception
 x86settag $r1, 0, 14: rd ^= 64
 x86settag $r1, 0, 15: rd ^= 128
-x86settag $r1, 0, 16: rd ^= 1
+x86settag $r1, 0, 16: exception
 x86settag $r1, 0, 17: rd ^= 2
 x86settag $r1, 0, 18: rd ^= 4
 x86settag $r1, 0, 19: rd ^= 8
 x86settag $r1, 0, 20: rd ^= 16
-x86settag $r1, 0, 21: rd ^= 32
+x86settag $r1, 0, 21: exception
 x86settag $r1, 0, 22: rd ^= 64
 x86settag $r1, 0, 23: rd ^= 128
-x86settag $r1, 0, 24: rd ^= 1
+x86settag $r1, 0, 24: exception
 x86settag $r1, 0, 25: rd ^= 2
 x86settag $r1, 0, 26: rd ^= 4
 x86settag $r1, 0, 27: rd ^= 8
 x86settag $r1, 0, 28: rd ^= 16
-x86settag $r1, 0, 29: rd ^= 32
+x86settag $r1, 0, 29: exception
 x86settag $r1, 0, 30: rd ^= 64
 x86settag $r1, 0, 31: rd ^= 128
-x86settag $r1, 0, 32: rd ^= 1
+x86settag $r1, 0, 32: exception
 x86settag $r1, 0, 33: rd ^= 2
 x86settag $r1, 0, 34: rd ^= 4
 x86settag $r1, 0, 35: rd ^= 8
 x86settag $r1, 0, 36: rd ^= 16
-x86settag $r1, 0, 37: rd ^= 32
+x86settag $r1, 0, 37: exception
 x86settag $r1, 0, 38: rd ^= 64
 x86settag $r1, 0, 39: rd ^= 128
-x86settag $r1, 0, 40: rd ^= 1
+x86settag $r1, 0, 40: exception
 x86settag $r1, 0, 41: rd ^= 2
 x86settag $r1, 0, 42: rd ^= 4
 x86settag $r1, 0, 43: rd ^= 8
 x86settag $r1, 0, 44: rd ^= 16
-x86settag $r1, 0, 45: rd ^= 32
+x86settag $r1, 0, 45: exception
 x86settag $r1, 0, 46: rd ^= 64
 x86settag $r1, 0, 47: rd ^= 128
-x86settag $r1, 0, 48: rd ^= 1
+x86settag $r1, 0, 48: exception
 x86settag $r1, 0, 49: rd ^= 2
 x86settag $r1, 0, 50: rd ^= 4
 x86settag $r1, 0, 51: rd ^= 8
 x86settag $r1, 0, 52: rd ^= 16
-x86settag $r1, 0, 53: rd ^= 32
+x86settag $r1, 0, 53: exception
 x86settag $r1, 0, 54: rd ^= 64
 x86settag $r1, 0, 55: rd ^= 128
-x86settag $r1, 0, 56: rd ^= 1
+x86settag $r1, 0, 56: exception
 x86settag $r1, 0, 57: rd ^= 2
 x86settag $r1, 0, 58: rd ^= 4
 x86settag $r1, 0, 59: rd ^= 8
 x86settag $r1, 0, 60: rd ^= 16
-x86settag $r1, 0, 61: rd ^= 32
+x86settag $r1, 0, 61: exception
 x86settag $r1, 0, 62: rd ^= 64
 x86settag $r1, 0, 63: rd ^= 128
-x86settag $r1, 0, 64: rd ^= 1
+x86settag $r1, 0, 64: exception
 x86settag $r1, 0, 65: rd ^= 2
 x86settag $r1, 0, 66: rd ^= 4
 x86settag $r1, 0, 67: rd ^= 8
 x86settag $r1, 0, 68: rd ^= 16
-x86settag $r1, 0, 69: rd ^= 32
+x86settag $r1, 0, 69: exception
 x86settag $r1, 0, 70: rd ^= 64
 x86settag $r1, 0, 71: rd ^= 128
-x86settag $r1, 0, 72: rd ^= 1
+x86settag $r1, 0, 72: exception
 x86settag $r1, 0, 73: rd ^= 2
 x86settag $r1, 0, 74: rd ^= 4
 x86settag $r1, 0, 75: rd ^= 8
 x86settag $r1, 0, 76: rd ^= 16
-x86settag $r1, 0, 77: rd ^= 32
+x86settag $r1, 0, 77: exception
 x86settag $r1, 0, 78: rd ^= 64
 x86settag $r1, 0, 79: rd ^= 128
-x86settag $r1, 0, 80: rd ^= 1
+x86settag $r1, 0, 80: exception
 x86settag $r1, 0, 81: rd ^= 2
 x86settag $r1, 0, 82: rd ^= 4
 x86settag $r1, 0, 83: rd ^= 8
 x86settag $r1, 0, 84: rd ^= 16
-x86settag $r1, 0, 85: rd ^= 32
+x86settag $r1, 0, 85: exception
 x86settag $r1, 0, 86: rd ^= 64
 x86settag $r1, 0, 87: rd ^= 128
-x86settag $r1, 0, 88: rd ^= 1
+x86settag $r1, 0, 88: exception
 x86settag $r1, 0, 89: rd ^= 2
 x86settag $r1, 0, 90: rd ^= 4
 x86settag $r1, 0, 91: rd ^= 8
 x86settag $r1, 0, 92: rd ^= 16
-x86settag $r1, 0, 93: rd ^= 32
+x86settag $r1, 0, 93: exception
 x86settag $r1, 0, 94: rd ^= 64
 x86settag $r1, 0, 95: rd ^= 128
-x86settag $r1, 0, 96: rd ^= 1
+x86settag $r1, 0, 96: exception
 x86settag $r1, 0, 97: rd ^= 2
 x86settag $r1, 0, 98: rd ^= 4
 x86settag $r1, 0, 99: rd ^= 8
 x86settag $r1, 0, 100: rd ^= 16
-x86settag $r1, 0, 101: rd ^= 32
+x86settag $r1, 0, 101: exception
 x86settag $r1, 0, 102: rd ^= 64
 x86settag $r1, 0, 103: rd ^= 128
-x86settag $r1, 0, 104: rd ^= 1
+x86settag $r1, 0, 104: exception
 x86settag $r1, 0, 105: rd ^= 2
 x86settag $r1, 0, 106: rd ^= 4
 x86settag $r1, 0, 107: rd ^= 8
 x86settag $r1, 0, 108: rd ^= 16
-x86settag $r1, 0, 109: rd ^= 32
+x86settag $r1, 0, 109: exception
 x86settag $r1, 0, 110: rd ^= 64
 x86settag $r1, 0, 111: rd ^= 128
-x86settag $r1, 0, 112: rd ^= 1
+x86settag $r1, 0, 112: exception
 x86settag $r1, 0, 113: rd ^= 2
 x86settag $r1, 0, 114: rd ^= 4
 x86settag $r1, 0, 115: rd ^= 8
 x86settag $r1, 0, 116: rd ^= 16
-x86settag $r1, 0, 117: rd ^= 32
+x86settag $r1, 0, 117: exception
 x86settag $r1, 0, 118: rd ^= 64
 x86settag $r1, 0, 119: rd ^= 128
-x86settag $r1, 0, 120: rd ^= 1
+x86settag $r1, 0, 120: exception
 x86settag $r1, 0, 121: rd ^= 2
 x86settag $r1, 0, 122: rd ^= 4
 x86settag $r1, 0, 123: rd ^= 8
 x86settag $r1, 0, 124: rd ^= 16
-x86settag $r1, 0, 125: rd ^= 32
+x86settag $r1, 0, 125: exception
 x86settag $r1, 0, 126: rd ^= 64
 x86settag $r1, 0, 127: rd ^= 128
-x86settag $r1, 0, 128: rd ^= 1
+x86settag $r1, 0, 128: exception
 x86settag $r1, 0, 129: rd ^= 2
 x86settag $r1, 0, 130: rd ^= 4
 x86settag $r1, 0, 131: rd ^= 8
 x86settag $r1, 0, 132: rd ^= 16
-x86settag $r1, 0, 133: rd ^= 32
+x86settag $r1, 0, 133: exception
 x86settag $r1, 0, 134: rd ^= 64
 x86settag $r1, 0, 135: rd ^= 128
-x86settag $r1, 0, 136: rd ^= 1
+x86settag $r1, 0, 136: exception
 x86settag $r1, 0, 137: rd ^= 2
 x86settag $r1, 0, 138: rd ^= 4
 x86settag $r1, 0, 139: rd ^= 8
 x86settag $r1, 0, 140: rd ^= 16
-x86settag $r1, 0, 141: rd ^= 32
+x86settag $r1, 0, 141: exception
 x86settag $r1, 0, 142: rd ^= 64
 x86settag $r1, 0, 143: rd ^= 128
-x86settag $r1, 0, 144: rd ^= 1
+x86settag $r1, 0, 144: exception
 x86settag $r1, 0, 145: rd ^= 2
 x86settag $r1, 0, 146: rd ^= 4
 x86settag $r1, 0, 147: rd ^= 8
 x86settag $r1, 0, 148: rd ^= 16
-x86settag $r1, 0, 149: rd ^= 32
+x86settag $r1, 0, 149: exception
 x86settag $r1, 0, 150: rd ^= 64
 x86settag $r1, 0, 151: rd ^= 128
-x86settag $r1, 0, 152: rd ^= 1
+x86settag $r1, 0, 152: exception
 x86settag $r1, 0, 153: rd ^= 2
 x86settag $r1, 0, 154: rd ^= 4
 x86settag $r1, 0, 155: rd ^= 8
 x86settag $r1, 0, 156: rd ^= 16
-x86settag $r1, 0, 157: rd ^= 32
+x86settag $r1, 0, 157: exception
 x86settag $r1, 0, 158: rd ^= 64
 x86settag $r1, 0, 159: rd ^= 128
-x86settag $r1, 0, 160: rd ^= 1
+x86settag $r1, 0, 160: exception
 x86settag $r1, 0, 161: rd ^= 2
 x86settag $r1, 0, 162: rd ^= 4
 x86settag $r1, 0, 163: rd ^= 8
 x86settag $r1, 0, 164: rd ^= 16
-x86settag $r1, 0, 165: rd ^= 32
+x86settag $r1, 0, 165: exception
 x86settag $r1, 0, 166: rd ^= 64
 x86settag $r1, 0, 167: rd ^= 128
-x86settag $r1, 0, 168: rd ^= 1
+x86settag $r1, 0, 168: exception
 x86settag $r1, 0, 169: rd ^= 2
 x86settag $r1, 0, 170: rd ^= 4
 x86settag $r1, 0, 171: rd ^= 8
 x86settag $r1, 0, 172: rd ^= 16
-x86settag $r1, 0, 173: rd ^= 32
+x86settag $r1, 0, 173: exception
 x86settag $r1, 0, 174: rd ^= 64
 x86settag $r1, 0, 175: rd ^= 128
-x86settag $r1, 0, 176: rd ^= 1
+x86settag $r1, 0, 176: exception
 x86settag $r1, 0, 177: rd ^= 2
 x86settag $r1, 0, 178: rd ^= 4
 x86settag $r1, 0, 179: rd ^= 8
 x86settag $r1, 0, 180: rd ^= 16
-x86settag $r1, 0, 181: rd ^= 32
+x86settag $r1, 0, 181: exception
 x86settag $r1, 0, 182: rd ^= 64
 x86settag $r1, 0, 183: rd ^= 128
-x86settag $r1, 0, 184: rd ^= 1
+x86settag $r1, 0, 184: exception
 x86settag $r1, 0, 185: rd ^= 2
 x86settag $r1, 0, 186: rd ^= 4
 x86settag $r1, 0, 187: rd ^= 8
 x86settag $r1, 0, 188: rd ^= 16
-x86settag $r1, 0, 189: rd ^= 32
+x86settag $r1, 0, 189: exception
 x86settag $r1, 0, 190: rd ^= 64
 x86settag $r1, 0, 191: rd ^= 128
-x86settag $r1, 0, 192: rd ^= 1
+x86settag $r1, 0, 192: exception
 x86settag $r1, 0, 193: rd ^= 2
 x86settag $r1, 0, 194: rd ^= 4
 x86settag $r1, 0, 195: rd ^= 8
 x86settag $r1, 0, 196: rd ^= 16
-x86settag $r1, 0, 197: rd ^= 32
+x86settag $r1, 0, 197: exception
 x86settag $r1, 0, 198: rd ^= 64
 x86settag $r1, 0, 199: rd ^= 128
-x86settag $r1, 0, 200: rd ^= 1
+x86settag $r1, 0, 200: exception
 x86settag $r1, 0, 201: rd ^= 2
 x86settag $r1, 0, 202: rd ^= 4
 x86settag $r1, 0, 203: rd ^= 8
 x86settag $r1, 0, 204: rd ^= 16
-x86settag $r1, 0, 205: rd ^= 32
+x86settag $r1, 0, 205: exception
 x86settag $r1, 0, 206: rd ^= 64
 x86settag $r1, 0, 207: rd ^= 128
-x86settag $r1, 0, 208: rd ^= 1
+x86settag $r1, 0, 208: exception
 x86settag $r1, 0, 209: rd ^= 2
 x86settag $r1, 0, 210: rd ^= 4
 x86settag $r1, 0, 211: rd ^= 8
 x86settag $r1, 0, 212: rd ^= 16
-x86settag $r1, 0, 213: rd ^= 32
+x86settag $r1, 0, 213: exception
 x86settag $r1, 0, 214: rd ^= 64
 x86settag $r1, 0, 215: rd ^= 128
-x86settag $r1, 0, 216: rd ^= 1
+x86settag $r1, 0, 216: exception
 x86settag $r1, 0, 217: rd ^= 2
 x86settag $r1, 0, 218: rd ^= 4
 x86settag $r1, 0, 219: rd ^= 8
 x86settag $r1, 0, 220: rd ^= 16
-x86settag $r1, 0, 221: rd ^= 32
+x86settag $r1, 0, 221: exception
 x86settag $r1, 0, 222: rd ^= 64
 x86settag $r1, 0, 223: rd ^= 128
-x86settag $r1, 0, 224: rd ^= 1
+x86settag $r1, 0, 224: exception
 x86settag $r1, 0, 225: rd ^= 2
 x86settag $r1, 0, 226: rd ^= 4
 x86settag $r1, 0, 227: rd ^= 8
 x86settag $r1, 0, 228: rd ^= 16
-x86settag $r1, 0, 229: rd ^= 32
+x86settag $r1, 0, 229: exception
 x86settag $r1, 0, 230: rd ^= 64
 x86settag $r1, 0, 231: rd ^= 128
-x86settag $r1, 0, 232: rd ^= 1
+x86settag $r1, 0, 232: exception
 x86settag $r1, 0, 233: rd ^= 2
 x86settag $r1, 0, 234: rd ^= 4
 x86settag $r1, 0, 235: rd ^= 8
 x86settag $r1, 0, 236: rd ^= 16
-x86settag $r1, 0, 237: rd ^= 32
+x86settag $r1, 0, 237: exception
 x86settag $r1, 0, 238: rd ^= 64
 x86settag $r1, 0, 239: rd ^= 128
-x86settag $r1, 0, 240: rd ^= 1
+x86settag $r1, 0, 240: exception
 x86settag $r1, 0, 241: rd ^= 2
 x86settag $r1, 0, 242: rd ^= 4
 x86settag $r1, 0, 243: rd ^= 8
 x86settag $r1, 0, 244: rd ^= 16
-x86settag $r1, 0, 245: rd ^= 32
+x86settag $r1, 0, 245: exception
 x86settag $r1, 0, 246: rd ^= 64
 x86settag $r1, 0, 247: rd ^= 128
-x86settag $r1, 0, 248: rd ^= 1
+x86settag $r1, 0, 248: exception
 x86settag $r1, 0, 249: rd ^= 2
 x86settag $r1, 0, 250: rd ^= 4
 x86settag $r1, 0, 251: rd ^= 8
 x86settag $r1, 0, 252: rd ^= 16
-x86settag $r1, 0, 253: rd ^= 32
+x86settag $r1, 0, 253: exception
 x86settag $r1, 0, 254: rd ^= 64
 x86settag $r1, 0, 255: rd ^= 128
-x86settag $r1, 1, 0: exception
+x86settag $r1, 1, 0: rd ^= 1
 x86settag $r1, 1, 1: exception
 x86settag $r1, 1, 2: exception
 x86settag $r1, 1, 3: exception
 x86settag $r1, 1, 4: exception
-x86settag $r1, 1, 5: exception
+x86settag $r1, 1, 5: rd ^= 32
 x86settag $r1, 1, 6: exception
 x86settag $r1, 1, 7: exception
-x86settag $r1, 1, 8: exception
+x86settag $r1, 1, 8: rd ^= 1
 x86settag $r1, 1, 9: exception
 x86settag $r1, 1, 10: exception
 x86settag $r1, 1, 11: exception
 x86settag $r1, 1, 12: exception
-x86settag $r1, 1, 13: exception
+x86settag $r1, 1, 13: rd ^= 32
 x86settag $r1, 1, 14: exception
 x86settag $r1, 1, 15: exception
-x86settag $r1, 1, 16: exception
+x86settag $r1, 1, 16: rd ^= 1
 x86settag $r1, 1, 17: exception
 x86settag $r1, 1, 18: exception
 x86settag $r1, 1, 19: exception
 x86settag $r1, 1, 20: exception
-x86settag $r1, 1, 21: exception
+x86settag $r1, 1, 21: rd ^= 32
 x86settag $r1, 1, 22: exception
 x86settag $r1, 1, 23: exception
-x86settag $r1, 1, 24: exception
+x86settag $r1, 1, 24: rd ^= 1
 x86settag $r1, 1, 25: exception
 x86settag $r1, 1, 26: exception
 x86settag $r1, 1, 27: exception
 x86settag $r1, 1, 28: exception
-x86settag $r1, 1, 29: exception
+x86settag $r1, 1, 29: rd ^= 32
 x86settag $r1, 1, 30: exception
 x86settag $r1, 1, 31: exception
-x86settag $r1, 1, 32: exception
+x86settag $r1, 1, 32: rd ^= 1
 x86settag $r1, 1, 33: exception
 x86settag $r1, 1, 34: exception
 x86settag $r1, 1, 35: exception
 x86settag $r1, 1, 36: exception
-x86settag $r1, 1, 37: exception
+x86settag $r1, 1, 37: rd ^= 32
 x86settag $r1, 1, 38: exception
 x86settag $r1, 1, 39: exception
-x86settag $r1, 1, 40: exception
+x86settag $r1, 1, 40: rd ^= 1
 x86settag $r1, 1, 41: exception
 x86settag $r1, 1, 42: exception
 x86settag $r1, 1, 43: exception
 x86settag $r1, 1, 44: exception
-x86settag $r1, 1, 45: exception
+x86settag $r1, 1, 45: rd ^= 32
 x86settag $r1, 1, 46: exception
 x86settag $r1, 1, 47: exception
-x86settag $r1, 1, 48: exception
+x86settag $r1, 1, 48: rd ^= 1
 x86settag $r1, 1, 49: exception
 x86settag $r1, 1, 50: exception
 x86settag $r1, 1, 51: exception
 x86settag $r1, 1, 52: exception
-x86settag $r1, 1, 53: exception
+x86settag $r1, 1, 53: rd ^= 32
 x86settag $r1, 1, 54: exception
 x86settag $r1, 1, 55: exception
-x86settag $r1, 1, 56: exception
+x86settag $r1, 1, 56: rd ^= 1
 x86settag $r1, 1, 57: exception
 x86settag $r1, 1, 58: exception
 x86settag $r1, 1, 59: exception
 x86settag $r1, 1, 60: exception
-x86settag $r1, 1, 61: exception
+x86settag $r1, 1, 61: rd ^= 32
 x86settag $r1, 1, 62: exception
 x86settag $r1, 1, 63: exception
-x86settag $r1, 1, 64: exception
+x86settag $r1, 1, 64: rd ^= 1
 x86settag $r1, 1, 65: exception
 x86settag $r1, 1, 66: exception
 x86settag $r1, 1, 67: exception
 x86settag $r1, 1, 68: exception
-x86settag $r1, 1, 69: exception
+x86settag $r1, 1, 69: rd ^= 32
 x86settag $r1, 1, 70: exception
 x86settag $r1, 1, 71: exception
-x86settag $r1, 1, 72: exception
+x86settag $r1, 1, 72: rd ^= 1
 x86settag $r1, 1, 73: exception
 x86settag $r1, 1, 74: exception
 x86settag $r1, 1, 75: exception
 x86settag $r1, 1, 76: exception
-x86settag $r1, 1, 77: exception
+x86settag $r1, 1, 77: rd ^= 32
 x86settag $r1, 1, 78: exception
 x86settag $r1, 1, 79: exception
-x86settag $r1, 1, 80: exception
+x86settag $r1, 1, 80: rd ^= 1
 x86settag $r1, 1, 81: exception
 x86settag $r1, 1, 82: exception
 x86settag $r1, 1, 83: exception
 x86settag $r1, 1, 84: exception
-x86settag $r1, 1, 85: exception
+x86settag $r1, 1, 85: rd ^= 32
 x86settag $r1, 1, 86: exception
 x86settag $r1, 1, 87: exception
-x86settag $r1, 1, 88: exception
+x86settag $r1, 1, 88: rd ^= 1
 x86settag $r1, 1, 89: exception
 x86settag $r1, 1, 90: exception
 x86settag $r1, 1, 91: exception
 x86settag $r1, 1, 92: exception
-x86settag $r1, 1, 93: exception
+x86settag $r1, 1, 93: rd ^= 32
 x86settag $r1, 1, 94: exception
 x86settag $r1, 1, 95: exception
-x86settag $r1, 1, 96: exception
+x86settag $r1, 1, 96: rd ^= 1
 x86settag $r1, 1, 97: exception
 x86settag $r1, 1, 98: exception
 x86settag $r1, 1, 99: exception
 x86settag $r1, 1, 100: exception
-x86settag $r1, 1, 101: exception
+x86settag $r1, 1, 101: rd ^= 32
 x86settag $r1, 1, 102: exception
 x86settag $r1, 1, 103: exception
-x86settag $r1, 1, 104: exception
+x86settag $r1, 1, 104: rd ^= 1
 x86settag $r1, 1, 105: exception
 x86settag $r1, 1, 106: exception
 x86settag $r1, 1, 107: exception
 x86settag $r1, 1, 108: exception
-x86settag $r1, 1, 109: exception
+x86settag $r1, 1, 109: rd ^= 32
 x86settag $r1, 1, 110: exception
 x86settag $r1, 1, 111: exception
-x86settag $r1, 1, 112: exception
+x86settag $r1, 1, 112: rd ^= 1
 x86settag $r1, 1, 113: exception
 x86settag $r1, 1, 114: exception
 x86settag $r1, 1, 115: exception
 x86settag $r1, 1, 116: exception
-x86settag $r1, 1, 117: exception
+x86settag $r1, 1, 117: rd ^= 32
 x86settag $r1, 1, 118: exception
 x86settag $r1, 1, 119: exception
-x86settag $r1, 1, 120: exception
+x86settag $r1, 1, 120: rd ^= 1
 x86settag $r1, 1, 121: exception
 x86settag $r1, 1, 122: exception
 x86settag $r1, 1, 123: exception
 x86settag $r1, 1, 124: exception
-x86settag $r1, 1, 125: exception
+x86settag $r1, 1, 125: rd ^= 32
 x86settag $r1, 1, 126: exception
 x86settag $r1, 1, 127: exception
-x86settag $r1, 1, 128: exception
+x86settag $r1, 1, 128: rd ^= 1
 x86settag $r1, 1, 129: exception
 x86settag $r1, 1, 130: exception
 x86settag $r1, 1, 131: exception
 x86settag $r1, 1, 132: exception
-x86settag $r1, 1, 133: exception
+x86settag $r1, 1, 133: rd ^= 32
 x86settag $r1, 1, 134: exception
 x86settag $r1, 1, 135: exception
-x86settag $r1, 1, 136: exception
+x86settag $r1, 1, 136: rd ^= 1
 x86settag $r1, 1, 137: exception
 x86settag $r1, 1, 138: exception
 x86settag $r1, 1, 139: exception
 x86settag $r1, 1, 140: exception
-x86settag $r1, 1, 141: exception
+x86settag $r1, 1, 141: rd ^= 32
 x86settag $r1, 1, 142: exception
 x86settag $r1, 1, 143: exception
-x86settag $r1, 1, 144: exception
+x86settag $r1, 1, 144: rd ^= 1
 x86settag $r1, 1, 145: exception
 x86settag $r1, 1, 146: exception
 x86settag $r1, 1, 147: exception
 x86settag $r1, 1, 148: exception
-x86settag $r1, 1, 149: exception
+x86settag $r1, 1, 149: rd ^= 32
 x86settag $r1, 1, 150: exception
 x86settag $r1, 1, 151: exception
-x86settag $r1, 1, 152: exception
+x86settag $r1, 1, 152: rd ^= 1
 x86settag $r1, 1, 153: exception
 x86settag $r1, 1, 154: exception
 x86settag $r1, 1, 155: exception
 x86settag $r1, 1, 156: exception
-x86settag $r1, 1, 157: exception
+x86settag $r1, 1, 157: rd ^= 32
 x86settag $r1, 1, 158: exception
 x86settag $r1, 1, 159: exception
-x86settag $r1, 1, 160: exception
+x86settag $r1, 1, 160: rd ^= 1
 x86settag $r1, 1, 161: exception
 x86settag $r1, 1, 162: exception
 x86settag $r1, 1, 163: exception
 x86settag $r1, 1, 164: exception
-x86settag $r1, 1, 165: exception
+x86settag $r1, 1, 165: rd ^= 32
 x86settag $r1, 1, 166: exception
 x86settag $r1, 1, 167: exception
-x86settag $r1, 1, 168: exception
+x86settag $r1, 1, 168: rd ^= 1
 x86settag $r1, 1, 169: exception
 x86settag $r1, 1, 170: exception
 x86settag $r1, 1, 171: exception
 x86settag $r1, 1, 172: exception
-x86settag $r1, 1, 173: exception
+x86settag $r1, 1, 173: rd ^= 32
 x86settag $r1, 1, 174: exception
 x86settag $r1, 1, 175: exception
-x86settag $r1, 1, 176: exception
+x86settag $r1, 1, 176: rd ^= 1
 x86settag $r1, 1, 177: exception
 x86settag $r1, 1, 178: exception
 x86settag $r1, 1, 179: exception
 x86settag $r1, 1, 180: exception
-x86settag $r1, 1, 181: exception
+x86settag $r1, 1, 181: rd ^= 32
 x86settag $r1, 1, 182: exception
 x86settag $r1, 1, 183: exception
-x86settag $r1, 1, 184: exception
+x86settag $r1, 1, 184: rd ^= 1
 x86settag $r1, 1, 185: exception
 x86settag $r1, 1, 186: exception
 x86settag $r1, 1, 187: exception
 x86settag $r1, 1, 188: exception
-x86settag $r1, 1, 189: exception
+x86settag $r1, 1, 189: rd ^= 32
 x86settag $r1, 1, 190: exception
 x86settag $r1, 1, 191: exception
-x86settag $r1, 1, 192: exception
+x86settag $r1, 1, 192: rd ^= 1
 x86settag $r1, 1, 193: exception
 x86settag $r1, 1, 194: exception
 x86settag $r1, 1, 195: exception
 x86settag $r1, 1, 196: exception
-x86settag $r1, 1, 197: exception
+x86settag $r1, 1, 197: rd ^= 32
 x86settag $r1, 1, 198: exception
 x86settag $r1, 1, 199: exception
-x86settag $r1, 1, 200: exception
+x86settag $r1, 1, 200: rd ^= 1
 x86settag $r1, 1, 201: exception
 x86settag $r1, 1, 202: exception
 x86settag $r1, 1, 203: exception
 x86settag $r1, 1, 204: exception
-x86settag $r1, 1, 205: exception
+x86settag $r1, 1, 205: rd ^= 32
 x86settag $r1, 1, 206: exception
 x86settag $r1, 1, 207: exception
-x86settag $r1, 1, 208: exception
+x86settag $r1, 1, 208: rd ^= 1
 x86settag $r1, 1, 209: exception
 x86settag $r1, 1, 210: exception
 x86settag $r1, 1, 211: exception
 x86settag $r1, 1, 212: exception
-x86settag $r1, 1, 213: exception
+x86settag $r1, 1, 213: rd ^= 32
 x86settag $r1, 1, 214: exception
 x86settag $r1, 1, 215: exception
-x86settag $r1, 1, 216: exception
+x86settag $r1, 1, 216: rd ^= 1
 x86settag $r1, 1, 217: exception
 x86settag $r1, 1, 218: exception
 x86settag $r1, 1, 219: exception
 x86settag $r1, 1, 220: exception
-x86settag $r1, 1, 221: exception
+x86settag $r1, 1, 221: rd ^= 32
 x86settag $r1, 1, 222: exception
 x86settag $r1, 1, 223: exception
-x86settag $r1, 1, 224: exception
+x86settag $r1, 1, 224: rd ^= 1
 x86settag $r1, 1, 225: exception
 x86settag $r1, 1, 226: exception
 x86settag $r1, 1, 227: exception
 x86settag $r1, 1, 228: exception
-x86settag $r1, 1, 229: exception
+x86settag $r1, 1, 229: rd ^= 32
 x86settag $r1, 1, 230: exception
 x86settag $r1, 1, 231: exception
-x86settag $r1, 1, 232: exception
+x86settag $r1, 1, 232: rd ^= 1
 x86settag $r1, 1, 233: exception
 x86settag $r1, 1, 234: exception
 x86settag $r1, 1, 235: exception
 x86settag $r1, 1, 236: exception
-x86settag $r1, 1, 237: exception
+x86settag $r1, 1, 237: rd ^= 32
 x86settag $r1, 1, 238: exception
 x86settag $r1, 1, 239: exception
-x86settag $r1, 1, 240: exception
+x86settag $r1, 1, 240: rd ^= 1
 x86settag $r1, 1, 241: exception
 x86settag $r1, 1, 242: exception
 x86settag $r1, 1, 243: exception
 x86settag $r1, 1, 244: exception
-x86settag $r1, 1, 245: exception
+x86settag $r1, 1, 245: rd ^= 32
 x86settag $r1, 1, 246: exception
 x86settag $r1, 1, 247: exception
-x86settag $r1, 1, 248: exception
+x86settag $r1, 1, 248: rd ^= 1
 x86settag $r1, 1, 249: exception
 x86settag $r1, 1, 250: exception
 x86settag $r1, 1, 251: exception
 x86settag $r1, 1, 252: exception
-x86settag $r1, 1, 253: exception
+x86settag $r1, 1, 253: rd ^= 32
 x86settag $r1, 1, 254: exception
 x86settag $r1, 1, 255: exception
-x86settag $r1, 2, 0: exception
+x86settag $r1, 2, 0: unchanged
 x86settag $r1, 2, 1: exception
 x86settag $r1, 2, 2: exception
 x86settag $r1, 2, 3: exception
 x86settag $r1, 2, 4: exception
-x86settag $r1, 2, 5: exception
+x86settag $r1, 2, 5: unchanged
 x86settag $r1, 2, 6: exception
 x86settag $r1, 2, 7: exception
 x86settag $r1, 2, 8: exception
@@ -550,12 +550,12 @@ x86settag $r1, 2, 36: exception
 x86settag $r1, 2, 37: exception
 x86settag $r1, 2, 38: exception
 x86settag $r1, 2, 39: exception
-x86settag $r1, 2, 40: exception
+x86settag $r1, 2, 40: unchanged
 x86settag $r1, 2, 41: exception
 x86settag $r1, 2, 42: exception
 x86settag $r1, 2, 43: exception
 x86settag $r1, 2, 44: exception
-x86settag $r1, 2, 45: exception
+x86settag $r1, 2, 45: unchanged
 x86settag $r1, 2, 46: exception
 x86settag $r1, 2, 47: exception
 x86settag $r1, 2, 48: exception
@@ -574,12 +574,12 @@ x86settag $r1, 2, 60: exception
 x86settag $r1, 2, 61: exception
 x86settag $r1, 2, 62: exception
 x86settag $r1, 2, 63: exception
-x86settag $r1, 2, 64: exception
+x86settag $r1, 2, 64: unchanged
 x86settag $r1, 2, 65: exception
 x86settag $r1, 2, 66: exception
 x86settag $r1, 2, 67: exception
 x86settag $r1, 2, 68: exception
-x86settag $r1, 2, 69: exception
+x86settag $r1, 2, 69: unchanged
 x86settag $r1, 2, 70: exception
 x86settag $r1, 2, 71: exception
 x86settag $r1, 2, 72: exception
@@ -614,12 +614,12 @@ x86settag $r1, 2, 100: exception
 x86settag $r1, 2, 101: exception
 x86settag $r1, 2, 102: exception
 x86settag $r1, 2, 103: exception
-x86settag $r1, 2, 104: exception
+x86settag $r1, 2, 104: unchanged
 x86settag $r1, 2, 105: exception
 x86settag $r1, 2, 106: exception
 x86settag $r1, 2, 107: exception
 x86settag $r1, 2, 108: exception
-x86settag $r1, 2, 109: exception
+x86settag $r1, 2, 109: unchanged
 x86settag $r1, 2, 110: exception
 x86settag $r1, 2, 111: exception
 x86settag $r1, 2, 112: exception
@@ -638,12 +638,12 @@ x86settag $r1, 2, 124: exception
 x86settag $r1, 2, 125: exception
 x86settag $r1, 2, 126: exception
 x86settag $r1, 2, 127: exception
-x86settag $r1, 2, 128: exception
+x86settag $r1, 2, 128: unchanged
 x86settag $r1, 2, 129: exception
 x86settag $r1, 2, 130: exception
 x86settag $r1, 2, 131: exception
 x86settag $r1, 2, 132: exception
-x86settag $r1, 2, 133: exception
+x86settag $r1, 2, 133: unchanged
 x86settag $r1, 2, 134: exception
 x86settag $r1, 2, 135: exception
 x86settag $r1, 2, 136: exception
@@ -678,12 +678,12 @@ x86settag $r1, 2, 164: exception
 x86settag $r1, 2, 165: exception
 x86settag $r1, 2, 166: exception
 x86settag $r1, 2, 167: exception
-x86settag $r1, 2, 168: exception
+x86settag $r1, 2, 168: unchanged
 x86settag $r1, 2, 169: exception
 x86settag $r1, 2, 170: exception
 x86settag $r1, 2, 171: exception
 x86settag $r1, 2, 172: exception
-x86settag $r1, 2, 173: exception
+x86settag $r1, 2, 173: unchanged
 x86settag $r1, 2, 174: exception
 x86settag $r1, 2, 175: exception
 x86settag $r1, 2, 176: exception
@@ -702,12 +702,12 @@ x86settag $r1, 2, 188: exception
 x86settag $r1, 2, 189: exception
 x86settag $r1, 2, 190: exception
 x86settag $r1, 2, 191: exception
-x86settag $r1, 2, 192: exception
+x86settag $r1, 2, 192: unchanged
 x86settag $r1, 2, 193: exception
 x86settag $r1, 2, 194: exception
 x86settag $r1, 2, 195: exception
 x86settag $r1, 2, 196: exception
-x86settag $r1, 2, 197: exception
+x86settag $r1, 2, 197: unchanged
 x86settag $r1, 2, 198: exception
 x86settag $r1, 2, 199: exception
 x86settag $r1, 2, 200: exception
@@ -742,12 +742,12 @@ x86settag $r1, 2, 228: exception
 x86settag $r1, 2, 229: exception
 x86settag $r1, 2, 230: exception
 x86settag $r1, 2, 231: exception
-x86settag $r1, 2, 232: exception
+x86settag $r1, 2, 232: unchanged
 x86settag $r1, 2, 233: exception
 x86settag $r1, 2, 234: exception
 x86settag $r1, 2, 235: exception
 x86settag $r1, 2, 236: exception
-x86settag $r1, 2, 237: exception
+x86settag $r1, 2, 237: unchanged
 x86settag $r1, 2, 238: exception
 x86settag $r1, 2, 239: exception
 x86settag $r1, 2, 240: exception
@@ -766,12 +766,12 @@ x86settag $r1, 2, 252: exception
 x86settag $r1, 2, 253: exception
 x86settag $r1, 2, 254: exception
 x86settag $r1, 2, 255: exception
-x86settag $r1, 3, 0: exception
+x86settag $r1, 3, 0: rd ^= 1
 x86settag $r1, 3, 1: exception
 x86settag $r1, 3, 2: exception
 x86settag $r1, 3, 3: exception
 x86settag $r1, 3, 4: exception
-x86settag $r1, 3, 5: exception
+x86settag $r1, 3, 5: rd ^= 32
 x86settag $r1, 3, 6: exception
 x86settag $r1, 3, 7: exception
 x86settag $r1, 3, 8: exception
@@ -806,12 +806,12 @@ x86settag $r1, 3, 36: exception
 x86settag $r1, 3, 37: exception
 x86settag $r1, 3, 38: exception
 x86settag $r1, 3, 39: exception
-x86settag $r1, 3, 40: exception
+x86settag $r1, 3, 40: rd ^= 1
 x86settag $r1, 3, 41: exception
 x86settag $r1, 3, 42: exception
 x86settag $r1, 3, 43: exception
 x86settag $r1, 3, 44: exception
-x86settag $r1, 3, 45: exception
+x86settag $r1, 3, 45: rd ^= 32
 x86settag $r1, 3, 46: exception
 x86settag $r1, 3, 47: exception
 x86settag $r1, 3, 48: exception
@@ -830,12 +830,12 @@ x86settag $r1, 3, 60: exception
 x86settag $r1, 3, 61: exception
 x86settag $r1, 3, 62: exception
 x86settag $r1, 3, 63: exception
-x86settag $r1, 3, 64: exception
+x86settag $r1, 3, 64: rd ^= 1
 x86settag $r1, 3, 65: exception
 x86settag $r1, 3, 66: exception
 x86settag $r1, 3, 67: exception
 x86settag $r1, 3, 68: exception
-x86settag $r1, 3, 69: exception
+x86settag $r1, 3, 69: rd ^= 32
 x86settag $r1, 3, 70: exception
 x86settag $r1, 3, 71: exception
 x86settag $r1, 3, 72: exception
@@ -870,12 +870,12 @@ x86settag $r1, 3, 100: exception
 x86settag $r1, 3, 101: exception
 x86settag $r1, 3, 102: exception
 x86settag $r1, 3, 103: exception
-x86settag $r1, 3, 104: exception
+x86settag $r1, 3, 104: rd ^= 1
 x86settag $r1, 3, 105: exception
 x86settag $r1, 3, 106: exception
 x86settag $r1, 3, 107: exception
 x86settag $r1, 3, 108: exception
-x86settag $r1, 3, 109: exception
+x86settag $r1, 3, 109: rd ^= 32
 x86settag $r1, 3, 110: exception
 x86settag $r1, 3, 111: exception
 x86settag $r1, 3, 112: exception
@@ -894,12 +894,12 @@ x86settag $r1, 3, 124: exception
 x86settag $r1, 3, 125: exception
 x86settag $r1, 3, 126: exception
 x86settag $r1, 3, 127: exception
-x86settag $r1, 3, 128: exception
+x86settag $r1, 3, 128: rd ^= 1
 x86settag $r1, 3, 129: exception
 x86settag $r1, 3, 130: exception
 x86settag $r1, 3, 131: exception
 x86settag $r1, 3, 132: exception
-x86settag $r1, 3, 133: exception
+x86settag $r1, 3, 133: rd ^= 32
 x86settag $r1, 3, 134: exception
 x86settag $r1, 3, 135: exception
 x86settag $r1, 3, 136: exception
@@ -934,12 +934,12 @@ x86settag $r1, 3, 164: exception
 x86settag $r1, 3, 165: exception
 x86settag $r1, 3, 166: exception
 x86settag $r1, 3, 167: exception
-x86settag $r1, 3, 168: exception
+x86settag $r1, 3, 168: rd ^= 1
 x86settag $r1, 3, 169: exception
 x86settag $r1, 3, 170: exception
 x86settag $r1, 3, 171: exception
 x86settag $r1, 3, 172: exception
-x86settag $r1, 3, 173: exception
+x86settag $r1, 3, 173: rd ^= 32
 x86settag $r1, 3, 174: exception
 x86settag $r1, 3, 175: exception
 x86settag $r1, 3, 176: exception
@@ -958,12 +958,12 @@ x86settag $r1, 3, 188: exception
 x86settag $r1, 3, 189: exception
 x86settag $r1, 3, 190: exception
 x86settag $r1, 3, 191: exception
-x86settag $r1, 3, 192: exception
+x86settag $r1, 3, 192: rd ^= 1
 x86settag $r1, 3, 193: exception
 x86settag $r1, 3, 194: exception
 x86settag $r1, 3, 195: exception
 x86settag $r1, 3, 196: exception
-x86settag $r1, 3, 197: exception
+x86settag $r1, 3, 197: rd ^= 32
 x86settag $r1, 3, 198: exception
 x86settag $r1, 3, 199: exception
 x86settag $r1, 3, 200: exception
@@ -998,12 +998,12 @@ x86settag $r1, 3, 228: exception
 x86settag $r1, 3, 229: exception
 x86settag $r1, 3, 230: exception
 x86settag $r1, 3, 231: exception
-x86settag $r1, 3, 232: exception
+x86settag $r1, 3, 232: rd ^= 1
 x86settag $r1, 3, 233: exception
 x86settag $r1, 3, 234: exception
 x86settag $r1, 3, 235: exception
 x86settag $r1, 3, 236: exception
-x86settag $r1, 3, 237: exception
+x86settag $r1, 3, 237: rd ^= 32
 x86settag $r1, 3, 238: exception
 x86settag $r1, 3, 239: exception
 x86settag $r1, 3, 240: exception
@@ -1022,12 +1022,12 @@ x86settag $r1, 3, 252: exception
 x86settag $r1, 3, 253: exception
 x86settag $r1, 3, 254: exception
 x86settag $r1, 3, 255: exception
-x86settag $r1, 4, 0: exception
+x86settag $r1, 4, 0: rd ^= 1
 x86settag $r1, 4, 1: exception
 x86settag $r1, 4, 2: exception
 x86settag $r1, 4, 3: exception
 x86settag $r1, 4, 4: exception
-x86settag $r1, 4, 5: exception
+x86settag $r1, 4, 5: rd ^= 33
 x86settag $r1, 4, 6: exception
 x86settag $r1, 4, 7: exception
 x86settag $r1, 4, 8: exception
@@ -1062,12 +1062,12 @@ x86settag $r1, 4, 36: exception
 x86settag $r1, 4, 37: exception
 x86settag $r1, 4, 38: exception
 x86settag $r1, 4, 39: exception
-x86settag $r1, 4, 40: exception
+x86settag $r1, 4, 40: rd ^= 33
 x86settag $r1, 4, 41: exception
 x86settag $r1, 4, 42: exception
 x86settag $r1, 4, 43: exception
 x86settag $r1, 4, 44: exception
-x86settag $r1, 4, 45: exception
+x86settag $r1, 4, 45: rd ^= 32
 x86settag $r1, 4, 46: exception
 x86settag $r1, 4, 47: exception
 x86settag $r1, 4, 48: exception
@@ -1086,12 +1086,12 @@ x86settag $r1, 4, 60: exception
 x86settag $r1, 4, 61: exception
 x86settag $r1, 4, 62: exception
 x86settag $r1, 4, 63: exception
-x86settag $r1, 4, 64: exception
+x86settag $r1, 4, 64: rd ^= 1
 x86settag $r1, 4, 65: exception
 x86settag $r1, 4, 66: exception
 x86settag $r1, 4, 67: exception
 x86settag $r1, 4, 68: exception
-x86settag $r1, 4, 69: exception
+x86settag $r1, 4, 69: rd ^= 33
 x86settag $r1, 4, 70: exception
 x86settag $r1, 4, 71: exception
 x86settag $r1, 4, 72: exception
@@ -1126,12 +1126,12 @@ x86settag $r1, 4, 100: exception
 x86settag $r1, 4, 101: exception
 x86settag $r1, 4, 102: exception
 x86settag $r1, 4, 103: exception
-x86settag $r1, 4, 104: exception
+x86settag $r1, 4, 104: rd ^= 33
 x86settag $r1, 4, 105: exception
 x86settag $r1, 4, 106: exception
 x86settag $r1, 4, 107: exception
 x86settag $r1, 4, 108: exception
-x86settag $r1, 4, 109: exception
+x86settag $r1, 4, 109: rd ^= 32
 x86settag $r1, 4, 110: exception
 x86settag $r1, 4, 111: exception
 x86settag $r1, 4, 112: exception
@@ -1150,12 +1150,12 @@ x86settag $r1, 4, 124: exception
 x86settag $r1, 4, 125: exception
 x86settag $r1, 4, 126: exception
 x86settag $r1, 4, 127: exception
-x86settag $r1, 4, 128: exception
+x86settag $r1, 4, 128: rd ^= 1
 x86settag $r1, 4, 129: exception
 x86settag $r1, 4, 130: exception
 x86settag $r1, 4, 131: exception
 x86settag $r1, 4, 132: exception
-x86settag $r1, 4, 133: exception
+x86settag $r1, 4, 133: rd ^= 33
 x86settag $r1, 4, 134: exception
 x86settag $r1, 4, 135: exception
 x86settag $r1, 4, 136: exception
@@ -1190,12 +1190,12 @@ x86settag $r1, 4, 164: exception
 x86settag $r1, 4, 165: exception
 x86settag $r1, 4, 166: exception
 x86settag $r1, 4, 167: exception
-x86settag $r1, 4, 168: exception
+x86settag $r1, 4, 168: rd ^= 33
 x86settag $r1, 4, 169: exception
 x86settag $r1, 4, 170: exception
 x86settag $r1, 4, 171: exception
 x86settag $r1, 4, 172: exception
-x86settag $r1, 4, 173: exception
+x86settag $r1, 4, 173: rd ^= 32
 x86settag $r1, 4, 174: exception
 x86settag $r1, 4, 175: exception
 x86settag $r1, 4, 176: exception
@@ -1214,12 +1214,12 @@ x86settag $r1, 4, 188: exception
 x86settag $r1, 4, 189: exception
 x86settag $r1, 4, 190: exception
 x86settag $r1, 4, 191: exception
-x86settag $r1, 4, 192: exception
+x86settag $r1, 4, 192: rd ^= 1
 x86settag $r1, 4, 193: exception
 x86settag $r1, 4, 194: exception
 x86settag $r1, 4, 195: exception
 x86settag $r1, 4, 196: exception
-x86settag $r1, 4, 197: exception
+x86settag $r1, 4, 197: rd ^= 33
 x86settag $r1, 4, 198: exception
 x86settag $r1, 4, 199: exception
 x86settag $r1, 4, 200: exception
@@ -1254,12 +1254,12 @@ x86settag $r1, 4, 228: exception
 x86settag $r1, 4, 229: exception
 x86settag $r1, 4, 230: exception
 x86settag $r1, 4, 231: exception
-x86settag $r1, 4, 232: exception
+x86settag $r1, 4, 232: rd ^= 33
 x86settag $r1, 4, 233: exception
 x86settag $r1, 4, 234: exception
 x86settag $r1, 4, 235: exception
 x86settag $r1, 4, 236: exception
-x86settag $r1, 4, 237: exception
+x86settag $r1, 4, 237: rd ^= 32
 x86settag $r1, 4, 238: exception
 x86settag $r1, 4, 239: exception
 x86settag $r1, 4, 240: exception
@@ -2046,524 +2046,524 @@ x86settag $r1, 7, 252: unchanged
 x86settag $r1, 7, 253: unchanged
 x86settag $r1, 7, 254: unchanged
 x86settag $r1, 7, 255: unchanged
-x86settag $r1, 8, 0: rd ^= 1
+x86settag $r1, 8, 0: exception
 x86settag $r1, 8, 1: rd ^= 2
 x86settag $r1, 8, 2: rd ^= 4
 x86settag $r1, 8, 3: rd ^= 8
 x86settag $r1, 8, 4: rd ^= 16
-x86settag $r1, 8, 5: rd ^= 32
+x86settag $r1, 8, 5: exception
 x86settag $r1, 8, 6: rd ^= 64
 x86settag $r1, 8, 7: rd ^= 128
-x86settag $r1, 8, 8: rd ^= 1
+x86settag $r1, 8, 8: exception
 x86settag $r1, 8, 9: rd ^= 2
 x86settag $r1, 8, 10: rd ^= 4
 x86settag $r1, 8, 11: rd ^= 8
 x86settag $r1, 8, 12: rd ^= 16
-x86settag $r1, 8, 13: rd ^= 32
+x86settag $r1, 8, 13: exception
 x86settag $r1, 8, 14: rd ^= 64
 x86settag $r1, 8, 15: rd ^= 128
-x86settag $r1, 8, 16: rd ^= 1
+x86settag $r1, 8, 16: exception
 x86settag $r1, 8, 17: rd ^= 2
 x86settag $r1, 8, 18: rd ^= 4
 x86settag $r1, 8, 19: rd ^= 8
 x86settag $r1, 8, 20: rd ^= 16
-x86settag $r1, 8, 21: rd ^= 32
+x86settag $r1, 8, 21: exception
 x86settag $r1, 8, 22: rd ^= 64
 x86settag $r1, 8, 23: rd ^= 128
-x86settag $r1, 8, 24: rd ^= 1
+x86settag $r1, 8, 24: exception
 x86settag $r1, 8, 25: rd ^= 2
 x86settag $r1, 8, 26: rd ^= 4
 x86settag $r1, 8, 27: rd ^= 8
 x86settag $r1, 8, 28: rd ^= 16
-x86settag $r1, 8, 29: rd ^= 32
+x86settag $r1, 8, 29: exception
 x86settag $r1, 8, 30: rd ^= 64
 x86settag $r1, 8, 31: rd ^= 128
-x86settag $r1, 8, 32: rd ^= 1
+x86settag $r1, 8, 32: exception
 x86settag $r1, 8, 33: rd ^= 2
 x86settag $r1, 8, 34: rd ^= 4
 x86settag $r1, 8, 35: rd ^= 8
 x86settag $r1, 8, 36: rd ^= 16
-x86settag $r1, 8, 37: rd ^= 32
+x86settag $r1, 8, 37: exception
 x86settag $r1, 8, 38: rd ^= 64
 x86settag $r1, 8, 39: rd ^= 128
-x86settag $r1, 8, 40: rd ^= 1
+x86settag $r1, 8, 40: exception
 x86settag $r1, 8, 41: rd ^= 2
 x86settag $r1, 8, 42: rd ^= 4
 x86settag $r1, 8, 43: rd ^= 8
 x86settag $r1, 8, 44: rd ^= 16
-x86settag $r1, 8, 45: rd ^= 32
+x86settag $r1, 8, 45: exception
 x86settag $r1, 8, 46: rd ^= 64
 x86settag $r1, 8, 47: rd ^= 128
-x86settag $r1, 8, 48: rd ^= 1
+x86settag $r1, 8, 48: exception
 x86settag $r1, 8, 49: rd ^= 2
 x86settag $r1, 8, 50: rd ^= 4
 x86settag $r1, 8, 51: rd ^= 8
 x86settag $r1, 8, 52: rd ^= 16
-x86settag $r1, 8, 53: rd ^= 32
+x86settag $r1, 8, 53: exception
 x86settag $r1, 8, 54: rd ^= 64
 x86settag $r1, 8, 55: rd ^= 128
-x86settag $r1, 8, 56: rd ^= 1
+x86settag $r1, 8, 56: exception
 x86settag $r1, 8, 57: rd ^= 2
 x86settag $r1, 8, 58: rd ^= 4
 x86settag $r1, 8, 59: rd ^= 8
 x86settag $r1, 8, 60: rd ^= 16
-x86settag $r1, 8, 61: rd ^= 32
+x86settag $r1, 8, 61: exception
 x86settag $r1, 8, 62: rd ^= 64
 x86settag $r1, 8, 63: rd ^= 128
-x86settag $r1, 8, 64: rd ^= 1
+x86settag $r1, 8, 64: exception
 x86settag $r1, 8, 65: rd ^= 2
 x86settag $r1, 8, 66: rd ^= 4
 x86settag $r1, 8, 67: rd ^= 8
 x86settag $r1, 8, 68: rd ^= 16
-x86settag $r1, 8, 69: rd ^= 32
+x86settag $r1, 8, 69: exception
 x86settag $r1, 8, 70: rd ^= 64
 x86settag $r1, 8, 71: rd ^= 128
-x86settag $r1, 8, 72: rd ^= 1
+x86settag $r1, 8, 72: exception
 x86settag $r1, 8, 73: rd ^= 2
 x86settag $r1, 8, 74: rd ^= 4
 x86settag $r1, 8, 75: rd ^= 8
 x86settag $r1, 8, 76: rd ^= 16
-x86settag $r1, 8, 77: rd ^= 32
+x86settag $r1, 8, 77: exception
 x86settag $r1, 8, 78: rd ^= 64
 x86settag $r1, 8, 79: rd ^= 128
-x86settag $r1, 8, 80: rd ^= 1
+x86settag $r1, 8, 80: exception
 x86settag $r1, 8, 81: rd ^= 2
 x86settag $r1, 8, 82: rd ^= 4
 x86settag $r1, 8, 83: rd ^= 8
 x86settag $r1, 8, 84: rd ^= 16
-x86settag $r1, 8, 85: rd ^= 32
+x86settag $r1, 8, 85: exception
 x86settag $r1, 8, 86: rd ^= 64
 x86settag $r1, 8, 87: rd ^= 128
-x86settag $r1, 8, 88: rd ^= 1
+x86settag $r1, 8, 88: exception
 x86settag $r1, 8, 89: rd ^= 2
 x86settag $r1, 8, 90: rd ^= 4
 x86settag $r1, 8, 91: rd ^= 8
 x86settag $r1, 8, 92: rd ^= 16
-x86settag $r1, 8, 93: rd ^= 32
+x86settag $r1, 8, 93: exception
 x86settag $r1, 8, 94: rd ^= 64
 x86settag $r1, 8, 95: rd ^= 128
-x86settag $r1, 8, 96: rd ^= 1
+x86settag $r1, 8, 96: exception
 x86settag $r1, 8, 97: rd ^= 2
 x86settag $r1, 8, 98: rd ^= 4
 x86settag $r1, 8, 99: rd ^= 8
 x86settag $r1, 8, 100: rd ^= 16
-x86settag $r1, 8, 101: rd ^= 32
+x86settag $r1, 8, 101: exception
 x86settag $r1, 8, 102: rd ^= 64
 x86settag $r1, 8, 103: rd ^= 128
-x86settag $r1, 8, 104: rd ^= 1
+x86settag $r1, 8, 104: exception
 x86settag $r1, 8, 105: rd ^= 2
 x86settag $r1, 8, 106: rd ^= 4
 x86settag $r1, 8, 107: rd ^= 8
 x86settag $r1, 8, 108: rd ^= 16
-x86settag $r1, 8, 109: rd ^= 32
+x86settag $r1, 8, 109: exception
 x86settag $r1, 8, 110: rd ^= 64
 x86settag $r1, 8, 111: rd ^= 128
-x86settag $r1, 8, 112: rd ^= 1
+x86settag $r1, 8, 112: exception
 x86settag $r1, 8, 113: rd ^= 2
 x86settag $r1, 8, 114: rd ^= 4
 x86settag $r1, 8, 115: rd ^= 8
 x86settag $r1, 8, 116: rd ^= 16
-x86settag $r1, 8, 117: rd ^= 32
+x86settag $r1, 8, 117: exception
 x86settag $r1, 8, 118: rd ^= 64
 x86settag $r1, 8, 119: rd ^= 128
-x86settag $r1, 8, 120: rd ^= 1
+x86settag $r1, 8, 120: exception
 x86settag $r1, 8, 121: rd ^= 2
 x86settag $r1, 8, 122: rd ^= 4
 x86settag $r1, 8, 123: rd ^= 8
 x86settag $r1, 8, 124: rd ^= 16
-x86settag $r1, 8, 125: rd ^= 32
+x86settag $r1, 8, 125: exception
 x86settag $r1, 8, 126: rd ^= 64
 x86settag $r1, 8, 127: rd ^= 128
-x86settag $r1, 8, 128: rd ^= 1
+x86settag $r1, 8, 128: exception
 x86settag $r1, 8, 129: rd ^= 2
 x86settag $r1, 8, 130: rd ^= 4
 x86settag $r1, 8, 131: rd ^= 8
 x86settag $r1, 8, 132: rd ^= 16
-x86settag $r1, 8, 133: rd ^= 32
+x86settag $r1, 8, 133: exception
 x86settag $r1, 8, 134: rd ^= 64
 x86settag $r1, 8, 135: rd ^= 128
-x86settag $r1, 8, 136: rd ^= 1
+x86settag $r1, 8, 136: exception
 x86settag $r1, 8, 137: rd ^= 2
 x86settag $r1, 8, 138: rd ^= 4
 x86settag $r1, 8, 139: rd ^= 8
 x86settag $r1, 8, 140: rd ^= 16
-x86settag $r1, 8, 141: rd ^= 32
+x86settag $r1, 8, 141: exception
 x86settag $r1, 8, 142: rd ^= 64
 x86settag $r1, 8, 143: rd ^= 128
-x86settag $r1, 8, 144: rd ^= 1
+x86settag $r1, 8, 144: exception
 x86settag $r1, 8, 145: rd ^= 2
 x86settag $r1, 8, 146: rd ^= 4
 x86settag $r1, 8, 147: rd ^= 8
 x86settag $r1, 8, 148: rd ^= 16
-x86settag $r1, 8, 149: rd ^= 32
+x86settag $r1, 8, 149: exception
 x86settag $r1, 8, 150: rd ^= 64
 x86settag $r1, 8, 151: rd ^= 128
-x86settag $r1, 8, 152: rd ^= 1
+x86settag $r1, 8, 152: exception
 x86settag $r1, 8, 153: rd ^= 2
 x86settag $r1, 8, 154: rd ^= 4
 x86settag $r1, 8, 155: rd ^= 8
 x86settag $r1, 8, 156: rd ^= 16
-x86settag $r1, 8, 157: rd ^= 32
+x86settag $r1, 8, 157: exception
 x86settag $r1, 8, 158: rd ^= 64
 x86settag $r1, 8, 159: rd ^= 128
-x86settag $r1, 8, 160: rd ^= 1
+x86settag $r1, 8, 160: exception
 x86settag $r1, 8, 161: rd ^= 2
 x86settag $r1, 8, 162: rd ^= 4
 x86settag $r1, 8, 163: rd ^= 8
 x86settag $r1, 8, 164: rd ^= 16
-x86settag $r1, 8, 165: rd ^= 32
+x86settag $r1, 8, 165: exception
 x86settag $r1, 8, 166: rd ^= 64
 x86settag $r1, 8, 167: rd ^= 128
-x86settag $r1, 8, 168: rd ^= 1
+x86settag $r1, 8, 168: exception
 x86settag $r1, 8, 169: rd ^= 2
 x86settag $r1, 8, 170: rd ^= 4
 x86settag $r1, 8, 171: rd ^= 8
 x86settag $r1, 8, 172: rd ^= 16
-x86settag $r1, 8, 173: rd ^= 32
+x86settag $r1, 8, 173: exception
 x86settag $r1, 8, 174: rd ^= 64
 x86settag $r1, 8, 175: rd ^= 128
-x86settag $r1, 8, 176: rd ^= 1
+x86settag $r1, 8, 176: exception
 x86settag $r1, 8, 177: rd ^= 2
 x86settag $r1, 8, 178: rd ^= 4
 x86settag $r1, 8, 179: rd ^= 8
 x86settag $r1, 8, 180: rd ^= 16
-x86settag $r1, 8, 181: rd ^= 32
+x86settag $r1, 8, 181: exception
 x86settag $r1, 8, 182: rd ^= 64
 x86settag $r1, 8, 183: rd ^= 128
-x86settag $r1, 8, 184: rd ^= 1
+x86settag $r1, 8, 184: exception
 x86settag $r1, 8, 185: rd ^= 2
 x86settag $r1, 8, 186: rd ^= 4
 x86settag $r1, 8, 187: rd ^= 8
 x86settag $r1, 8, 188: rd ^= 16
-x86settag $r1, 8, 189: rd ^= 32
+x86settag $r1, 8, 189: exception
 x86settag $r1, 8, 190: rd ^= 64
 x86settag $r1, 8, 191: rd ^= 128
-x86settag $r1, 8, 192: rd ^= 1
+x86settag $r1, 8, 192: exception
 x86settag $r1, 8, 193: rd ^= 2
 x86settag $r1, 8, 194: rd ^= 4
 x86settag $r1, 8, 195: rd ^= 8
 x86settag $r1, 8, 196: rd ^= 16
-x86settag $r1, 8, 197: rd ^= 32
+x86settag $r1, 8, 197: exception
 x86settag $r1, 8, 198: rd ^= 64
 x86settag $r1, 8, 199: rd ^= 128
-x86settag $r1, 8, 200: rd ^= 1
+x86settag $r1, 8, 200: exception
 x86settag $r1, 8, 201: rd ^= 2
 x86settag $r1, 8, 202: rd ^= 4
 x86settag $r1, 8, 203: rd ^= 8
 x86settag $r1, 8, 204: rd ^= 16
-x86settag $r1, 8, 205: rd ^= 32
+x86settag $r1, 8, 205: exception
 x86settag $r1, 8, 206: rd ^= 64
 x86settag $r1, 8, 207: rd ^= 128
-x86settag $r1, 8, 208: rd ^= 1
+x86settag $r1, 8, 208: exception
 x86settag $r1, 8, 209: rd ^= 2
 x86settag $r1, 8, 210: rd ^= 4
 x86settag $r1, 8, 211: rd ^= 8
 x86settag $r1, 8, 212: rd ^= 16
-x86settag $r1, 8, 213: rd ^= 32
+x86settag $r1, 8, 213: exception
 x86settag $r1, 8, 214: rd ^= 64
 x86settag $r1, 8, 215: rd ^= 128
-x86settag $r1, 8, 216: rd ^= 1
+x86settag $r1, 8, 216: exception
 x86settag $r1, 8, 217: rd ^= 2
 x86settag $r1, 8, 218: rd ^= 4
 x86settag $r1, 8, 219: rd ^= 8
 x86settag $r1, 8, 220: rd ^= 16
-x86settag $r1, 8, 221: rd ^= 32
+x86settag $r1, 8, 221: exception
 x86settag $r1, 8, 222: rd ^= 64
 x86settag $r1, 8, 223: rd ^= 128
-x86settag $r1, 8, 224: rd ^= 1
+x86settag $r1, 8, 224: exception
 x86settag $r1, 8, 225: rd ^= 2
 x86settag $r1, 8, 226: rd ^= 4
 x86settag $r1, 8, 227: rd ^= 8
 x86settag $r1, 8, 228: rd ^= 16
-x86settag $r1, 8, 229: rd ^= 32
+x86settag $r1, 8, 229: exception
 x86settag $r1, 8, 230: rd ^= 64
 x86settag $r1, 8, 231: rd ^= 128
-x86settag $r1, 8, 232: rd ^= 1
+x86settag $r1, 8, 232: exception
 x86settag $r1, 8, 233: rd ^= 2
 x86settag $r1, 8, 234: rd ^= 4
 x86settag $r1, 8, 235: rd ^= 8
 x86settag $r1, 8, 236: rd ^= 16
-x86settag $r1, 8, 237: rd ^= 32
+x86settag $r1, 8, 237: exception
 x86settag $r1, 8, 238: rd ^= 64
 x86settag $r1, 8, 239: rd ^= 128
-x86settag $r1, 8, 240: rd ^= 1
+x86settag $r1, 8, 240: exception
 x86settag $r1, 8, 241: rd ^= 2
 x86settag $r1, 8, 242: rd ^= 4
 x86settag $r1, 8, 243: rd ^= 8
 x86settag $r1, 8, 244: rd ^= 16
-x86settag $r1, 8, 245: rd ^= 32
+x86settag $r1, 8, 245: exception
 x86settag $r1, 8, 246: rd ^= 64
 x86settag $r1, 8, 247: rd ^= 128
-x86settag $r1, 8, 248: rd ^= 1
+x86settag $r1, 8, 248: exception
 x86settag $r1, 8, 249: rd ^= 2
 x86settag $r1, 8, 250: rd ^= 4
 x86settag $r1, 8, 251: rd ^= 8
 x86settag $r1, 8, 252: rd ^= 16
-x86settag $r1, 8, 253: rd ^= 32
+x86settag $r1, 8, 253: exception
 x86settag $r1, 8, 254: rd ^= 64
 x86settag $r1, 8, 255: rd ^= 128
-x86settag $r1, 9, 0: exception
+x86settag $r1, 9, 0: rd ^= 1
 x86settag $r1, 9, 1: exception
 x86settag $r1, 9, 2: exception
 x86settag $r1, 9, 3: exception
 x86settag $r1, 9, 4: exception
-x86settag $r1, 9, 5: exception
+x86settag $r1, 9, 5: rd ^= 32
 x86settag $r1, 9, 6: exception
 x86settag $r1, 9, 7: exception
-x86settag $r1, 9, 8: exception
+x86settag $r1, 9, 8: rd ^= 1
 x86settag $r1, 9, 9: exception
 x86settag $r1, 9, 10: exception
 x86settag $r1, 9, 11: exception
 x86settag $r1, 9, 12: exception
-x86settag $r1, 9, 13: exception
+x86settag $r1, 9, 13: rd ^= 32
 x86settag $r1, 9, 14: exception
 x86settag $r1, 9, 15: exception
-x86settag $r1, 9, 16: exception
+x86settag $r1, 9, 16: rd ^= 1
 x86settag $r1, 9, 17: exception
 x86settag $r1, 9, 18: exception
 x86settag $r1, 9, 19: exception
 x86settag $r1, 9, 20: exception
-x86settag $r1, 9, 21: exception
+x86settag $r1, 9, 21: rd ^= 32
 x86settag $r1, 9, 22: exception
 x86settag $r1, 9, 23: exception
-x86settag $r1, 9, 24: exception
+x86settag $r1, 9, 24: rd ^= 1
 x86settag $r1, 9, 25: exception
 x86settag $r1, 9, 26: exception
 x86settag $r1, 9, 27: exception
 x86settag $r1, 9, 28: exception
-x86settag $r1, 9, 29: exception
+x86settag $r1, 9, 29: rd ^= 32
 x86settag $r1, 9, 30: exception
 x86settag $r1, 9, 31: exception
-x86settag $r1, 9, 32: exception
+x86settag $r1, 9, 32: rd ^= 1
 x86settag $r1, 9, 33: exception
 x86settag $r1, 9, 34: exception
 x86settag $r1, 9, 35: exception
 x86settag $r1, 9, 36: exception
-x86settag $r1, 9, 37: exception
+x86settag $r1, 9, 37: rd ^= 32
 x86settag $r1, 9, 38: exception
 x86settag $r1, 9, 39: exception
-x86settag $r1, 9, 40: exception
+x86settag $r1, 9, 40: rd ^= 1
 x86settag $r1, 9, 41: exception
 x86settag $r1, 9, 42: exception
 x86settag $r1, 9, 43: exception
 x86settag $r1, 9, 44: exception
-x86settag $r1, 9, 45: exception
+x86settag $r1, 9, 45: rd ^= 32
 x86settag $r1, 9, 46: exception
 x86settag $r1, 9, 47: exception
-x86settag $r1, 9, 48: exception
+x86settag $r1, 9, 48: rd ^= 1
 x86settag $r1, 9, 49: exception
 x86settag $r1, 9, 50: exception
 x86settag $r1, 9, 51: exception
 x86settag $r1, 9, 52: exception
-x86settag $r1, 9, 53: exception
+x86settag $r1, 9, 53: rd ^= 32
 x86settag $r1, 9, 54: exception
 x86settag $r1, 9, 55: exception
-x86settag $r1, 9, 56: exception
+x86settag $r1, 9, 56: rd ^= 1
 x86settag $r1, 9, 57: exception
 x86settag $r1, 9, 58: exception
 x86settag $r1, 9, 59: exception
 x86settag $r1, 9, 60: exception
-x86settag $r1, 9, 61: exception
+x86settag $r1, 9, 61: rd ^= 32
 x86settag $r1, 9, 62: exception
 x86settag $r1, 9, 63: exception
-x86settag $r1, 9, 64: exception
+x86settag $r1, 9, 64: rd ^= 1
 x86settag $r1, 9, 65: exception
 x86settag $r1, 9, 66: exception
 x86settag $r1, 9, 67: exception
 x86settag $r1, 9, 68: exception
-x86settag $r1, 9, 69: exception
+x86settag $r1, 9, 69: rd ^= 32
 x86settag $r1, 9, 70: exception
 x86settag $r1, 9, 71: exception
-x86settag $r1, 9, 72: exception
+x86settag $r1, 9, 72: rd ^= 1
 x86settag $r1, 9, 73: exception
 x86settag $r1, 9, 74: exception
 x86settag $r1, 9, 75: exception
 x86settag $r1, 9, 76: exception
-x86settag $r1, 9, 77: exception
+x86settag $r1, 9, 77: rd ^= 32
 x86settag $r1, 9, 78: exception
 x86settag $r1, 9, 79: exception
-x86settag $r1, 9, 80: exception
+x86settag $r1, 9, 80: rd ^= 1
 x86settag $r1, 9, 81: exception
 x86settag $r1, 9, 82: exception
 x86settag $r1, 9, 83: exception
 x86settag $r1, 9, 84: exception
-x86settag $r1, 9, 85: exception
+x86settag $r1, 9, 85: rd ^= 32
 x86settag $r1, 9, 86: exception
 x86settag $r1, 9, 87: exception
-x86settag $r1, 9, 88: exception
+x86settag $r1, 9, 88: rd ^= 1
 x86settag $r1, 9, 89: exception
 x86settag $r1, 9, 90: exception
 x86settag $r1, 9, 91: exception
 x86settag $r1, 9, 92: exception
-x86settag $r1, 9, 93: exception
+x86settag $r1, 9, 93: rd ^= 32
 x86settag $r1, 9, 94: exception
 x86settag $r1, 9, 95: exception
-x86settag $r1, 9, 96: exception
+x86settag $r1, 9, 96: rd ^= 1
 x86settag $r1, 9, 97: exception
 x86settag $r1, 9, 98: exception
 x86settag $r1, 9, 99: exception
 x86settag $r1, 9, 100: exception
-x86settag $r1, 9, 101: exception
+x86settag $r1, 9, 101: rd ^= 32
 x86settag $r1, 9, 102: exception
 x86settag $r1, 9, 103: exception
-x86settag $r1, 9, 104: exception
+x86settag $r1, 9, 104: rd ^= 1
 x86settag $r1, 9, 105: exception
 x86settag $r1, 9, 106: exception
 x86settag $r1, 9, 107: exception
 x86settag $r1, 9, 108: exception
-x86settag $r1, 9, 109: exception
+x86settag $r1, 9, 109: rd ^= 32
 x86settag $r1, 9, 110: exception
 x86settag $r1, 9, 111: exception
-x86settag $r1, 9, 112: exception
+x86settag $r1, 9, 112: rd ^= 1
 x86settag $r1, 9, 113: exception
 x86settag $r1, 9, 114: exception
 x86settag $r1, 9, 115: exception
 x86settag $r1, 9, 116: exception
-x86settag $r1, 9, 117: exception
+x86settag $r1, 9, 117: rd ^= 32
 x86settag $r1, 9, 118: exception
 x86settag $r1, 9, 119: exception
-x86settag $r1, 9, 120: exception
+x86settag $r1, 9, 120: rd ^= 1
 x86settag $r1, 9, 121: exception
 x86settag $r1, 9, 122: exception
 x86settag $r1, 9, 123: exception
 x86settag $r1, 9, 124: exception
-x86settag $r1, 9, 125: exception
+x86settag $r1, 9, 125: rd ^= 32
 x86settag $r1, 9, 126: exception
 x86settag $r1, 9, 127: exception
-x86settag $r1, 9, 128: exception
+x86settag $r1, 9, 128: rd ^= 1
 x86settag $r1, 9, 129: exception
 x86settag $r1, 9, 130: exception
 x86settag $r1, 9, 131: exception
 x86settag $r1, 9, 132: exception
-x86settag $r1, 9, 133: exception
+x86settag $r1, 9, 133: rd ^= 32
 x86settag $r1, 9, 134: exception
 x86settag $r1, 9, 135: exception
-x86settag $r1, 9, 136: exception
+x86settag $r1, 9, 136: rd ^= 1
 x86settag $r1, 9, 137: exception
 x86settag $r1, 9, 138: exception
 x86settag $r1, 9, 139: exception
 x86settag $r1, 9, 140: exception
-x86settag $r1, 9, 141: exception
+x86settag $r1, 9, 141: rd ^= 32
 x86settag $r1, 9, 142: exception
 x86settag $r1, 9, 143: exception
-x86settag $r1, 9, 144: exception
+x86settag $r1, 9, 144: rd ^= 1
 x86settag $r1, 9, 145: exception
 x86settag $r1, 9, 146: exception
 x86settag $r1, 9, 147: exception
 x86settag $r1, 9, 148: exception
-x86settag $r1, 9, 149: exception
+x86settag $r1, 9, 149: rd ^= 32
 x86settag $r1, 9, 150: exception
 x86settag $r1, 9, 151: exception
-x86settag $r1, 9, 152: exception
+x86settag $r1, 9, 152: rd ^= 1
 x86settag $r1, 9, 153: exception
 x86settag $r1, 9, 154: exception
 x86settag $r1, 9, 155: exception
 x86settag $r1, 9, 156: exception
-x86settag $r1, 9, 157: exception
+x86settag $r1, 9, 157: rd ^= 32
 x86settag $r1, 9, 158: exception
 x86settag $r1, 9, 159: exception
-x86settag $r1, 9, 160: exception
+x86settag $r1, 9, 160: rd ^= 1
 x86settag $r1, 9, 161: exception
 x86settag $r1, 9, 162: exception
 x86settag $r1, 9, 163: exception
 x86settag $r1, 9, 164: exception
-x86settag $r1, 9, 165: exception
+x86settag $r1, 9, 165: rd ^= 32
 x86settag $r1, 9, 166: exception
 x86settag $r1, 9, 167: exception
-x86settag $r1, 9, 168: exception
+x86settag $r1, 9, 168: rd ^= 1
 x86settag $r1, 9, 169: exception
 x86settag $r1, 9, 170: exception
 x86settag $r1, 9, 171: exception
 x86settag $r1, 9, 172: exception
-x86settag $r1, 9, 173: exception
+x86settag $r1, 9, 173: rd ^= 32
 x86settag $r1, 9, 174: exception
 x86settag $r1, 9, 175: exception
-x86settag $r1, 9, 176: exception
+x86settag $r1, 9, 176: rd ^= 1
 x86settag $r1, 9, 177: exception
 x86settag $r1, 9, 178: exception
 x86settag $r1, 9, 179: exception
 x86settag $r1, 9, 180: exception
-x86settag $r1, 9, 181: exception
+x86settag $r1, 9, 181: rd ^= 32
 x86settag $r1, 9, 182: exception
 x86settag $r1, 9, 183: exception
-x86settag $r1, 9, 184: exception
+x86settag $r1, 9, 184: rd ^= 1
 x86settag $r1, 9, 185: exception
 x86settag $r1, 9, 186: exception
 x86settag $r1, 9, 187: exception
 x86settag $r1, 9, 188: exception
-x86settag $r1, 9, 189: exception
+x86settag $r1, 9, 189: rd ^= 32
 x86settag $r1, 9, 190: exception
 x86settag $r1, 9, 191: exception
-x86settag $r1, 9, 192: exception
+x86settag $r1, 9, 192: rd ^= 1
 x86settag $r1, 9, 193: exception
 x86settag $r1, 9, 194: exception
 x86settag $r1, 9, 195: exception
 x86settag $r1, 9, 196: exception
-x86settag $r1, 9, 197: exception
+x86settag $r1, 9, 197: rd ^= 32
 x86settag $r1, 9, 198: exception
 x86settag $r1, 9, 199: exception
-x86settag $r1, 9, 200: exception
+x86settag $r1, 9, 200: rd ^= 1
 x86settag $r1, 9, 201: exception
 x86settag $r1, 9, 202: exception
 x86settag $r1, 9, 203: exception
 x86settag $r1, 9, 204: exception
-x86settag $r1, 9, 205: exception
+x86settag $r1, 9, 205: rd ^= 32
 x86settag $r1, 9, 206: exception
 x86settag $r1, 9, 207: exception
-x86settag $r1, 9, 208: exception
+x86settag $r1, 9, 208: rd ^= 1
 x86settag $r1, 9, 209: exception
 x86settag $r1, 9, 210: exception
 x86settag $r1, 9, 211: exception
 x86settag $r1, 9, 212: exception
-x86settag $r1, 9, 213: exception
+x86settag $r1, 9, 213: rd ^= 32
 x86settag $r1, 9, 214: exception
 x86settag $r1, 9, 215: exception
-x86settag $r1, 9, 216: exception
+x86settag $r1, 9, 216: rd ^= 1
 x86settag $r1, 9, 217: exception
 x86settag $r1, 9, 218: exception
 x86settag $r1, 9, 219: exception
 x86settag $r1, 9, 220: exception
-x86settag $r1, 9, 221: exception
+x86settag $r1, 9, 221: rd ^= 32
 x86settag $r1, 9, 222: exception
 x86settag $r1, 9, 223: exception
-x86settag $r1, 9, 224: exception
+x86settag $r1, 9, 224: rd ^= 1
 x86settag $r1, 9, 225: exception
 x86settag $r1, 9, 226: exception
 x86settag $r1, 9, 227: exception
 x86settag $r1, 9, 228: exception
-x86settag $r1, 9, 229: exception
+x86settag $r1, 9, 229: rd ^= 32
 x86settag $r1, 9, 230: exception
 x86settag $r1, 9, 231: exception
-x86settag $r1, 9, 232: exception
+x86settag $r1, 9, 232: rd ^= 1
 x86settag $r1, 9, 233: exception
 x86settag $r1, 9, 234: exception
 x86settag $r1, 9, 235: exception
 x86settag $r1, 9, 236: exception
-x86settag $r1, 9, 237: exception
+x86settag $r1, 9, 237: rd ^= 32
 x86settag $r1, 9, 238: exception
 x86settag $r1, 9, 239: exception
-x86settag $r1, 9, 240: exception
+x86settag $r1, 9, 240: rd ^= 1
 x86settag $r1, 9, 241: exception
 x86settag $r1, 9, 242: exception
 x86settag $r1, 9, 243: exception
 x86settag $r1, 9, 244: exception
-x86settag $r1, 9, 245: exception
+x86settag $r1, 9, 245: rd ^= 32
 x86settag $r1, 9, 246: exception
 x86settag $r1, 9, 247: exception
-x86settag $r1, 9, 248: exception
+x86settag $r1, 9, 248: rd ^= 1
 x86settag $r1, 9, 249: exception
 x86settag $r1, 9, 250: exception
 x86settag $r1, 9, 251: exception
 x86settag $r1, 9, 252: exception
-x86settag $r1, 9, 253: exception
+x86settag $r1, 9, 253: rd ^= 32
 x86settag $r1, 9, 254: exception
 x86settag $r1, 9, 255: exception
-x86settag $r1, 10, 0: exception
+x86settag $r1, 10, 0: unchanged
 x86settag $r1, 10, 1: exception
 x86settag $r1, 10, 2: exception
 x86settag $r1, 10, 3: exception
 x86settag $r1, 10, 4: exception
-x86settag $r1, 10, 5: exception
+x86settag $r1, 10, 5: unchanged
 x86settag $r1, 10, 6: exception
 x86settag $r1, 10, 7: exception
 x86settag $r1, 10, 8: exception
@@ -2598,12 +2598,12 @@ x86settag $r1, 10, 36: exception
 x86settag $r1, 10, 37: exception
 x86settag $r1, 10, 38: exception
 x86settag $r1, 10, 39: exception
-x86settag $r1, 10, 40: exception
+x86settag $r1, 10, 40: unchanged
 x86settag $r1, 10, 41: exception
 x86settag $r1, 10, 42: exception
 x86settag $r1, 10, 43: exception
 x86settag $r1, 10, 44: exception
-x86settag $r1, 10, 45: exception
+x86settag $r1, 10, 45: unchanged
 x86settag $r1, 10, 46: exception
 x86settag $r1, 10, 47: exception
 x86settag $r1, 10, 48: exception
@@ -2622,12 +2622,12 @@ x86settag $r1, 10, 60: exception
 x86settag $r1, 10, 61: exception
 x86settag $r1, 10, 62: exception
 x86settag $r1, 10, 63: exception
-x86settag $r1, 10, 64: exception
+x86settag $r1, 10, 64: unchanged
 x86settag $r1, 10, 65: exception
 x86settag $r1, 10, 66: exception
 x86settag $r1, 10, 67: exception
 x86settag $r1, 10, 68: exception
-x86settag $r1, 10, 69: exception
+x86settag $r1, 10, 69: unchanged
 x86settag $r1, 10, 70: exception
 x86settag $r1, 10, 71: exception
 x86settag $r1, 10, 72: exception
@@ -2662,12 +2662,12 @@ x86settag $r1, 10, 100: exception
 x86settag $r1, 10, 101: exception
 x86settag $r1, 10, 102: exception
 x86settag $r1, 10, 103: exception
-x86settag $r1, 10, 104: exception
+x86settag $r1, 10, 104: unchanged
 x86settag $r1, 10, 105: exception
 x86settag $r1, 10, 106: exception
 x86settag $r1, 10, 107: exception
 x86settag $r1, 10, 108: exception
-x86settag $r1, 10, 109: exception
+x86settag $r1, 10, 109: unchanged
 x86settag $r1, 10, 110: exception
 x86settag $r1, 10, 111: exception
 x86settag $r1, 10, 112: exception
@@ -2686,12 +2686,12 @@ x86settag $r1, 10, 124: exception
 x86settag $r1, 10, 125: exception
 x86settag $r1, 10, 126: exception
 x86settag $r1, 10, 127: exception
-x86settag $r1, 10, 128: exception
+x86settag $r1, 10, 128: unchanged
 x86settag $r1, 10, 129: exception
 x86settag $r1, 10, 130: exception
 x86settag $r1, 10, 131: exception
 x86settag $r1, 10, 132: exception
-x86settag $r1, 10, 133: exception
+x86settag $r1, 10, 133: unchanged
 x86settag $r1, 10, 134: exception
 x86settag $r1, 10, 135: exception
 x86settag $r1, 10, 136: exception
@@ -2726,12 +2726,12 @@ x86settag $r1, 10, 164: exception
 x86settag $r1, 10, 165: exception
 x86settag $r1, 10, 166: exception
 x86settag $r1, 10, 167: exception
-x86settag $r1, 10, 168: exception
+x86settag $r1, 10, 168: unchanged
 x86settag $r1, 10, 169: exception
 x86settag $r1, 10, 170: exception
 x86settag $r1, 10, 171: exception
 x86settag $r1, 10, 172: exception
-x86settag $r1, 10, 173: exception
+x86settag $r1, 10, 173: unchanged
 x86settag $r1, 10, 174: exception
 x86settag $r1, 10, 175: exception
 x86settag $r1, 10, 176: exception
@@ -2750,12 +2750,12 @@ x86settag $r1, 10, 188: exception
 x86settag $r1, 10, 189: exception
 x86settag $r1, 10, 190: exception
 x86settag $r1, 10, 191: exception
-x86settag $r1, 10, 192: exception
+x86settag $r1, 10, 192: unchanged
 x86settag $r1, 10, 193: exception
 x86settag $r1, 10, 194: exception
 x86settag $r1, 10, 195: exception
 x86settag $r1, 10, 196: exception
-x86settag $r1, 10, 197: exception
+x86settag $r1, 10, 197: unchanged
 x86settag $r1, 10, 198: exception
 x86settag $r1, 10, 199: exception
 x86settag $r1, 10, 200: exception
@@ -2790,12 +2790,12 @@ x86settag $r1, 10, 228: exception
 x86settag $r1, 10, 229: exception
 x86settag $r1, 10, 230: exception
 x86settag $r1, 10, 231: exception
-x86settag $r1, 10, 232: exception
+x86settag $r1, 10, 232: unchanged
 x86settag $r1, 10, 233: exception
 x86settag $r1, 10, 234: exception
 x86settag $r1, 10, 235: exception
 x86settag $r1, 10, 236: exception
-x86settag $r1, 10, 237: exception
+x86settag $r1, 10, 237: unchanged
 x86settag $r1, 10, 238: exception
 x86settag $r1, 10, 239: exception
 x86settag $r1, 10, 240: exception
@@ -2814,12 +2814,12 @@ x86settag $r1, 10, 252: exception
 x86settag $r1, 10, 253: exception
 x86settag $r1, 10, 254: exception
 x86settag $r1, 10, 255: exception
-x86settag $r1, 11, 0: exception
+x86settag $r1, 11, 0: rd ^= 1
 x86settag $r1, 11, 1: exception
 x86settag $r1, 11, 2: exception
 x86settag $r1, 11, 3: exception
 x86settag $r1, 11, 4: exception
-x86settag $r1, 11, 5: exception
+x86settag $r1, 11, 5: rd ^= 32
 x86settag $r1, 11, 6: exception
 x86settag $r1, 11, 7: exception
 x86settag $r1, 11, 8: exception
@@ -2854,12 +2854,12 @@ x86settag $r1, 11, 36: exception
 x86settag $r1, 11, 37: exception
 x86settag $r1, 11, 38: exception
 x86settag $r1, 11, 39: exception
-x86settag $r1, 11, 40: exception
+x86settag $r1, 11, 40: rd ^= 1
 x86settag $r1, 11, 41: exception
 x86settag $r1, 11, 42: exception
 x86settag $r1, 11, 43: exception
 x86settag $r1, 11, 44: exception
-x86settag $r1, 11, 45: exception
+x86settag $r1, 11, 45: rd ^= 32
 x86settag $r1, 11, 46: exception
 x86settag $r1, 11, 47: exception
 x86settag $r1, 11, 48: exception
@@ -2878,12 +2878,12 @@ x86settag $r1, 11, 60: exception
 x86settag $r1, 11, 61: exception
 x86settag $r1, 11, 62: exception
 x86settag $r1, 11, 63: exception
-x86settag $r1, 11, 64: exception
+x86settag $r1, 11, 64: rd ^= 1
 x86settag $r1, 11, 65: exception
 x86settag $r1, 11, 66: exception
 x86settag $r1, 11, 67: exception
 x86settag $r1, 11, 68: exception
-x86settag $r1, 11, 69: exception
+x86settag $r1, 11, 69: rd ^= 32
 x86settag $r1, 11, 70: exception
 x86settag $r1, 11, 71: exception
 x86settag $r1, 11, 72: exception
@@ -2918,12 +2918,12 @@ x86settag $r1, 11, 100: exception
 x86settag $r1, 11, 101: exception
 x86settag $r1, 11, 102: exception
 x86settag $r1, 11, 103: exception
-x86settag $r1, 11, 104: exception
+x86settag $r1, 11, 104: rd ^= 1
 x86settag $r1, 11, 105: exception
 x86settag $r1, 11, 106: exception
 x86settag $r1, 11, 107: exception
 x86settag $r1, 11, 108: exception
-x86settag $r1, 11, 109: exception
+x86settag $r1, 11, 109: rd ^= 32
 x86settag $r1, 11, 110: exception
 x86settag $r1, 11, 111: exception
 x86settag $r1, 11, 112: exception
@@ -2942,12 +2942,12 @@ x86settag $r1, 11, 124: exception
 x86settag $r1, 11, 125: exception
 x86settag $r1, 11, 126: exception
 x86settag $r1, 11, 127: exception
-x86settag $r1, 11, 128: exception
+x86settag $r1, 11, 128: rd ^= 1
 x86settag $r1, 11, 129: exception
 x86settag $r1, 11, 130: exception
 x86settag $r1, 11, 131: exception
 x86settag $r1, 11, 132: exception
-x86settag $r1, 11, 133: exception
+x86settag $r1, 11, 133: rd ^= 32
 x86settag $r1, 11, 134: exception
 x86settag $r1, 11, 135: exception
 x86settag $r1, 11, 136: exception
@@ -2982,12 +2982,12 @@ x86settag $r1, 11, 164: exception
 x86settag $r1, 11, 165: exception
 x86settag $r1, 11, 166: exception
 x86settag $r1, 11, 167: exception
-x86settag $r1, 11, 168: exception
+x86settag $r1, 11, 168: rd ^= 1
 x86settag $r1, 11, 169: exception
 x86settag $r1, 11, 170: exception
 x86settag $r1, 11, 171: exception
 x86settag $r1, 11, 172: exception
-x86settag $r1, 11, 173: exception
+x86settag $r1, 11, 173: rd ^= 32
 x86settag $r1, 11, 174: exception
 x86settag $r1, 11, 175: exception
 x86settag $r1, 11, 176: exception
@@ -3006,12 +3006,12 @@ x86settag $r1, 11, 188: exception
 x86settag $r1, 11, 189: exception
 x86settag $r1, 11, 190: exception
 x86settag $r1, 11, 191: exception
-x86settag $r1, 11, 192: exception
+x86settag $r1, 11, 192: rd ^= 1
 x86settag $r1, 11, 193: exception
 x86settag $r1, 11, 194: exception
 x86settag $r1, 11, 195: exception
 x86settag $r1, 11, 196: exception
-x86settag $r1, 11, 197: exception
+x86settag $r1, 11, 197: rd ^= 32
 x86settag $r1, 11, 198: exception
 x86settag $r1, 11, 199: exception
 x86settag $r1, 11, 200: exception
@@ -3046,12 +3046,12 @@ x86settag $r1, 11, 228: exception
 x86settag $r1, 11, 229: exception
 x86settag $r1, 11, 230: exception
 x86settag $r1, 11, 231: exception
-x86settag $r1, 11, 232: exception
+x86settag $r1, 11, 232: rd ^= 1
 x86settag $r1, 11, 233: exception
 x86settag $r1, 11, 234: exception
 x86settag $r1, 11, 235: exception
 x86settag $r1, 11, 236: exception
-x86settag $r1, 11, 237: exception
+x86settag $r1, 11, 237: rd ^= 32
 x86settag $r1, 11, 238: exception
 x86settag $r1, 11, 239: exception
 x86settag $r1, 11, 240: exception
@@ -3070,12 +3070,12 @@ x86settag $r1, 11, 252: exception
 x86settag $r1, 11, 253: exception
 x86settag $r1, 11, 254: exception
 x86settag $r1, 11, 255: exception
-x86settag $r1, 12, 0: exception
+x86settag $r1, 12, 0: rd ^= 1
 x86settag $r1, 12, 1: exception
 x86settag $r1, 12, 2: exception
 x86settag $r1, 12, 3: exception
 x86settag $r1, 12, 4: exception
-x86settag $r1, 12, 5: exception
+x86settag $r1, 12, 5: rd ^= 33
 x86settag $r1, 12, 6: exception
 x86settag $r1, 12, 7: exception
 x86settag $r1, 12, 8: exception
@@ -3110,12 +3110,12 @@ x86settag $r1, 12, 36: exception
 x86settag $r1, 12, 37: exception
 x86settag $r1, 12, 38: exception
 x86settag $r1, 12, 39: exception
-x86settag $r1, 12, 40: exception
+x86settag $r1, 12, 40: rd ^= 33
 x86settag $r1, 12, 41: exception
 x86settag $r1, 12, 42: exception
 x86settag $r1, 12, 43: exception
 x86settag $r1, 12, 44: exception
-x86settag $r1, 12, 45: exception
+x86settag $r1, 12, 45: rd ^= 32
 x86settag $r1, 12, 46: exception
 x86settag $r1, 12, 47: exception
 x86settag $r1, 12, 48: exception
@@ -3134,12 +3134,12 @@ x86settag $r1, 12, 60: exception
 x86settag $r1, 12, 61: exception
 x86settag $r1, 12, 62: exception
 x86settag $r1, 12, 63: exception
-x86settag $r1, 12, 64: exception
+x86settag $r1, 12, 64: rd ^= 1
 x86settag $r1, 12, 65: exception
 x86settag $r1, 12, 66: exception
 x86settag $r1, 12, 67: exception
 x86settag $r1, 12, 68: exception
-x86settag $r1, 12, 69: exception
+x86settag $r1, 12, 69: rd ^= 33
 x86settag $r1, 12, 70: exception
 x86settag $r1, 12, 71: exception
 x86settag $r1, 12, 72: exception
@@ -3174,12 +3174,12 @@ x86settag $r1, 12, 100: exception
 x86settag $r1, 12, 101: exception
 x86settag $r1, 12, 102: exception
 x86settag $r1, 12, 103: exception
-x86settag $r1, 12, 104: exception
+x86settag $r1, 12, 104: rd ^= 33
 x86settag $r1, 12, 105: exception
 x86settag $r1, 12, 106: exception
 x86settag $r1, 12, 107: exception
 x86settag $r1, 12, 108: exception
-x86settag $r1, 12, 109: exception
+x86settag $r1, 12, 109: rd ^= 32
 x86settag $r1, 12, 110: exception
 x86settag $r1, 12, 111: exception
 x86settag $r1, 12, 112: exception
@@ -3198,12 +3198,12 @@ x86settag $r1, 12, 124: exception
 x86settag $r1, 12, 125: exception
 x86settag $r1, 12, 126: exception
 x86settag $r1, 12, 127: exception
-x86settag $r1, 12, 128: exception
+x86settag $r1, 12, 128: rd ^= 1
 x86settag $r1, 12, 129: exception
 x86settag $r1, 12, 130: exception
 x86settag $r1, 12, 131: exception
 x86settag $r1, 12, 132: exception
-x86settag $r1, 12, 133: exception
+x86settag $r1, 12, 133: rd ^= 33
 x86settag $r1, 12, 134: exception
 x86settag $r1, 12, 135: exception
 x86settag $r1, 12, 136: exception
@@ -3238,12 +3238,12 @@ x86settag $r1, 12, 164: exception
 x86settag $r1, 12, 165: exception
 x86settag $r1, 12, 166: exception
 x86settag $r1, 12, 167: exception
-x86settag $r1, 12, 168: exception
+x86settag $r1, 12, 168: rd ^= 33
 x86settag $r1, 12, 169: exception
 x86settag $r1, 12, 170: exception
 x86settag $r1, 12, 171: exception
 x86settag $r1, 12, 172: exception
-x86settag $r1, 12, 173: exception
+x86settag $r1, 12, 173: rd ^= 32
 x86settag $r1, 12, 174: exception
 x86settag $r1, 12, 175: exception
 x86settag $r1, 12, 176: exception
@@ -3262,12 +3262,12 @@ x86settag $r1, 12, 188: exception
 x86settag $r1, 12, 189: exception
 x86settag $r1, 12, 190: exception
 x86settag $r1, 12, 191: exception
-x86settag $r1, 12, 192: exception
+x86settag $r1, 12, 192: rd ^= 1
 x86settag $r1, 12, 193: exception
 x86settag $r1, 12, 194: exception
 x86settag $r1, 12, 195: exception
 x86settag $r1, 12, 196: exception
-x86settag $r1, 12, 197: exception
+x86settag $r1, 12, 197: rd ^= 33
 x86settag $r1, 12, 198: exception
 x86settag $r1, 12, 199: exception
 x86settag $r1, 12, 200: exception
@@ -3302,12 +3302,12 @@ x86settag $r1, 12, 228: exception
 x86settag $r1, 12, 229: exception
 x86settag $r1, 12, 230: exception
 x86settag $r1, 12, 231: exception
-x86settag $r1, 12, 232: exception
+x86settag $r1, 12, 232: rd ^= 33
 x86settag $r1, 12, 233: exception
 x86settag $r1, 12, 234: exception
 x86settag $r1, 12, 235: exception
 x86settag $r1, 12, 236: exception
-x86settag $r1, 12, 237: exception
+x86settag $r1, 12, 237: rd ^= 32
 x86settag $r1, 12, 238: exception
 x86settag $r1, 12, 239: exception
 x86settag $r1, 12, 240: exception
@@ -4094,524 +4094,524 @@ x86settag $r1, 15, 252: unchanged
 x86settag $r1, 15, 253: unchanged
 x86settag $r1, 15, 254: unchanged
 x86settag $r1, 15, 255: unchanged
-x86settag $r1, 16, 0: rd ^= 1
+x86settag $r1, 16, 0: exception
 x86settag $r1, 16, 1: rd ^= 2
 x86settag $r1, 16, 2: rd ^= 4
 x86settag $r1, 16, 3: rd ^= 8
 x86settag $r1, 16, 4: rd ^= 16
-x86settag $r1, 16, 5: rd ^= 32
+x86settag $r1, 16, 5: exception
 x86settag $r1, 16, 6: rd ^= 64
 x86settag $r1, 16, 7: rd ^= 128
-x86settag $r1, 16, 8: rd ^= 1
+x86settag $r1, 16, 8: exception
 x86settag $r1, 16, 9: rd ^= 2
 x86settag $r1, 16, 10: rd ^= 4
 x86settag $r1, 16, 11: rd ^= 8
 x86settag $r1, 16, 12: rd ^= 16
-x86settag $r1, 16, 13: rd ^= 32
+x86settag $r1, 16, 13: exception
 x86settag $r1, 16, 14: rd ^= 64
 x86settag $r1, 16, 15: rd ^= 128
-x86settag $r1, 16, 16: rd ^= 1
+x86settag $r1, 16, 16: exception
 x86settag $r1, 16, 17: rd ^= 2
 x86settag $r1, 16, 18: rd ^= 4
 x86settag $r1, 16, 19: rd ^= 8
 x86settag $r1, 16, 20: rd ^= 16
-x86settag $r1, 16, 21: rd ^= 32
+x86settag $r1, 16, 21: exception
 x86settag $r1, 16, 22: rd ^= 64
 x86settag $r1, 16, 23: rd ^= 128
-x86settag $r1, 16, 24: rd ^= 1
+x86settag $r1, 16, 24: exception
 x86settag $r1, 16, 25: rd ^= 2
 x86settag $r1, 16, 26: rd ^= 4
 x86settag $r1, 16, 27: rd ^= 8
 x86settag $r1, 16, 28: rd ^= 16
-x86settag $r1, 16, 29: rd ^= 32
+x86settag $r1, 16, 29: exception
 x86settag $r1, 16, 30: rd ^= 64
 x86settag $r1, 16, 31: rd ^= 128
-x86settag $r1, 16, 32: rd ^= 1
+x86settag $r1, 16, 32: exception
 x86settag $r1, 16, 33: rd ^= 2
 x86settag $r1, 16, 34: rd ^= 4
 x86settag $r1, 16, 35: rd ^= 8
 x86settag $r1, 16, 36: rd ^= 16
-x86settag $r1, 16, 37: rd ^= 32
+x86settag $r1, 16, 37: exception
 x86settag $r1, 16, 38: rd ^= 64
 x86settag $r1, 16, 39: rd ^= 128
-x86settag $r1, 16, 40: rd ^= 1
+x86settag $r1, 16, 40: exception
 x86settag $r1, 16, 41: rd ^= 2
 x86settag $r1, 16, 42: rd ^= 4
 x86settag $r1, 16, 43: rd ^= 8
 x86settag $r1, 16, 44: rd ^= 16
-x86settag $r1, 16, 45: rd ^= 32
+x86settag $r1, 16, 45: exception
 x86settag $r1, 16, 46: rd ^= 64
 x86settag $r1, 16, 47: rd ^= 128
-x86settag $r1, 16, 48: rd ^= 1
+x86settag $r1, 16, 48: exception
 x86settag $r1, 16, 49: rd ^= 2
 x86settag $r1, 16, 50: rd ^= 4
 x86settag $r1, 16, 51: rd ^= 8
 x86settag $r1, 16, 52: rd ^= 16
-x86settag $r1, 16, 53: rd ^= 32
+x86settag $r1, 16, 53: exception
 x86settag $r1, 16, 54: rd ^= 64
 x86settag $r1, 16, 55: rd ^= 128
-x86settag $r1, 16, 56: rd ^= 1
+x86settag $r1, 16, 56: exception
 x86settag $r1, 16, 57: rd ^= 2
 x86settag $r1, 16, 58: rd ^= 4
 x86settag $r1, 16, 59: rd ^= 8
 x86settag $r1, 16, 60: rd ^= 16
-x86settag $r1, 16, 61: rd ^= 32
+x86settag $r1, 16, 61: exception
 x86settag $r1, 16, 62: rd ^= 64
 x86settag $r1, 16, 63: rd ^= 128
-x86settag $r1, 16, 64: rd ^= 1
+x86settag $r1, 16, 64: exception
 x86settag $r1, 16, 65: rd ^= 2
 x86settag $r1, 16, 66: rd ^= 4
 x86settag $r1, 16, 67: rd ^= 8
 x86settag $r1, 16, 68: rd ^= 16
-x86settag $r1, 16, 69: rd ^= 32
+x86settag $r1, 16, 69: exception
 x86settag $r1, 16, 70: rd ^= 64
 x86settag $r1, 16, 71: rd ^= 128
-x86settag $r1, 16, 72: rd ^= 1
+x86settag $r1, 16, 72: exception
 x86settag $r1, 16, 73: rd ^= 2
 x86settag $r1, 16, 74: rd ^= 4
 x86settag $r1, 16, 75: rd ^= 8
 x86settag $r1, 16, 76: rd ^= 16
-x86settag $r1, 16, 77: rd ^= 32
+x86settag $r1, 16, 77: exception
 x86settag $r1, 16, 78: rd ^= 64
 x86settag $r1, 16, 79: rd ^= 128
-x86settag $r1, 16, 80: rd ^= 1
+x86settag $r1, 16, 80: exception
 x86settag $r1, 16, 81: rd ^= 2
 x86settag $r1, 16, 82: rd ^= 4
 x86settag $r1, 16, 83: rd ^= 8
 x86settag $r1, 16, 84: rd ^= 16
-x86settag $r1, 16, 85: rd ^= 32
+x86settag $r1, 16, 85: exception
 x86settag $r1, 16, 86: rd ^= 64
 x86settag $r1, 16, 87: rd ^= 128
-x86settag $r1, 16, 88: rd ^= 1
+x86settag $r1, 16, 88: exception
 x86settag $r1, 16, 89: rd ^= 2
 x86settag $r1, 16, 90: rd ^= 4
 x86settag $r1, 16, 91: rd ^= 8
 x86settag $r1, 16, 92: rd ^= 16
-x86settag $r1, 16, 93: rd ^= 32
+x86settag $r1, 16, 93: exception
 x86settag $r1, 16, 94: rd ^= 64
 x86settag $r1, 16, 95: rd ^= 128
-x86settag $r1, 16, 96: rd ^= 1
+x86settag $r1, 16, 96: exception
 x86settag $r1, 16, 97: rd ^= 2
 x86settag $r1, 16, 98: rd ^= 4
 x86settag $r1, 16, 99: rd ^= 8
 x86settag $r1, 16, 100: rd ^= 16
-x86settag $r1, 16, 101: rd ^= 32
+x86settag $r1, 16, 101: exception
 x86settag $r1, 16, 102: rd ^= 64
 x86settag $r1, 16, 103: rd ^= 128
-x86settag $r1, 16, 104: rd ^= 1
+x86settag $r1, 16, 104: exception
 x86settag $r1, 16, 105: rd ^= 2
 x86settag $r1, 16, 106: rd ^= 4
 x86settag $r1, 16, 107: rd ^= 8
 x86settag $r1, 16, 108: rd ^= 16
-x86settag $r1, 16, 109: rd ^= 32
+x86settag $r1, 16, 109: exception
 x86settag $r1, 16, 110: rd ^= 64
 x86settag $r1, 16, 111: rd ^= 128
-x86settag $r1, 16, 112: rd ^= 1
+x86settag $r1, 16, 112: exception
 x86settag $r1, 16, 113: rd ^= 2
 x86settag $r1, 16, 114: rd ^= 4
 x86settag $r1, 16, 115: rd ^= 8
 x86settag $r1, 16, 116: rd ^= 16
-x86settag $r1, 16, 117: rd ^= 32
+x86settag $r1, 16, 117: exception
 x86settag $r1, 16, 118: rd ^= 64
 x86settag $r1, 16, 119: rd ^= 128
-x86settag $r1, 16, 120: rd ^= 1
+x86settag $r1, 16, 120: exception
 x86settag $r1, 16, 121: rd ^= 2
 x86settag $r1, 16, 122: rd ^= 4
 x86settag $r1, 16, 123: rd ^= 8
 x86settag $r1, 16, 124: rd ^= 16
-x86settag $r1, 16, 125: rd ^= 32
+x86settag $r1, 16, 125: exception
 x86settag $r1, 16, 126: rd ^= 64
 x86settag $r1, 16, 127: rd ^= 128
-x86settag $r1, 16, 128: rd ^= 1
+x86settag $r1, 16, 128: exception
 x86settag $r1, 16, 129: rd ^= 2
 x86settag $r1, 16, 130: rd ^= 4
 x86settag $r1, 16, 131: rd ^= 8
 x86settag $r1, 16, 132: rd ^= 16
-x86settag $r1, 16, 133: rd ^= 32
+x86settag $r1, 16, 133: exception
 x86settag $r1, 16, 134: rd ^= 64
 x86settag $r1, 16, 135: rd ^= 128
-x86settag $r1, 16, 136: rd ^= 1
+x86settag $r1, 16, 136: exception
 x86settag $r1, 16, 137: rd ^= 2
 x86settag $r1, 16, 138: rd ^= 4
 x86settag $r1, 16, 139: rd ^= 8
 x86settag $r1, 16, 140: rd ^= 16
-x86settag $r1, 16, 141: rd ^= 32
+x86settag $r1, 16, 141: exception
 x86settag $r1, 16, 142: rd ^= 64
 x86settag $r1, 16, 143: rd ^= 128
-x86settag $r1, 16, 144: rd ^= 1
+x86settag $r1, 16, 144: exception
 x86settag $r1, 16, 145: rd ^= 2
 x86settag $r1, 16, 146: rd ^= 4
 x86settag $r1, 16, 147: rd ^= 8
 x86settag $r1, 16, 148: rd ^= 16
-x86settag $r1, 16, 149: rd ^= 32
+x86settag $r1, 16, 149: exception
 x86settag $r1, 16, 150: rd ^= 64
 x86settag $r1, 16, 151: rd ^= 128
-x86settag $r1, 16, 152: rd ^= 1
+x86settag $r1, 16, 152: exception
 x86settag $r1, 16, 153: rd ^= 2
 x86settag $r1, 16, 154: rd ^= 4
 x86settag $r1, 16, 155: rd ^= 8
 x86settag $r1, 16, 156: rd ^= 16
-x86settag $r1, 16, 157: rd ^= 32
+x86settag $r1, 16, 157: exception
 x86settag $r1, 16, 158: rd ^= 64
 x86settag $r1, 16, 159: rd ^= 128
-x86settag $r1, 16, 160: rd ^= 1
+x86settag $r1, 16, 160: exception
 x86settag $r1, 16, 161: rd ^= 2
 x86settag $r1, 16, 162: rd ^= 4
 x86settag $r1, 16, 163: rd ^= 8
 x86settag $r1, 16, 164: rd ^= 16
-x86settag $r1, 16, 165: rd ^= 32
+x86settag $r1, 16, 165: exception
 x86settag $r1, 16, 166: rd ^= 64
 x86settag $r1, 16, 167: rd ^= 128
-x86settag $r1, 16, 168: rd ^= 1
+x86settag $r1, 16, 168: exception
 x86settag $r1, 16, 169: rd ^= 2
 x86settag $r1, 16, 170: rd ^= 4
 x86settag $r1, 16, 171: rd ^= 8
 x86settag $r1, 16, 172: rd ^= 16
-x86settag $r1, 16, 173: rd ^= 32
+x86settag $r1, 16, 173: exception
 x86settag $r1, 16, 174: rd ^= 64
 x86settag $r1, 16, 175: rd ^= 128
-x86settag $r1, 16, 176: rd ^= 1
+x86settag $r1, 16, 176: exception
 x86settag $r1, 16, 177: rd ^= 2
 x86settag $r1, 16, 178: rd ^= 4
 x86settag $r1, 16, 179: rd ^= 8
 x86settag $r1, 16, 180: rd ^= 16
-x86settag $r1, 16, 181: rd ^= 32
+x86settag $r1, 16, 181: exception
 x86settag $r1, 16, 182: rd ^= 64
 x86settag $r1, 16, 183: rd ^= 128
-x86settag $r1, 16, 184: rd ^= 1
+x86settag $r1, 16, 184: exception
 x86settag $r1, 16, 185: rd ^= 2
 x86settag $r1, 16, 186: rd ^= 4
 x86settag $r1, 16, 187: rd ^= 8
 x86settag $r1, 16, 188: rd ^= 16
-x86settag $r1, 16, 189: rd ^= 32
+x86settag $r1, 16, 189: exception
 x86settag $r1, 16, 190: rd ^= 64
 x86settag $r1, 16, 191: rd ^= 128
-x86settag $r1, 16, 192: rd ^= 1
+x86settag $r1, 16, 192: exception
 x86settag $r1, 16, 193: rd ^= 2
 x86settag $r1, 16, 194: rd ^= 4
 x86settag $r1, 16, 195: rd ^= 8
 x86settag $r1, 16, 196: rd ^= 16
-x86settag $r1, 16, 197: rd ^= 32
+x86settag $r1, 16, 197: exception
 x86settag $r1, 16, 198: rd ^= 64
 x86settag $r1, 16, 199: rd ^= 128
-x86settag $r1, 16, 200: rd ^= 1
+x86settag $r1, 16, 200: exception
 x86settag $r1, 16, 201: rd ^= 2
 x86settag $r1, 16, 202: rd ^= 4
 x86settag $r1, 16, 203: rd ^= 8
 x86settag $r1, 16, 204: rd ^= 16
-x86settag $r1, 16, 205: rd ^= 32
+x86settag $r1, 16, 205: exception
 x86settag $r1, 16, 206: rd ^= 64
 x86settag $r1, 16, 207: rd ^= 128
-x86settag $r1, 16, 208: rd ^= 1
+x86settag $r1, 16, 208: exception
 x86settag $r1, 16, 209: rd ^= 2
 x86settag $r1, 16, 210: rd ^= 4
 x86settag $r1, 16, 211: rd ^= 8
 x86settag $r1, 16, 212: rd ^= 16
-x86settag $r1, 16, 213: rd ^= 32
+x86settag $r1, 16, 213: exception
 x86settag $r1, 16, 214: rd ^= 64
 x86settag $r1, 16, 215: rd ^= 128
-x86settag $r1, 16, 216: rd ^= 1
+x86settag $r1, 16, 216: exception
 x86settag $r1, 16, 217: rd ^= 2
 x86settag $r1, 16, 218: rd ^= 4
 x86settag $r1, 16, 219: rd ^= 8
 x86settag $r1, 16, 220: rd ^= 16
-x86settag $r1, 16, 221: rd ^= 32
+x86settag $r1, 16, 221: exception
 x86settag $r1, 16, 222: rd ^= 64
 x86settag $r1, 16, 223: rd ^= 128
-x86settag $r1, 16, 224: rd ^= 1
+x86settag $r1, 16, 224: exception
 x86settag $r1, 16, 225: rd ^= 2
 x86settag $r1, 16, 226: rd ^= 4
 x86settag $r1, 16, 227: rd ^= 8
 x86settag $r1, 16, 228: rd ^= 16
-x86settag $r1, 16, 229: rd ^= 32
+x86settag $r1, 16, 229: exception
 x86settag $r1, 16, 230: rd ^= 64
 x86settag $r1, 16, 231: rd ^= 128
-x86settag $r1, 16, 232: rd ^= 1
+x86settag $r1, 16, 232: exception
 x86settag $r1, 16, 233: rd ^= 2
 x86settag $r1, 16, 234: rd ^= 4
 x86settag $r1, 16, 235: rd ^= 8
 x86settag $r1, 16, 236: rd ^= 16
-x86settag $r1, 16, 237: rd ^= 32
+x86settag $r1, 16, 237: exception
 x86settag $r1, 16, 238: rd ^= 64
 x86settag $r1, 16, 239: rd ^= 128
-x86settag $r1, 16, 240: rd ^= 1
+x86settag $r1, 16, 240: exception
 x86settag $r1, 16, 241: rd ^= 2
 x86settag $r1, 16, 242: rd ^= 4
 x86settag $r1, 16, 243: rd ^= 8
 x86settag $r1, 16, 244: rd ^= 16
-x86settag $r1, 16, 245: rd ^= 32
+x86settag $r1, 16, 245: exception
 x86settag $r1, 16, 246: rd ^= 64
 x86settag $r1, 16, 247: rd ^= 128
-x86settag $r1, 16, 248: rd ^= 1
+x86settag $r1, 16, 248: exception
 x86settag $r1, 16, 249: rd ^= 2
 x86settag $r1, 16, 250: rd ^= 4
 x86settag $r1, 16, 251: rd ^= 8
 x86settag $r1, 16, 252: rd ^= 16
-x86settag $r1, 16, 253: rd ^= 32
+x86settag $r1, 16, 253: exception
 x86settag $r1, 16, 254: rd ^= 64
 x86settag $r1, 16, 255: rd ^= 128
-x86settag $r1, 17, 0: exception
+x86settag $r1, 17, 0: rd ^= 1
 x86settag $r1, 17, 1: exception
 x86settag $r1, 17, 2: exception
 x86settag $r1, 17, 3: exception
 x86settag $r1, 17, 4: exception
-x86settag $r1, 17, 5: exception
+x86settag $r1, 17, 5: rd ^= 32
 x86settag $r1, 17, 6: exception
 x86settag $r1, 17, 7: exception
-x86settag $r1, 17, 8: exception
+x86settag $r1, 17, 8: rd ^= 1
 x86settag $r1, 17, 9: exception
 x86settag $r1, 17, 10: exception
 x86settag $r1, 17, 11: exception
 x86settag $r1, 17, 12: exception
-x86settag $r1, 17, 13: exception
+x86settag $r1, 17, 13: rd ^= 32
 x86settag $r1, 17, 14: exception
 x86settag $r1, 17, 15: exception
-x86settag $r1, 17, 16: exception
+x86settag $r1, 17, 16: rd ^= 1
 x86settag $r1, 17, 17: exception
 x86settag $r1, 17, 18: exception
 x86settag $r1, 17, 19: exception
 x86settag $r1, 17, 20: exception
-x86settag $r1, 17, 21: exception
+x86settag $r1, 17, 21: rd ^= 32
 x86settag $r1, 17, 22: exception
 x86settag $r1, 17, 23: exception
-x86settag $r1, 17, 24: exception
+x86settag $r1, 17, 24: rd ^= 1
 x86settag $r1, 17, 25: exception
 x86settag $r1, 17, 26: exception
 x86settag $r1, 17, 27: exception
 x86settag $r1, 17, 28: exception
-x86settag $r1, 17, 29: exception
+x86settag $r1, 17, 29: rd ^= 32
 x86settag $r1, 17, 30: exception
 x86settag $r1, 17, 31: exception
-x86settag $r1, 17, 32: exception
+x86settag $r1, 17, 32: rd ^= 1
 x86settag $r1, 17, 33: exception
 x86settag $r1, 17, 34: exception
 x86settag $r1, 17, 35: exception
 x86settag $r1, 17, 36: exception
-x86settag $r1, 17, 37: exception
+x86settag $r1, 17, 37: rd ^= 32
 x86settag $r1, 17, 38: exception
 x86settag $r1, 17, 39: exception
-x86settag $r1, 17, 40: exception
+x86settag $r1, 17, 40: rd ^= 1
 x86settag $r1, 17, 41: exception
 x86settag $r1, 17, 42: exception
 x86settag $r1, 17, 43: exception
 x86settag $r1, 17, 44: exception
-x86settag $r1, 17, 45: exception
+x86settag $r1, 17, 45: rd ^= 32
 x86settag $r1, 17, 46: exception
 x86settag $r1, 17, 47: exception
-x86settag $r1, 17, 48: exception
+x86settag $r1, 17, 48: rd ^= 1
 x86settag $r1, 17, 49: exception
 x86settag $r1, 17, 50: exception
 x86settag $r1, 17, 51: exception
 x86settag $r1, 17, 52: exception
-x86settag $r1, 17, 53: exception
+x86settag $r1, 17, 53: rd ^= 32
 x86settag $r1, 17, 54: exception
 x86settag $r1, 17, 55: exception
-x86settag $r1, 17, 56: exception
+x86settag $r1, 17, 56: rd ^= 1
 x86settag $r1, 17, 57: exception
 x86settag $r1, 17, 58: exception
 x86settag $r1, 17, 59: exception
 x86settag $r1, 17, 60: exception
-x86settag $r1, 17, 61: exception
+x86settag $r1, 17, 61: rd ^= 32
 x86settag $r1, 17, 62: exception
 x86settag $r1, 17, 63: exception
-x86settag $r1, 17, 64: exception
+x86settag $r1, 17, 64: rd ^= 1
 x86settag $r1, 17, 65: exception
 x86settag $r1, 17, 66: exception
 x86settag $r1, 17, 67: exception
 x86settag $r1, 17, 68: exception
-x86settag $r1, 17, 69: exception
+x86settag $r1, 17, 69: rd ^= 32
 x86settag $r1, 17, 70: exception
 x86settag $r1, 17, 71: exception
-x86settag $r1, 17, 72: exception
+x86settag $r1, 17, 72: rd ^= 1
 x86settag $r1, 17, 73: exception
 x86settag $r1, 17, 74: exception
 x86settag $r1, 17, 75: exception
 x86settag $r1, 17, 76: exception
-x86settag $r1, 17, 77: exception
+x86settag $r1, 17, 77: rd ^= 32
 x86settag $r1, 17, 78: exception
 x86settag $r1, 17, 79: exception
-x86settag $r1, 17, 80: exception
+x86settag $r1, 17, 80: rd ^= 1
 x86settag $r1, 17, 81: exception
 x86settag $r1, 17, 82: exception
 x86settag $r1, 17, 83: exception
 x86settag $r1, 17, 84: exception
-x86settag $r1, 17, 85: exception
+x86settag $r1, 17, 85: rd ^= 32
 x86settag $r1, 17, 86: exception
 x86settag $r1, 17, 87: exception
-x86settag $r1, 17, 88: exception
+x86settag $r1, 17, 88: rd ^= 1
 x86settag $r1, 17, 89: exception
 x86settag $r1, 17, 90: exception
 x86settag $r1, 17, 91: exception
 x86settag $r1, 17, 92: exception
-x86settag $r1, 17, 93: exception
+x86settag $r1, 17, 93: rd ^= 32
 x86settag $r1, 17, 94: exception
 x86settag $r1, 17, 95: exception
-x86settag $r1, 17, 96: exception
+x86settag $r1, 17, 96: rd ^= 1
 x86settag $r1, 17, 97: exception
 x86settag $r1, 17, 98: exception
 x86settag $r1, 17, 99: exception
 x86settag $r1, 17, 100: exception
-x86settag $r1, 17, 101: exception
+x86settag $r1, 17, 101: rd ^= 32
 x86settag $r1, 17, 102: exception
 x86settag $r1, 17, 103: exception
-x86settag $r1, 17, 104: exception
+x86settag $r1, 17, 104: rd ^= 1
 x86settag $r1, 17, 105: exception
 x86settag $r1, 17, 106: exception
 x86settag $r1, 17, 107: exception
 x86settag $r1, 17, 108: exception
-x86settag $r1, 17, 109: exception
+x86settag $r1, 17, 109: rd ^= 32
 x86settag $r1, 17, 110: exception
 x86settag $r1, 17, 111: exception
-x86settag $r1, 17, 112: exception
+x86settag $r1, 17, 112: rd ^= 1
 x86settag $r1, 17, 113: exception
 x86settag $r1, 17, 114: exception
 x86settag $r1, 17, 115: exception
 x86settag $r1, 17, 116: exception
-x86settag $r1, 17, 117: exception
+x86settag $r1, 17, 117: rd ^= 32
 x86settag $r1, 17, 118: exception
 x86settag $r1, 17, 119: exception
-x86settag $r1, 17, 120: exception
+x86settag $r1, 17, 120: rd ^= 1
 x86settag $r1, 17, 121: exception
 x86settag $r1, 17, 122: exception
 x86settag $r1, 17, 123: exception
 x86settag $r1, 17, 124: exception
-x86settag $r1, 17, 125: exception
+x86settag $r1, 17, 125: rd ^= 32
 x86settag $r1, 17, 126: exception
 x86settag $r1, 17, 127: exception
-x86settag $r1, 17, 128: exception
+x86settag $r1, 17, 128: rd ^= 1
 x86settag $r1, 17, 129: exception
 x86settag $r1, 17, 130: exception
 x86settag $r1, 17, 131: exception
 x86settag $r1, 17, 132: exception
-x86settag $r1, 17, 133: exception
+x86settag $r1, 17, 133: rd ^= 32
 x86settag $r1, 17, 134: exception
 x86settag $r1, 17, 135: exception
-x86settag $r1, 17, 136: exception
+x86settag $r1, 17, 136: rd ^= 1
 x86settag $r1, 17, 137: exception
 x86settag $r1, 17, 138: exception
 x86settag $r1, 17, 139: exception
 x86settag $r1, 17, 140: exception
-x86settag $r1, 17, 141: exception
+x86settag $r1, 17, 141: rd ^= 32
 x86settag $r1, 17, 142: exception
 x86settag $r1, 17, 143: exception
-x86settag $r1, 17, 144: exception
+x86settag $r1, 17, 144: rd ^= 1
 x86settag $r1, 17, 145: exception
 x86settag $r1, 17, 146: exception
 x86settag $r1, 17, 147: exception
 x86settag $r1, 17, 148: exception
-x86settag $r1, 17, 149: exception
+x86settag $r1, 17, 149: rd ^= 32
 x86settag $r1, 17, 150: exception
 x86settag $r1, 17, 151: exception
-x86settag $r1, 17, 152: exception
+x86settag $r1, 17, 152: rd ^= 1
 x86settag $r1, 17, 153: exception
 x86settag $r1, 17, 154: exception
 x86settag $r1, 17, 155: exception
 x86settag $r1, 17, 156: exception
-x86settag $r1, 17, 157: exception
+x86settag $r1, 17, 157: rd ^= 32
 x86settag $r1, 17, 158: exception
 x86settag $r1, 17, 159: exception
-x86settag $r1, 17, 160: exception
+x86settag $r1, 17, 160: rd ^= 1
 x86settag $r1, 17, 161: exception
 x86settag $r1, 17, 162: exception
 x86settag $r1, 17, 163: exception
 x86settag $r1, 17, 164: exception
-x86settag $r1, 17, 165: exception
+x86settag $r1, 17, 165: rd ^= 32
 x86settag $r1, 17, 166: exception
 x86settag $r1, 17, 167: exception
-x86settag $r1, 17, 168: exception
+x86settag $r1, 17, 168: rd ^= 1
 x86settag $r1, 17, 169: exception
 x86settag $r1, 17, 170: exception
 x86settag $r1, 17, 171: exception
 x86settag $r1, 17, 172: exception
-x86settag $r1, 17, 173: exception
+x86settag $r1, 17, 173: rd ^= 32
 x86settag $r1, 17, 174: exception
 x86settag $r1, 17, 175: exception
-x86settag $r1, 17, 176: exception
+x86settag $r1, 17, 176: rd ^= 1
 x86settag $r1, 17, 177: exception
 x86settag $r1, 17, 178: exception
 x86settag $r1, 17, 179: exception
 x86settag $r1, 17, 180: exception
-x86settag $r1, 17, 181: exception
+x86settag $r1, 17, 181: rd ^= 32
 x86settag $r1, 17, 182: exception
 x86settag $r1, 17, 183: exception
-x86settag $r1, 17, 184: exception
+x86settag $r1, 17, 184: rd ^= 1
 x86settag $r1, 17, 185: exception
 x86settag $r1, 17, 186: exception
 x86settag $r1, 17, 187: exception
 x86settag $r1, 17, 188: exception
-x86settag $r1, 17, 189: exception
+x86settag $r1, 17, 189: rd ^= 32
 x86settag $r1, 17, 190: exception
 x86settag $r1, 17, 191: exception
-x86settag $r1, 17, 192: exception
+x86settag $r1, 17, 192: rd ^= 1
 x86settag $r1, 17, 193: exception
 x86settag $r1, 17, 194: exception
 x86settag $r1, 17, 195: exception
 x86settag $r1, 17, 196: exception
-x86settag $r1, 17, 197: exception
+x86settag $r1, 17, 197: rd ^= 32
 x86settag $r1, 17, 198: exception
 x86settag $r1, 17, 199: exception
-x86settag $r1, 17, 200: exception
+x86settag $r1, 17, 200: rd ^= 1
 x86settag $r1, 17, 201: exception
 x86settag $r1, 17, 202: exception
 x86settag $r1, 17, 203: exception
 x86settag $r1, 17, 204: exception
-x86settag $r1, 17, 205: exception
+x86settag $r1, 17, 205: rd ^= 32
 x86settag $r1, 17, 206: exception
 x86settag $r1, 17, 207: exception
-x86settag $r1, 17, 208: exception
+x86settag $r1, 17, 208: rd ^= 1
 x86settag $r1, 17, 209: exception
 x86settag $r1, 17, 210: exception
 x86settag $r1, 17, 211: exception
 x86settag $r1, 17, 212: exception
-x86settag $r1, 17, 213: exception
+x86settag $r1, 17, 213: rd ^= 32
 x86settag $r1, 17, 214: exception
 x86settag $r1, 17, 215: exception
-x86settag $r1, 17, 216: exception
+x86settag $r1, 17, 216: rd ^= 1
 x86settag $r1, 17, 217: exception
 x86settag $r1, 17, 218: exception
 x86settag $r1, 17, 219: exception
 x86settag $r1, 17, 220: exception
-x86settag $r1, 17, 221: exception
+x86settag $r1, 17, 221: rd ^= 32
 x86settag $r1, 17, 222: exception
 x86settag $r1, 17, 223: exception
-x86settag $r1, 17, 224: exception
+x86settag $r1, 17, 224: rd ^= 1
 x86settag $r1, 17, 225: exception
 x86settag $r1, 17, 226: exception
 x86settag $r1, 17, 227: exception
 x86settag $r1, 17, 228: exception
-x86settag $r1, 17, 229: exception
+x86settag $r1, 17, 229: rd ^= 32
 x86settag $r1, 17, 230: exception
 x86settag $r1, 17, 231: exception
-x86settag $r1, 17, 232: exception
+x86settag $r1, 17, 232: rd ^= 1
 x86settag $r1, 17, 233: exception
 x86settag $r1, 17, 234: exception
 x86settag $r1, 17, 235: exception
 x86settag $r1, 17, 236: exception
-x86settag $r1, 17, 237: exception
+x86settag $r1, 17, 237: rd ^= 32
 x86settag $r1, 17, 238: exception
 x86settag $r1, 17, 239: exception
-x86settag $r1, 17, 240: exception
+x86settag $r1, 17, 240: rd ^= 1
 x86settag $r1, 17, 241: exception
 x86settag $r1, 17, 242: exception
 x86settag $r1, 17, 243: exception
 x86settag $r1, 17, 244: exception
-x86settag $r1, 17, 245: exception
+x86settag $r1, 17, 245: rd ^= 32
 x86settag $r1, 17, 246: exception
 x86settag $r1, 17, 247: exception
-x86settag $r1, 17, 248: exception
+x86settag $r1, 17, 248: rd ^= 1
 x86settag $r1, 17, 249: exception
 x86settag $r1, 17, 250: exception
 x86settag $r1, 17, 251: exception
 x86settag $r1, 17, 252: exception
-x86settag $r1, 17, 253: exception
+x86settag $r1, 17, 253: rd ^= 32
 x86settag $r1, 17, 254: exception
 x86settag $r1, 17, 255: exception
-x86settag $r1, 18, 0: exception
+x86settag $r1, 18, 0: unchanged
 x86settag $r1, 18, 1: exception
 x86settag $r1, 18, 2: exception
 x86settag $r1, 18, 3: exception
 x86settag $r1, 18, 4: exception
-x86settag $r1, 18, 5: exception
+x86settag $r1, 18, 5: unchanged
 x86settag $r1, 18, 6: exception
 x86settag $r1, 18, 7: exception
 x86settag $r1, 18, 8: exception
@@ -4646,12 +4646,12 @@ x86settag $r1, 18, 36: exception
 x86settag $r1, 18, 37: exception
 x86settag $r1, 18, 38: exception
 x86settag $r1, 18, 39: exception
-x86settag $r1, 18, 40: exception
+x86settag $r1, 18, 40: unchanged
 x86settag $r1, 18, 41: exception
 x86settag $r1, 18, 42: exception
 x86settag $r1, 18, 43: exception
 x86settag $r1, 18, 44: exception
-x86settag $r1, 18, 45: exception
+x86settag $r1, 18, 45: unchanged
 x86settag $r1, 18, 46: exception
 x86settag $r1, 18, 47: exception
 x86settag $r1, 18, 48: exception
@@ -4670,12 +4670,12 @@ x86settag $r1, 18, 60: exception
 x86settag $r1, 18, 61: exception
 x86settag $r1, 18, 62: exception
 x86settag $r1, 18, 63: exception
-x86settag $r1, 18, 64: exception
+x86settag $r1, 18, 64: unchanged
 x86settag $r1, 18, 65: exception
 x86settag $r1, 18, 66: exception
 x86settag $r1, 18, 67: exception
 x86settag $r1, 18, 68: exception
-x86settag $r1, 18, 69: exception
+x86settag $r1, 18, 69: unchanged
 x86settag $r1, 18, 70: exception
 x86settag $r1, 18, 71: exception
 x86settag $r1, 18, 72: exception
@@ -4710,12 +4710,12 @@ x86settag $r1, 18, 100: exception
 x86settag $r1, 18, 101: exception
 x86settag $r1, 18, 102: exception
 x86settag $r1, 18, 103: exception
-x86settag $r1, 18, 104: exception
+x86settag $r1, 18, 104: unchanged
 x86settag $r1, 18, 105: exception
 x86settag $r1, 18, 106: exception
 x86settag $r1, 18, 107: exception
 x86settag $r1, 18, 108: exception
-x86settag $r1, 18, 109: exception
+x86settag $r1, 18, 109: unchanged
 x86settag $r1, 18, 110: exception
 x86settag $r1, 18, 111: exception
 x86settag $r1, 18, 112: exception
@@ -4734,12 +4734,12 @@ x86settag $r1, 18, 124: exception
 x86settag $r1, 18, 125: exception
 x86settag $r1, 18, 126: exception
 x86settag $r1, 18, 127: exception
-x86settag $r1, 18, 128: exception
+x86settag $r1, 18, 128: unchanged
 x86settag $r1, 18, 129: exception
 x86settag $r1, 18, 130: exception
 x86settag $r1, 18, 131: exception
 x86settag $r1, 18, 132: exception
-x86settag $r1, 18, 133: exception
+x86settag $r1, 18, 133: unchanged
 x86settag $r1, 18, 134: exception
 x86settag $r1, 18, 135: exception
 x86settag $r1, 18, 136: exception
@@ -4774,12 +4774,12 @@ x86settag $r1, 18, 164: exception
 x86settag $r1, 18, 165: exception
 x86settag $r1, 18, 166: exception
 x86settag $r1, 18, 167: exception
-x86settag $r1, 18, 168: exception
+x86settag $r1, 18, 168: unchanged
 x86settag $r1, 18, 169: exception
 x86settag $r1, 18, 170: exception
 x86settag $r1, 18, 171: exception
 x86settag $r1, 18, 172: exception
-x86settag $r1, 18, 173: exception
+x86settag $r1, 18, 173: unchanged
 x86settag $r1, 18, 174: exception
 x86settag $r1, 18, 175: exception
 x86settag $r1, 18, 176: exception
@@ -4798,12 +4798,12 @@ x86settag $r1, 18, 188: exception
 x86settag $r1, 18, 189: exception
 x86settag $r1, 18, 190: exception
 x86settag $r1, 18, 191: exception
-x86settag $r1, 18, 192: exception
+x86settag $r1, 18, 192: unchanged
 x86settag $r1, 18, 193: exception
 x86settag $r1, 18, 194: exception
 x86settag $r1, 18, 195: exception
 x86settag $r1, 18, 196: exception
-x86settag $r1, 18, 197: exception
+x86settag $r1, 18, 197: unchanged
 x86settag $r1, 18, 198: exception
 x86settag $r1, 18, 199: exception
 x86settag $r1, 18, 200: exception
@@ -4838,12 +4838,12 @@ x86settag $r1, 18, 228: exception
 x86settag $r1, 18, 229: exception
 x86settag $r1, 18, 230: exception
 x86settag $r1, 18, 231: exception
-x86settag $r1, 18, 232: exception
+x86settag $r1, 18, 232: unchanged
 x86settag $r1, 18, 233: exception
 x86settag $r1, 18, 234: exception
 x86settag $r1, 18, 235: exception
 x86settag $r1, 18, 236: exception
-x86settag $r1, 18, 237: exception
+x86settag $r1, 18, 237: unchanged
 x86settag $r1, 18, 238: exception
 x86settag $r1, 18, 239: exception
 x86settag $r1, 18, 240: exception
@@ -4862,12 +4862,12 @@ x86settag $r1, 18, 252: exception
 x86settag $r1, 18, 253: exception
 x86settag $r1, 18, 254: exception
 x86settag $r1, 18, 255: exception
-x86settag $r1, 19, 0: exception
+x86settag $r1, 19, 0: rd ^= 1
 x86settag $r1, 19, 1: exception
 x86settag $r1, 19, 2: exception
 x86settag $r1, 19, 3: exception
 x86settag $r1, 19, 4: exception
-x86settag $r1, 19, 5: exception
+x86settag $r1, 19, 5: rd ^= 32
 x86settag $r1, 19, 6: exception
 x86settag $r1, 19, 7: exception
 x86settag $r1, 19, 8: exception
@@ -4902,12 +4902,12 @@ x86settag $r1, 19, 36: exception
 x86settag $r1, 19, 37: exception
 x86settag $r1, 19, 38: exception
 x86settag $r1, 19, 39: exception
-x86settag $r1, 19, 40: exception
+x86settag $r1, 19, 40: rd ^= 1
 x86settag $r1, 19, 41: exception
 x86settag $r1, 19, 42: exception
 x86settag $r1, 19, 43: exception
 x86settag $r1, 19, 44: exception
-x86settag $r1, 19, 45: exception
+x86settag $r1, 19, 45: rd ^= 32
 x86settag $r1, 19, 46: exception
 x86settag $r1, 19, 47: exception
 x86settag $r1, 19, 48: exception
@@ -4926,12 +4926,12 @@ x86settag $r1, 19, 60: exception
 x86settag $r1, 19, 61: exception
 x86settag $r1, 19, 62: exception
 x86settag $r1, 19, 63: exception
-x86settag $r1, 19, 64: exception
+x86settag $r1, 19, 64: rd ^= 1
 x86settag $r1, 19, 65: exception
 x86settag $r1, 19, 66: exception
 x86settag $r1, 19, 67: exception
 x86settag $r1, 19, 68: exception
-x86settag $r1, 19, 69: exception
+x86settag $r1, 19, 69: rd ^= 32
 x86settag $r1, 19, 70: exception
 x86settag $r1, 19, 71: exception
 x86settag $r1, 19, 72: exception
@@ -4966,12 +4966,12 @@ x86settag $r1, 19, 100: exception
 x86settag $r1, 19, 101: exception
 x86settag $r1, 19, 102: exception
 x86settag $r1, 19, 103: exception
-x86settag $r1, 19, 104: exception
+x86settag $r1, 19, 104: rd ^= 1
 x86settag $r1, 19, 105: exception
 x86settag $r1, 19, 106: exception
 x86settag $r1, 19, 107: exception
 x86settag $r1, 19, 108: exception
-x86settag $r1, 19, 109: exception
+x86settag $r1, 19, 109: rd ^= 32
 x86settag $r1, 19, 110: exception
 x86settag $r1, 19, 111: exception
 x86settag $r1, 19, 112: exception
@@ -4990,12 +4990,12 @@ x86settag $r1, 19, 124: exception
 x86settag $r1, 19, 125: exception
 x86settag $r1, 19, 126: exception
 x86settag $r1, 19, 127: exception
-x86settag $r1, 19, 128: exception
+x86settag $r1, 19, 128: rd ^= 1
 x86settag $r1, 19, 129: exception
 x86settag $r1, 19, 130: exception
 x86settag $r1, 19, 131: exception
 x86settag $r1, 19, 132: exception
-x86settag $r1, 19, 133: exception
+x86settag $r1, 19, 133: rd ^= 32
 x86settag $r1, 19, 134: exception
 x86settag $r1, 19, 135: exception
 x86settag $r1, 19, 136: exception
@@ -5030,12 +5030,12 @@ x86settag $r1, 19, 164: exception
 x86settag $r1, 19, 165: exception
 x86settag $r1, 19, 166: exception
 x86settag $r1, 19, 167: exception
-x86settag $r1, 19, 168: exception
+x86settag $r1, 19, 168: rd ^= 1
 x86settag $r1, 19, 169: exception
 x86settag $r1, 19, 170: exception
 x86settag $r1, 19, 171: exception
 x86settag $r1, 19, 172: exception
-x86settag $r1, 19, 173: exception
+x86settag $r1, 19, 173: rd ^= 32
 x86settag $r1, 19, 174: exception
 x86settag $r1, 19, 175: exception
 x86settag $r1, 19, 176: exception
@@ -5054,12 +5054,12 @@ x86settag $r1, 19, 188: exception
 x86settag $r1, 19, 189: exception
 x86settag $r1, 19, 190: exception
 x86settag $r1, 19, 191: exception
-x86settag $r1, 19, 192: exception
+x86settag $r1, 19, 192: rd ^= 1
 x86settag $r1, 19, 193: exception
 x86settag $r1, 19, 194: exception
 x86settag $r1, 19, 195: exception
 x86settag $r1, 19, 196: exception
-x86settag $r1, 19, 197: exception
+x86settag $r1, 19, 197: rd ^= 32
 x86settag $r1, 19, 198: exception
 x86settag $r1, 19, 199: exception
 x86settag $r1, 19, 200: exception
@@ -5094,12 +5094,12 @@ x86settag $r1, 19, 228: exception
 x86settag $r1, 19, 229: exception
 x86settag $r1, 19, 230: exception
 x86settag $r1, 19, 231: exception
-x86settag $r1, 19, 232: exception
+x86settag $r1, 19, 232: rd ^= 1
 x86settag $r1, 19, 233: exception
 x86settag $r1, 19, 234: exception
 x86settag $r1, 19, 235: exception
 x86settag $r1, 19, 236: exception
-x86settag $r1, 19, 237: exception
+x86settag $r1, 19, 237: rd ^= 32
 x86settag $r1, 19, 238: exception
 x86settag $r1, 19, 239: exception
 x86settag $r1, 19, 240: exception
@@ -5118,12 +5118,12 @@ x86settag $r1, 19, 252: exception
 x86settag $r1, 19, 253: exception
 x86settag $r1, 19, 254: exception
 x86settag $r1, 19, 255: exception
-x86settag $r1, 20, 0: exception
+x86settag $r1, 20, 0: rd ^= 1
 x86settag $r1, 20, 1: exception
 x86settag $r1, 20, 2: exception
 x86settag $r1, 20, 3: exception
 x86settag $r1, 20, 4: exception
-x86settag $r1, 20, 5: exception
+x86settag $r1, 20, 5: rd ^= 33
 x86settag $r1, 20, 6: exception
 x86settag $r1, 20, 7: exception
 x86settag $r1, 20, 8: exception
@@ -5158,12 +5158,12 @@ x86settag $r1, 20, 36: exception
 x86settag $r1, 20, 37: exception
 x86settag $r1, 20, 38: exception
 x86settag $r1, 20, 39: exception
-x86settag $r1, 20, 40: exception
+x86settag $r1, 20, 40: rd ^= 33
 x86settag $r1, 20, 41: exception
 x86settag $r1, 20, 42: exception
 x86settag $r1, 20, 43: exception
 x86settag $r1, 20, 44: exception
-x86settag $r1, 20, 45: exception
+x86settag $r1, 20, 45: rd ^= 32
 x86settag $r1, 20, 46: exception
 x86settag $r1, 20, 47: exception
 x86settag $r1, 20, 48: exception
@@ -5182,12 +5182,12 @@ x86settag $r1, 20, 60: exception
 x86settag $r1, 20, 61: exception
 x86settag $r1, 20, 62: exception
 x86settag $r1, 20, 63: exception
-x86settag $r1, 20, 64: exception
+x86settag $r1, 20, 64: rd ^= 1
 x86settag $r1, 20, 65: exception
 x86settag $r1, 20, 66: exception
 x86settag $r1, 20, 67: exception
 x86settag $r1, 20, 68: exception
-x86settag $r1, 20, 69: exception
+x86settag $r1, 20, 69: rd ^= 33
 x86settag $r1, 20, 70: exception
 x86settag $r1, 20, 71: exception
 x86settag $r1, 20, 72: exception
@@ -5222,12 +5222,12 @@ x86settag $r1, 20, 100: exception
 x86settag $r1, 20, 101: exception
 x86settag $r1, 20, 102: exception
 x86settag $r1, 20, 103: exception
-x86settag $r1, 20, 104: exception
+x86settag $r1, 20, 104: rd ^= 33
 x86settag $r1, 20, 105: exception
 x86settag $r1, 20, 106: exception
 x86settag $r1, 20, 107: exception
 x86settag $r1, 20, 108: exception
-x86settag $r1, 20, 109: exception
+x86settag $r1, 20, 109: rd ^= 32
 x86settag $r1, 20, 110: exception
 x86settag $r1, 20, 111: exception
 x86settag $r1, 20, 112: exception
@@ -5246,12 +5246,12 @@ x86settag $r1, 20, 124: exception
 x86settag $r1, 20, 125: exception
 x86settag $r1, 20, 126: exception
 x86settag $r1, 20, 127: exception
-x86settag $r1, 20, 128: exception
+x86settag $r1, 20, 128: rd ^= 1
 x86settag $r1, 20, 129: exception
 x86settag $r1, 20, 130: exception
 x86settag $r1, 20, 131: exception
 x86settag $r1, 20, 132: exception
-x86settag $r1, 20, 133: exception
+x86settag $r1, 20, 133: rd ^= 33
 x86settag $r1, 20, 134: exception
 x86settag $r1, 20, 135: exception
 x86settag $r1, 20, 136: exception
@@ -5286,12 +5286,12 @@ x86settag $r1, 20, 164: exception
 x86settag $r1, 20, 165: exception
 x86settag $r1, 20, 166: exception
 x86settag $r1, 20, 167: exception
-x86settag $r1, 20, 168: exception
+x86settag $r1, 20, 168: rd ^= 33
 x86settag $r1, 20, 169: exception
 x86settag $r1, 20, 170: exception
 x86settag $r1, 20, 171: exception
 x86settag $r1, 20, 172: exception
-x86settag $r1, 20, 173: exception
+x86settag $r1, 20, 173: rd ^= 32
 x86settag $r1, 20, 174: exception
 x86settag $r1, 20, 175: exception
 x86settag $r1, 20, 176: exception
@@ -5310,12 +5310,12 @@ x86settag $r1, 20, 188: exception
 x86settag $r1, 20, 189: exception
 x86settag $r1, 20, 190: exception
 x86settag $r1, 20, 191: exception
-x86settag $r1, 20, 192: exception
+x86settag $r1, 20, 192: rd ^= 1
 x86settag $r1, 20, 193: exception
 x86settag $r1, 20, 194: exception
 x86settag $r1, 20, 195: exception
 x86settag $r1, 20, 196: exception
-x86settag $r1, 20, 197: exception
+x86settag $r1, 20, 197: rd ^= 33
 x86settag $r1, 20, 198: exception
 x86settag $r1, 20, 199: exception
 x86settag $r1, 20, 200: exception
@@ -5350,12 +5350,12 @@ x86settag $r1, 20, 228: exception
 x86settag $r1, 20, 229: exception
 x86settag $r1, 20, 230: exception
 x86settag $r1, 20, 231: exception
-x86settag $r1, 20, 232: exception
+x86settag $r1, 20, 232: rd ^= 33
 x86settag $r1, 20, 233: exception
 x86settag $r1, 20, 234: exception
 x86settag $r1, 20, 235: exception
 x86settag $r1, 20, 236: exception
-x86settag $r1, 20, 237: exception
+x86settag $r1, 20, 237: rd ^= 32
 x86settag $r1, 20, 238: exception
 x86settag $r1, 20, 239: exception
 x86settag $r1, 20, 240: exception
@@ -6142,524 +6142,524 @@ x86settag $r1, 23, 252: unchanged
 x86settag $r1, 23, 253: unchanged
 x86settag $r1, 23, 254: unchanged
 x86settag $r1, 23, 255: unchanged
-x86settag $r1, 24, 0: rd ^= 1
+x86settag $r1, 24, 0: exception
 x86settag $r1, 24, 1: rd ^= 2
 x86settag $r1, 24, 2: rd ^= 4
 x86settag $r1, 24, 3: rd ^= 8
 x86settag $r1, 24, 4: rd ^= 16
-x86settag $r1, 24, 5: rd ^= 32
+x86settag $r1, 24, 5: exception
 x86settag $r1, 24, 6: rd ^= 64
 x86settag $r1, 24, 7: rd ^= 128
-x86settag $r1, 24, 8: rd ^= 1
+x86settag $r1, 24, 8: exception
 x86settag $r1, 24, 9: rd ^= 2
 x86settag $r1, 24, 10: rd ^= 4
 x86settag $r1, 24, 11: rd ^= 8
 x86settag $r1, 24, 12: rd ^= 16
-x86settag $r1, 24, 13: rd ^= 32
+x86settag $r1, 24, 13: exception
 x86settag $r1, 24, 14: rd ^= 64
 x86settag $r1, 24, 15: rd ^= 128
-x86settag $r1, 24, 16: rd ^= 1
+x86settag $r1, 24, 16: exception
 x86settag $r1, 24, 17: rd ^= 2
 x86settag $r1, 24, 18: rd ^= 4
 x86settag $r1, 24, 19: rd ^= 8
 x86settag $r1, 24, 20: rd ^= 16
-x86settag $r1, 24, 21: rd ^= 32
+x86settag $r1, 24, 21: exception
 x86settag $r1, 24, 22: rd ^= 64
 x86settag $r1, 24, 23: rd ^= 128
-x86settag $r1, 24, 24: rd ^= 1
+x86settag $r1, 24, 24: exception
 x86settag $r1, 24, 25: rd ^= 2
 x86settag $r1, 24, 26: rd ^= 4
 x86settag $r1, 24, 27: rd ^= 8
 x86settag $r1, 24, 28: rd ^= 16
-x86settag $r1, 24, 29: rd ^= 32
+x86settag $r1, 24, 29: exception
 x86settag $r1, 24, 30: rd ^= 64
 x86settag $r1, 24, 31: rd ^= 128
-x86settag $r1, 24, 32: rd ^= 1
+x86settag $r1, 24, 32: exception
 x86settag $r1, 24, 33: rd ^= 2
 x86settag $r1, 24, 34: rd ^= 4
 x86settag $r1, 24, 35: rd ^= 8
 x86settag $r1, 24, 36: rd ^= 16
-x86settag $r1, 24, 37: rd ^= 32
+x86settag $r1, 24, 37: exception
 x86settag $r1, 24, 38: rd ^= 64
 x86settag $r1, 24, 39: rd ^= 128
-x86settag $r1, 24, 40: rd ^= 1
+x86settag $r1, 24, 40: exception
 x86settag $r1, 24, 41: rd ^= 2
 x86settag $r1, 24, 42: rd ^= 4
 x86settag $r1, 24, 43: rd ^= 8
 x86settag $r1, 24, 44: rd ^= 16
-x86settag $r1, 24, 45: rd ^= 32
+x86settag $r1, 24, 45: exception
 x86settag $r1, 24, 46: rd ^= 64
 x86settag $r1, 24, 47: rd ^= 128
-x86settag $r1, 24, 48: rd ^= 1
+x86settag $r1, 24, 48: exception
 x86settag $r1, 24, 49: rd ^= 2
 x86settag $r1, 24, 50: rd ^= 4
 x86settag $r1, 24, 51: rd ^= 8
 x86settag $r1, 24, 52: rd ^= 16
-x86settag $r1, 24, 53: rd ^= 32
+x86settag $r1, 24, 53: exception
 x86settag $r1, 24, 54: rd ^= 64
 x86settag $r1, 24, 55: rd ^= 128
-x86settag $r1, 24, 56: rd ^= 1
+x86settag $r1, 24, 56: exception
 x86settag $r1, 24, 57: rd ^= 2
 x86settag $r1, 24, 58: rd ^= 4
 x86settag $r1, 24, 59: rd ^= 8
 x86settag $r1, 24, 60: rd ^= 16
-x86settag $r1, 24, 61: rd ^= 32
+x86settag $r1, 24, 61: exception
 x86settag $r1, 24, 62: rd ^= 64
 x86settag $r1, 24, 63: rd ^= 128
-x86settag $r1, 24, 64: rd ^= 1
+x86settag $r1, 24, 64: exception
 x86settag $r1, 24, 65: rd ^= 2
 x86settag $r1, 24, 66: rd ^= 4
 x86settag $r1, 24, 67: rd ^= 8
 x86settag $r1, 24, 68: rd ^= 16
-x86settag $r1, 24, 69: rd ^= 32
+x86settag $r1, 24, 69: exception
 x86settag $r1, 24, 70: rd ^= 64
 x86settag $r1, 24, 71: rd ^= 128
-x86settag $r1, 24, 72: rd ^= 1
+x86settag $r1, 24, 72: exception
 x86settag $r1, 24, 73: rd ^= 2
 x86settag $r1, 24, 74: rd ^= 4
 x86settag $r1, 24, 75: rd ^= 8
 x86settag $r1, 24, 76: rd ^= 16
-x86settag $r1, 24, 77: rd ^= 32
+x86settag $r1, 24, 77: exception
 x86settag $r1, 24, 78: rd ^= 64
 x86settag $r1, 24, 79: rd ^= 128
-x86settag $r1, 24, 80: rd ^= 1
+x86settag $r1, 24, 80: exception
 x86settag $r1, 24, 81: rd ^= 2
 x86settag $r1, 24, 82: rd ^= 4
 x86settag $r1, 24, 83: rd ^= 8
 x86settag $r1, 24, 84: rd ^= 16
-x86settag $r1, 24, 85: rd ^= 32
+x86settag $r1, 24, 85: exception
 x86settag $r1, 24, 86: rd ^= 64
 x86settag $r1, 24, 87: rd ^= 128
-x86settag $r1, 24, 88: rd ^= 1
+x86settag $r1, 24, 88: exception
 x86settag $r1, 24, 89: rd ^= 2
 x86settag $r1, 24, 90: rd ^= 4
 x86settag $r1, 24, 91: rd ^= 8
 x86settag $r1, 24, 92: rd ^= 16
-x86settag $r1, 24, 93: rd ^= 32
+x86settag $r1, 24, 93: exception
 x86settag $r1, 24, 94: rd ^= 64
 x86settag $r1, 24, 95: rd ^= 128
-x86settag $r1, 24, 96: rd ^= 1
+x86settag $r1, 24, 96: exception
 x86settag $r1, 24, 97: rd ^= 2
 x86settag $r1, 24, 98: rd ^= 4
 x86settag $r1, 24, 99: rd ^= 8
 x86settag $r1, 24, 100: rd ^= 16
-x86settag $r1, 24, 101: rd ^= 32
+x86settag $r1, 24, 101: exception
 x86settag $r1, 24, 102: rd ^= 64
 x86settag $r1, 24, 103: rd ^= 128
-x86settag $r1, 24, 104: rd ^= 1
+x86settag $r1, 24, 104: exception
 x86settag $r1, 24, 105: rd ^= 2
 x86settag $r1, 24, 106: rd ^= 4
 x86settag $r1, 24, 107: rd ^= 8
 x86settag $r1, 24, 108: rd ^= 16
-x86settag $r1, 24, 109: rd ^= 32
+x86settag $r1, 24, 109: exception
 x86settag $r1, 24, 110: rd ^= 64
 x86settag $r1, 24, 111: rd ^= 128
-x86settag $r1, 24, 112: rd ^= 1
+x86settag $r1, 24, 112: exception
 x86settag $r1, 24, 113: rd ^= 2
 x86settag $r1, 24, 114: rd ^= 4
 x86settag $r1, 24, 115: rd ^= 8
 x86settag $r1, 24, 116: rd ^= 16
-x86settag $r1, 24, 117: rd ^= 32
+x86settag $r1, 24, 117: exception
 x86settag $r1, 24, 118: rd ^= 64
 x86settag $r1, 24, 119: rd ^= 128
-x86settag $r1, 24, 120: rd ^= 1
+x86settag $r1, 24, 120: exception
 x86settag $r1, 24, 121: rd ^= 2
 x86settag $r1, 24, 122: rd ^= 4
 x86settag $r1, 24, 123: rd ^= 8
 x86settag $r1, 24, 124: rd ^= 16
-x86settag $r1, 24, 125: rd ^= 32
+x86settag $r1, 24, 125: exception
 x86settag $r1, 24, 126: rd ^= 64
 x86settag $r1, 24, 127: rd ^= 128
-x86settag $r1, 24, 128: rd ^= 1
+x86settag $r1, 24, 128: exception
 x86settag $r1, 24, 129: rd ^= 2
 x86settag $r1, 24, 130: rd ^= 4
 x86settag $r1, 24, 131: rd ^= 8
 x86settag $r1, 24, 132: rd ^= 16
-x86settag $r1, 24, 133: rd ^= 32
+x86settag $r1, 24, 133: exception
 x86settag $r1, 24, 134: rd ^= 64
 x86settag $r1, 24, 135: rd ^= 128
-x86settag $r1, 24, 136: rd ^= 1
+x86settag $r1, 24, 136: exception
 x86settag $r1, 24, 137: rd ^= 2
 x86settag $r1, 24, 138: rd ^= 4
 x86settag $r1, 24, 139: rd ^= 8
 x86settag $r1, 24, 140: rd ^= 16
-x86settag $r1, 24, 141: rd ^= 32
+x86settag $r1, 24, 141: exception
 x86settag $r1, 24, 142: rd ^= 64
 x86settag $r1, 24, 143: rd ^= 128
-x86settag $r1, 24, 144: rd ^= 1
+x86settag $r1, 24, 144: exception
 x86settag $r1, 24, 145: rd ^= 2
 x86settag $r1, 24, 146: rd ^= 4
 x86settag $r1, 24, 147: rd ^= 8
 x86settag $r1, 24, 148: rd ^= 16
-x86settag $r1, 24, 149: rd ^= 32
+x86settag $r1, 24, 149: exception
 x86settag $r1, 24, 150: rd ^= 64
 x86settag $r1, 24, 151: rd ^= 128
-x86settag $r1, 24, 152: rd ^= 1
+x86settag $r1, 24, 152: exception
 x86settag $r1, 24, 153: rd ^= 2
 x86settag $r1, 24, 154: rd ^= 4
 x86settag $r1, 24, 155: rd ^= 8
 x86settag $r1, 24, 156: rd ^= 16
-x86settag $r1, 24, 157: rd ^= 32
+x86settag $r1, 24, 157: exception
 x86settag $r1, 24, 158: rd ^= 64
 x86settag $r1, 24, 159: rd ^= 128
-x86settag $r1, 24, 160: rd ^= 1
+x86settag $r1, 24, 160: exception
 x86settag $r1, 24, 161: rd ^= 2
 x86settag $r1, 24, 162: rd ^= 4
 x86settag $r1, 24, 163: rd ^= 8
 x86settag $r1, 24, 164: rd ^= 16
-x86settag $r1, 24, 165: rd ^= 32
+x86settag $r1, 24, 165: exception
 x86settag $r1, 24, 166: rd ^= 64
 x86settag $r1, 24, 167: rd ^= 128
-x86settag $r1, 24, 168: rd ^= 1
+x86settag $r1, 24, 168: exception
 x86settag $r1, 24, 169: rd ^= 2
 x86settag $r1, 24, 170: rd ^= 4
 x86settag $r1, 24, 171: rd ^= 8
 x86settag $r1, 24, 172: rd ^= 16
-x86settag $r1, 24, 173: rd ^= 32
+x86settag $r1, 24, 173: exception
 x86settag $r1, 24, 174: rd ^= 64
 x86settag $r1, 24, 175: rd ^= 128
-x86settag $r1, 24, 176: rd ^= 1
+x86settag $r1, 24, 176: exception
 x86settag $r1, 24, 177: rd ^= 2
 x86settag $r1, 24, 178: rd ^= 4
 x86settag $r1, 24, 179: rd ^= 8
 x86settag $r1, 24, 180: rd ^= 16
-x86settag $r1, 24, 181: rd ^= 32
+x86settag $r1, 24, 181: exception
 x86settag $r1, 24, 182: rd ^= 64
 x86settag $r1, 24, 183: rd ^= 128
-x86settag $r1, 24, 184: rd ^= 1
+x86settag $r1, 24, 184: exception
 x86settag $r1, 24, 185: rd ^= 2
 x86settag $r1, 24, 186: rd ^= 4
 x86settag $r1, 24, 187: rd ^= 8
 x86settag $r1, 24, 188: rd ^= 16
-x86settag $r1, 24, 189: rd ^= 32
+x86settag $r1, 24, 189: exception
 x86settag $r1, 24, 190: rd ^= 64
 x86settag $r1, 24, 191: rd ^= 128
-x86settag $r1, 24, 192: rd ^= 1
+x86settag $r1, 24, 192: exception
 x86settag $r1, 24, 193: rd ^= 2
 x86settag $r1, 24, 194: rd ^= 4
 x86settag $r1, 24, 195: rd ^= 8
 x86settag $r1, 24, 196: rd ^= 16
-x86settag $r1, 24, 197: rd ^= 32
+x86settag $r1, 24, 197: exception
 x86settag $r1, 24, 198: rd ^= 64
 x86settag $r1, 24, 199: rd ^= 128
-x86settag $r1, 24, 200: rd ^= 1
+x86settag $r1, 24, 200: exception
 x86settag $r1, 24, 201: rd ^= 2
 x86settag $r1, 24, 202: rd ^= 4
 x86settag $r1, 24, 203: rd ^= 8
 x86settag $r1, 24, 204: rd ^= 16
-x86settag $r1, 24, 205: rd ^= 32
+x86settag $r1, 24, 205: exception
 x86settag $r1, 24, 206: rd ^= 64
 x86settag $r1, 24, 207: rd ^= 128
-x86settag $r1, 24, 208: rd ^= 1
+x86settag $r1, 24, 208: exception
 x86settag $r1, 24, 209: rd ^= 2
 x86settag $r1, 24, 210: rd ^= 4
 x86settag $r1, 24, 211: rd ^= 8
 x86settag $r1, 24, 212: rd ^= 16
-x86settag $r1, 24, 213: rd ^= 32
+x86settag $r1, 24, 213: exception
 x86settag $r1, 24, 214: rd ^= 64
 x86settag $r1, 24, 215: rd ^= 128
-x86settag $r1, 24, 216: rd ^= 1
+x86settag $r1, 24, 216: exception
 x86settag $r1, 24, 217: rd ^= 2
 x86settag $r1, 24, 218: rd ^= 4
 x86settag $r1, 24, 219: rd ^= 8
 x86settag $r1, 24, 220: rd ^= 16
-x86settag $r1, 24, 221: rd ^= 32
+x86settag $r1, 24, 221: exception
 x86settag $r1, 24, 222: rd ^= 64
 x86settag $r1, 24, 223: rd ^= 128
-x86settag $r1, 24, 224: rd ^= 1
+x86settag $r1, 24, 224: exception
 x86settag $r1, 24, 225: rd ^= 2
 x86settag $r1, 24, 226: rd ^= 4
 x86settag $r1, 24, 227: rd ^= 8
 x86settag $r1, 24, 228: rd ^= 16
-x86settag $r1, 24, 229: rd ^= 32
+x86settag $r1, 24, 229: exception
 x86settag $r1, 24, 230: rd ^= 64
 x86settag $r1, 24, 231: rd ^= 128
-x86settag $r1, 24, 232: rd ^= 1
+x86settag $r1, 24, 232: exception
 x86settag $r1, 24, 233: rd ^= 2
 x86settag $r1, 24, 234: rd ^= 4
 x86settag $r1, 24, 235: rd ^= 8
 x86settag $r1, 24, 236: rd ^= 16
-x86settag $r1, 24, 237: rd ^= 32
+x86settag $r1, 24, 237: exception
 x86settag $r1, 24, 238: rd ^= 64
 x86settag $r1, 24, 239: rd ^= 128
-x86settag $r1, 24, 240: rd ^= 1
+x86settag $r1, 24, 240: exception
 x86settag $r1, 24, 241: rd ^= 2
 x86settag $r1, 24, 242: rd ^= 4
 x86settag $r1, 24, 243: rd ^= 8
 x86settag $r1, 24, 244: rd ^= 16
-x86settag $r1, 24, 245: rd ^= 32
+x86settag $r1, 24, 245: exception
 x86settag $r1, 24, 246: rd ^= 64
 x86settag $r1, 24, 247: rd ^= 128
-x86settag $r1, 24, 248: rd ^= 1
+x86settag $r1, 24, 248: exception
 x86settag $r1, 24, 249: rd ^= 2
 x86settag $r1, 24, 250: rd ^= 4
 x86settag $r1, 24, 251: rd ^= 8
 x86settag $r1, 24, 252: rd ^= 16
-x86settag $r1, 24, 253: rd ^= 32
+x86settag $r1, 24, 253: exception
 x86settag $r1, 24, 254: rd ^= 64
 x86settag $r1, 24, 255: rd ^= 128
-x86settag $r1, 25, 0: exception
+x86settag $r1, 25, 0: rd ^= 1
 x86settag $r1, 25, 1: exception
 x86settag $r1, 25, 2: exception
 x86settag $r1, 25, 3: exception
 x86settag $r1, 25, 4: exception
-x86settag $r1, 25, 5: exception
+x86settag $r1, 25, 5: rd ^= 32
 x86settag $r1, 25, 6: exception
 x86settag $r1, 25, 7: exception
-x86settag $r1, 25, 8: exception
+x86settag $r1, 25, 8: rd ^= 1
 x86settag $r1, 25, 9: exception
 x86settag $r1, 25, 10: exception
 x86settag $r1, 25, 11: exception
 x86settag $r1, 25, 12: exception
-x86settag $r1, 25, 13: exception
+x86settag $r1, 25, 13: rd ^= 32
 x86settag $r1, 25, 14: exception
 x86settag $r1, 25, 15: exception
-x86settag $r1, 25, 16: exception
+x86settag $r1, 25, 16: rd ^= 1
 x86settag $r1, 25, 17: exception
 x86settag $r1, 25, 18: exception
 x86settag $r1, 25, 19: exception
 x86settag $r1, 25, 20: exception
-x86settag $r1, 25, 21: exception
+x86settag $r1, 25, 21: rd ^= 32
 x86settag $r1, 25, 22: exception
 x86settag $r1, 25, 23: exception
-x86settag $r1, 25, 24: exception
+x86settag $r1, 25, 24: rd ^= 1
 x86settag $r1, 25, 25: exception
 x86settag $r1, 25, 26: exception
 x86settag $r1, 25, 27: exception
 x86settag $r1, 25, 28: exception
-x86settag $r1, 25, 29: exception
+x86settag $r1, 25, 29: rd ^= 32
 x86settag $r1, 25, 30: exception
 x86settag $r1, 25, 31: exception
-x86settag $r1, 25, 32: exception
+x86settag $r1, 25, 32: rd ^= 1
 x86settag $r1, 25, 33: exception
 x86settag $r1, 25, 34: exception
 x86settag $r1, 25, 35: exception
 x86settag $r1, 25, 36: exception
-x86settag $r1, 25, 37: exception
+x86settag $r1, 25, 37: rd ^= 32
 x86settag $r1, 25, 38: exception
 x86settag $r1, 25, 39: exception
-x86settag $r1, 25, 40: exception
+x86settag $r1, 25, 40: rd ^= 1
 x86settag $r1, 25, 41: exception
 x86settag $r1, 25, 42: exception
 x86settag $r1, 25, 43: exception
 x86settag $r1, 25, 44: exception
-x86settag $r1, 25, 45: exception
+x86settag $r1, 25, 45: rd ^= 32
 x86settag $r1, 25, 46: exception
 x86settag $r1, 25, 47: exception
-x86settag $r1, 25, 48: exception
+x86settag $r1, 25, 48: rd ^= 1
 x86settag $r1, 25, 49: exception
 x86settag $r1, 25, 50: exception
 x86settag $r1, 25, 51: exception
 x86settag $r1, 25, 52: exception
-x86settag $r1, 25, 53: exception
+x86settag $r1, 25, 53: rd ^= 32
 x86settag $r1, 25, 54: exception
 x86settag $r1, 25, 55: exception
-x86settag $r1, 25, 56: exception
+x86settag $r1, 25, 56: rd ^= 1
 x86settag $r1, 25, 57: exception
 x86settag $r1, 25, 58: exception
 x86settag $r1, 25, 59: exception
 x86settag $r1, 25, 60: exception
-x86settag $r1, 25, 61: exception
+x86settag $r1, 25, 61: rd ^= 32
 x86settag $r1, 25, 62: exception
 x86settag $r1, 25, 63: exception
-x86settag $r1, 25, 64: exception
+x86settag $r1, 25, 64: rd ^= 1
 x86settag $r1, 25, 65: exception
 x86settag $r1, 25, 66: exception
 x86settag $r1, 25, 67: exception
 x86settag $r1, 25, 68: exception
-x86settag $r1, 25, 69: exception
+x86settag $r1, 25, 69: rd ^= 32
 x86settag $r1, 25, 70: exception
 x86settag $r1, 25, 71: exception
-x86settag $r1, 25, 72: exception
+x86settag $r1, 25, 72: rd ^= 1
 x86settag $r1, 25, 73: exception
 x86settag $r1, 25, 74: exception
 x86settag $r1, 25, 75: exception
 x86settag $r1, 25, 76: exception
-x86settag $r1, 25, 77: exception
+x86settag $r1, 25, 77: rd ^= 32
 x86settag $r1, 25, 78: exception
 x86settag $r1, 25, 79: exception
-x86settag $r1, 25, 80: exception
+x86settag $r1, 25, 80: rd ^= 1
 x86settag $r1, 25, 81: exception
 x86settag $r1, 25, 82: exception
 x86settag $r1, 25, 83: exception
 x86settag $r1, 25, 84: exception
-x86settag $r1, 25, 85: exception
+x86settag $r1, 25, 85: rd ^= 32
 x86settag $r1, 25, 86: exception
 x86settag $r1, 25, 87: exception
-x86settag $r1, 25, 88: exception
+x86settag $r1, 25, 88: rd ^= 1
 x86settag $r1, 25, 89: exception
 x86settag $r1, 25, 90: exception
 x86settag $r1, 25, 91: exception
 x86settag $r1, 25, 92: exception
-x86settag $r1, 25, 93: exception
+x86settag $r1, 25, 93: rd ^= 32
 x86settag $r1, 25, 94: exception
 x86settag $r1, 25, 95: exception
-x86settag $r1, 25, 96: exception
+x86settag $r1, 25, 96: rd ^= 1
 x86settag $r1, 25, 97: exception
 x86settag $r1, 25, 98: exception
 x86settag $r1, 25, 99: exception
 x86settag $r1, 25, 100: exception
-x86settag $r1, 25, 101: exception
+x86settag $r1, 25, 101: rd ^= 32
 x86settag $r1, 25, 102: exception
 x86settag $r1, 25, 103: exception
-x86settag $r1, 25, 104: exception
+x86settag $r1, 25, 104: rd ^= 1
 x86settag $r1, 25, 105: exception
 x86settag $r1, 25, 106: exception
 x86settag $r1, 25, 107: exception
 x86settag $r1, 25, 108: exception
-x86settag $r1, 25, 109: exception
+x86settag $r1, 25, 109: rd ^= 32
 x86settag $r1, 25, 110: exception
 x86settag $r1, 25, 111: exception
-x86settag $r1, 25, 112: exception
+x86settag $r1, 25, 112: rd ^= 1
 x86settag $r1, 25, 113: exception
 x86settag $r1, 25, 114: exception
 x86settag $r1, 25, 115: exception
 x86settag $r1, 25, 116: exception
-x86settag $r1, 25, 117: exception
+x86settag $r1, 25, 117: rd ^= 32
 x86settag $r1, 25, 118: exception
 x86settag $r1, 25, 119: exception
-x86settag $r1, 25, 120: exception
+x86settag $r1, 25, 120: rd ^= 1
 x86settag $r1, 25, 121: exception
 x86settag $r1, 25, 122: exception
 x86settag $r1, 25, 123: exception
 x86settag $r1, 25, 124: exception
-x86settag $r1, 25, 125: exception
+x86settag $r1, 25, 125: rd ^= 32
 x86settag $r1, 25, 126: exception
 x86settag $r1, 25, 127: exception
-x86settag $r1, 25, 128: exception
+x86settag $r1, 25, 128: rd ^= 1
 x86settag $r1, 25, 129: exception
 x86settag $r1, 25, 130: exception
 x86settag $r1, 25, 131: exception
 x86settag $r1, 25, 132: exception
-x86settag $r1, 25, 133: exception
+x86settag $r1, 25, 133: rd ^= 32
 x86settag $r1, 25, 134: exception
 x86settag $r1, 25, 135: exception
-x86settag $r1, 25, 136: exception
+x86settag $r1, 25, 136: rd ^= 1
 x86settag $r1, 25, 137: exception
 x86settag $r1, 25, 138: exception
 x86settag $r1, 25, 139: exception
 x86settag $r1, 25, 140: exception
-x86settag $r1, 25, 141: exception
+x86settag $r1, 25, 141: rd ^= 32
 x86settag $r1, 25, 142: exception
 x86settag $r1, 25, 143: exception
-x86settag $r1, 25, 144: exception
+x86settag $r1, 25, 144: rd ^= 1
 x86settag $r1, 25, 145: exception
 x86settag $r1, 25, 146: exception
 x86settag $r1, 25, 147: exception
 x86settag $r1, 25, 148: exception
-x86settag $r1, 25, 149: exception
+x86settag $r1, 25, 149: rd ^= 32
 x86settag $r1, 25, 150: exception
 x86settag $r1, 25, 151: exception
-x86settag $r1, 25, 152: exception
+x86settag $r1, 25, 152: rd ^= 1
 x86settag $r1, 25, 153: exception
 x86settag $r1, 25, 154: exception
 x86settag $r1, 25, 155: exception
 x86settag $r1, 25, 156: exception
-x86settag $r1, 25, 157: exception
+x86settag $r1, 25, 157: rd ^= 32
 x86settag $r1, 25, 158: exception
 x86settag $r1, 25, 159: exception
-x86settag $r1, 25, 160: exception
+x86settag $r1, 25, 160: rd ^= 1
 x86settag $r1, 25, 161: exception
 x86settag $r1, 25, 162: exception
 x86settag $r1, 25, 163: exception
 x86settag $r1, 25, 164: exception
-x86settag $r1, 25, 165: exception
+x86settag $r1, 25, 165: rd ^= 32
 x86settag $r1, 25, 166: exception
 x86settag $r1, 25, 167: exception
-x86settag $r1, 25, 168: exception
+x86settag $r1, 25, 168: rd ^= 1
 x86settag $r1, 25, 169: exception
 x86settag $r1, 25, 170: exception
 x86settag $r1, 25, 171: exception
 x86settag $r1, 25, 172: exception
-x86settag $r1, 25, 173: exception
+x86settag $r1, 25, 173: rd ^= 32
 x86settag $r1, 25, 174: exception
 x86settag $r1, 25, 175: exception
-x86settag $r1, 25, 176: exception
+x86settag $r1, 25, 176: rd ^= 1
 x86settag $r1, 25, 177: exception
 x86settag $r1, 25, 178: exception
 x86settag $r1, 25, 179: exception
 x86settag $r1, 25, 180: exception
-x86settag $r1, 25, 181: exception
+x86settag $r1, 25, 181: rd ^= 32
 x86settag $r1, 25, 182: exception
 x86settag $r1, 25, 183: exception
-x86settag $r1, 25, 184: exception
+x86settag $r1, 25, 184: rd ^= 1
 x86settag $r1, 25, 185: exception
 x86settag $r1, 25, 186: exception
 x86settag $r1, 25, 187: exception
 x86settag $r1, 25, 188: exception
-x86settag $r1, 25, 189: exception
+x86settag $r1, 25, 189: rd ^= 32
 x86settag $r1, 25, 190: exception
 x86settag $r1, 25, 191: exception
-x86settag $r1, 25, 192: exception
+x86settag $r1, 25, 192: rd ^= 1
 x86settag $r1, 25, 193: exception
 x86settag $r1, 25, 194: exception
 x86settag $r1, 25, 195: exception
 x86settag $r1, 25, 196: exception
-x86settag $r1, 25, 197: exception
+x86settag $r1, 25, 197: rd ^= 32
 x86settag $r1, 25, 198: exception
 x86settag $r1, 25, 199: exception
-x86settag $r1, 25, 200: exception
+x86settag $r1, 25, 200: rd ^= 1
 x86settag $r1, 25, 201: exception
 x86settag $r1, 25, 202: exception
 x86settag $r1, 25, 203: exception
 x86settag $r1, 25, 204: exception
-x86settag $r1, 25, 205: exception
+x86settag $r1, 25, 205: rd ^= 32
 x86settag $r1, 25, 206: exception
 x86settag $r1, 25, 207: exception
-x86settag $r1, 25, 208: exception
+x86settag $r1, 25, 208: rd ^= 1
 x86settag $r1, 25, 209: exception
 x86settag $r1, 25, 210: exception
 x86settag $r1, 25, 211: exception
 x86settag $r1, 25, 212: exception
-x86settag $r1, 25, 213: exception
+x86settag $r1, 25, 213: rd ^= 32
 x86settag $r1, 25, 214: exception
 x86settag $r1, 25, 215: exception
-x86settag $r1, 25, 216: exception
+x86settag $r1, 25, 216: rd ^= 1
 x86settag $r1, 25, 217: exception
 x86settag $r1, 25, 218: exception
 x86settag $r1, 25, 219: exception
 x86settag $r1, 25, 220: exception
-x86settag $r1, 25, 221: exception
+x86settag $r1, 25, 221: rd ^= 32
 x86settag $r1, 25, 222: exception
 x86settag $r1, 25, 223: exception
-x86settag $r1, 25, 224: exception
+x86settag $r1, 25, 224: rd ^= 1
 x86settag $r1, 25, 225: exception
 x86settag $r1, 25, 226: exception
 x86settag $r1, 25, 227: exception
 x86settag $r1, 25, 228: exception
-x86settag $r1, 25, 229: exception
+x86settag $r1, 25, 229: rd ^= 32
 x86settag $r1, 25, 230: exception
 x86settag $r1, 25, 231: exception
-x86settag $r1, 25, 232: exception
+x86settag $r1, 25, 232: rd ^= 1
 x86settag $r1, 25, 233: exception
 x86settag $r1, 25, 234: exception
 x86settag $r1, 25, 235: exception
 x86settag $r1, 25, 236: exception
-x86settag $r1, 25, 237: exception
+x86settag $r1, 25, 237: rd ^= 32
 x86settag $r1, 25, 238: exception
 x86settag $r1, 25, 239: exception
-x86settag $r1, 25, 240: exception
+x86settag $r1, 25, 240: rd ^= 1
 x86settag $r1, 25, 241: exception
 x86settag $r1, 25, 242: exception
 x86settag $r1, 25, 243: exception
 x86settag $r1, 25, 244: exception
-x86settag $r1, 25, 245: exception
+x86settag $r1, 25, 245: rd ^= 32
 x86settag $r1, 25, 246: exception
 x86settag $r1, 25, 247: exception
-x86settag $r1, 25, 248: exception
+x86settag $r1, 25, 248: rd ^= 1
 x86settag $r1, 25, 249: exception
 x86settag $r1, 25, 250: exception
 x86settag $r1, 25, 251: exception
 x86settag $r1, 25, 252: exception
-x86settag $r1, 25, 253: exception
+x86settag $r1, 25, 253: rd ^= 32
 x86settag $r1, 25, 254: exception
 x86settag $r1, 25, 255: exception
-x86settag $r1, 26, 0: exception
+x86settag $r1, 26, 0: unchanged
 x86settag $r1, 26, 1: exception
 x86settag $r1, 26, 2: exception
 x86settag $r1, 26, 3: exception
 x86settag $r1, 26, 4: exception
-x86settag $r1, 26, 5: exception
+x86settag $r1, 26, 5: unchanged
 x86settag $r1, 26, 6: exception
 x86settag $r1, 26, 7: exception
 x86settag $r1, 26, 8: exception
@@ -6694,12 +6694,12 @@ x86settag $r1, 26, 36: exception
 x86settag $r1, 26, 37: exception
 x86settag $r1, 26, 38: exception
 x86settag $r1, 26, 39: exception
-x86settag $r1, 26, 40: exception
+x86settag $r1, 26, 40: unchanged
 x86settag $r1, 26, 41: exception
 x86settag $r1, 26, 42: exception
 x86settag $r1, 26, 43: exception
 x86settag $r1, 26, 44: exception
-x86settag $r1, 26, 45: exception
+x86settag $r1, 26, 45: unchanged
 x86settag $r1, 26, 46: exception
 x86settag $r1, 26, 47: exception
 x86settag $r1, 26, 48: exception
@@ -6718,12 +6718,12 @@ x86settag $r1, 26, 60: exception
 x86settag $r1, 26, 61: exception
 x86settag $r1, 26, 62: exception
 x86settag $r1, 26, 63: exception
-x86settag $r1, 26, 64: exception
+x86settag $r1, 26, 64: unchanged
 x86settag $r1, 26, 65: exception
 x86settag $r1, 26, 66: exception
 x86settag $r1, 26, 67: exception
 x86settag $r1, 26, 68: exception
-x86settag $r1, 26, 69: exception
+x86settag $r1, 26, 69: unchanged
 x86settag $r1, 26, 70: exception
 x86settag $r1, 26, 71: exception
 x86settag $r1, 26, 72: exception
@@ -6758,12 +6758,12 @@ x86settag $r1, 26, 100: exception
 x86settag $r1, 26, 101: exception
 x86settag $r1, 26, 102: exception
 x86settag $r1, 26, 103: exception
-x86settag $r1, 26, 104: exception
+x86settag $r1, 26, 104: unchanged
 x86settag $r1, 26, 105: exception
 x86settag $r1, 26, 106: exception
 x86settag $r1, 26, 107: exception
 x86settag $r1, 26, 108: exception
-x86settag $r1, 26, 109: exception
+x86settag $r1, 26, 109: unchanged
 x86settag $r1, 26, 110: exception
 x86settag $r1, 26, 111: exception
 x86settag $r1, 26, 112: exception
@@ -6782,12 +6782,12 @@ x86settag $r1, 26, 124: exception
 x86settag $r1, 26, 125: exception
 x86settag $r1, 26, 126: exception
 x86settag $r1, 26, 127: exception
-x86settag $r1, 26, 128: exception
+x86settag $r1, 26, 128: unchanged
 x86settag $r1, 26, 129: exception
 x86settag $r1, 26, 130: exception
 x86settag $r1, 26, 131: exception
 x86settag $r1, 26, 132: exception
-x86settag $r1, 26, 133: exception
+x86settag $r1, 26, 133: unchanged
 x86settag $r1, 26, 134: exception
 x86settag $r1, 26, 135: exception
 x86settag $r1, 26, 136: exception
@@ -6822,12 +6822,12 @@ x86settag $r1, 26, 164: exception
 x86settag $r1, 26, 165: exception
 x86settag $r1, 26, 166: exception
 x86settag $r1, 26, 167: exception
-x86settag $r1, 26, 168: exception
+x86settag $r1, 26, 168: unchanged
 x86settag $r1, 26, 169: exception
 x86settag $r1, 26, 170: exception
 x86settag $r1, 26, 171: exception
 x86settag $r1, 26, 172: exception
-x86settag $r1, 26, 173: exception
+x86settag $r1, 26, 173: unchanged
 x86settag $r1, 26, 174: exception
 x86settag $r1, 26, 175: exception
 x86settag $r1, 26, 176: exception
@@ -6846,12 +6846,12 @@ x86settag $r1, 26, 188: exception
 x86settag $r1, 26, 189: exception
 x86settag $r1, 26, 190: exception
 x86settag $r1, 26, 191: exception
-x86settag $r1, 26, 192: exception
+x86settag $r1, 26, 192: unchanged
 x86settag $r1, 26, 193: exception
 x86settag $r1, 26, 194: exception
 x86settag $r1, 26, 195: exception
 x86settag $r1, 26, 196: exception
-x86settag $r1, 26, 197: exception
+x86settag $r1, 26, 197: unchanged
 x86settag $r1, 26, 198: exception
 x86settag $r1, 26, 199: exception
 x86settag $r1, 26, 200: exception
@@ -6886,12 +6886,12 @@ x86settag $r1, 26, 228: exception
 x86settag $r1, 26, 229: exception
 x86settag $r1, 26, 230: exception
 x86settag $r1, 26, 231: exception
-x86settag $r1, 26, 232: exception
+x86settag $r1, 26, 232: unchanged
 x86settag $r1, 26, 233: exception
 x86settag $r1, 26, 234: exception
 x86settag $r1, 26, 235: exception
 x86settag $r1, 26, 236: exception
-x86settag $r1, 26, 237: exception
+x86settag $r1, 26, 237: unchanged
 x86settag $r1, 26, 238: exception
 x86settag $r1, 26, 239: exception
 x86settag $r1, 26, 240: exception
@@ -6910,12 +6910,12 @@ x86settag $r1, 26, 252: exception
 x86settag $r1, 26, 253: exception
 x86settag $r1, 26, 254: exception
 x86settag $r1, 26, 255: exception
-x86settag $r1, 27, 0: exception
+x86settag $r1, 27, 0: rd ^= 1
 x86settag $r1, 27, 1: exception
 x86settag $r1, 27, 2: exception
 x86settag $r1, 27, 3: exception
 x86settag $r1, 27, 4: exception
-x86settag $r1, 27, 5: exception
+x86settag $r1, 27, 5: rd ^= 32
 x86settag $r1, 27, 6: exception
 x86settag $r1, 27, 7: exception
 x86settag $r1, 27, 8: exception
@@ -6950,12 +6950,12 @@ x86settag $r1, 27, 36: exception
 x86settag $r1, 27, 37: exception
 x86settag $r1, 27, 38: exception
 x86settag $r1, 27, 39: exception
-x86settag $r1, 27, 40: exception
+x86settag $r1, 27, 40: rd ^= 1
 x86settag $r1, 27, 41: exception
 x86settag $r1, 27, 42: exception
 x86settag $r1, 27, 43: exception
 x86settag $r1, 27, 44: exception
-x86settag $r1, 27, 45: exception
+x86settag $r1, 27, 45: rd ^= 32
 x86settag $r1, 27, 46: exception
 x86settag $r1, 27, 47: exception
 x86settag $r1, 27, 48: exception
@@ -6974,12 +6974,12 @@ x86settag $r1, 27, 60: exception
 x86settag $r1, 27, 61: exception
 x86settag $r1, 27, 62: exception
 x86settag $r1, 27, 63: exception
-x86settag $r1, 27, 64: exception
+x86settag $r1, 27, 64: rd ^= 1
 x86settag $r1, 27, 65: exception
 x86settag $r1, 27, 66: exception
 x86settag $r1, 27, 67: exception
 x86settag $r1, 27, 68: exception
-x86settag $r1, 27, 69: exception
+x86settag $r1, 27, 69: rd ^= 32
 x86settag $r1, 27, 70: exception
 x86settag $r1, 27, 71: exception
 x86settag $r1, 27, 72: exception
@@ -7014,12 +7014,12 @@ x86settag $r1, 27, 100: exception
 x86settag $r1, 27, 101: exception
 x86settag $r1, 27, 102: exception
 x86settag $r1, 27, 103: exception
-x86settag $r1, 27, 104: exception
+x86settag $r1, 27, 104: rd ^= 1
 x86settag $r1, 27, 105: exception
 x86settag $r1, 27, 106: exception
 x86settag $r1, 27, 107: exception
 x86settag $r1, 27, 108: exception
-x86settag $r1, 27, 109: exception
+x86settag $r1, 27, 109: rd ^= 32
 x86settag $r1, 27, 110: exception
 x86settag $r1, 27, 111: exception
 x86settag $r1, 27, 112: exception
@@ -7038,12 +7038,12 @@ x86settag $r1, 27, 124: exception
 x86settag $r1, 27, 125: exception
 x86settag $r1, 27, 126: exception
 x86settag $r1, 27, 127: exception
-x86settag $r1, 27, 128: exception
+x86settag $r1, 27, 128: rd ^= 1
 x86settag $r1, 27, 129: exception
 x86settag $r1, 27, 130: exception
 x86settag $r1, 27, 131: exception
 x86settag $r1, 27, 132: exception
-x86settag $r1, 27, 133: exception
+x86settag $r1, 27, 133: rd ^= 32
 x86settag $r1, 27, 134: exception
 x86settag $r1, 27, 135: exception
 x86settag $r1, 27, 136: exception
@@ -7078,12 +7078,12 @@ x86settag $r1, 27, 164: exception
 x86settag $r1, 27, 165: exception
 x86settag $r1, 27, 166: exception
 x86settag $r1, 27, 167: exception
-x86settag $r1, 27, 168: exception
+x86settag $r1, 27, 168: rd ^= 1
 x86settag $r1, 27, 169: exception
 x86settag $r1, 27, 170: exception
 x86settag $r1, 27, 171: exception
 x86settag $r1, 27, 172: exception
-x86settag $r1, 27, 173: exception
+x86settag $r1, 27, 173: rd ^= 32
 x86settag $r1, 27, 174: exception
 x86settag $r1, 27, 175: exception
 x86settag $r1, 27, 176: exception
@@ -7102,12 +7102,12 @@ x86settag $r1, 27, 188: exception
 x86settag $r1, 27, 189: exception
 x86settag $r1, 27, 190: exception
 x86settag $r1, 27, 191: exception
-x86settag $r1, 27, 192: exception
+x86settag $r1, 27, 192: rd ^= 1
 x86settag $r1, 27, 193: exception
 x86settag $r1, 27, 194: exception
 x86settag $r1, 27, 195: exception
 x86settag $r1, 27, 196: exception
-x86settag $r1, 27, 197: exception
+x86settag $r1, 27, 197: rd ^= 32
 x86settag $r1, 27, 198: exception
 x86settag $r1, 27, 199: exception
 x86settag $r1, 27, 200: exception
@@ -7142,12 +7142,12 @@ x86settag $r1, 27, 228: exception
 x86settag $r1, 27, 229: exception
 x86settag $r1, 27, 230: exception
 x86settag $r1, 27, 231: exception
-x86settag $r1, 27, 232: exception
+x86settag $r1, 27, 232: rd ^= 1
 x86settag $r1, 27, 233: exception
 x86settag $r1, 27, 234: exception
 x86settag $r1, 27, 235: exception
 x86settag $r1, 27, 236: exception
-x86settag $r1, 27, 237: exception
+x86settag $r1, 27, 237: rd ^= 32
 x86settag $r1, 27, 238: exception
 x86settag $r1, 27, 239: exception
 x86settag $r1, 27, 240: exception
@@ -7166,12 +7166,12 @@ x86settag $r1, 27, 252: exception
 x86settag $r1, 27, 253: exception
 x86settag $r1, 27, 254: exception
 x86settag $r1, 27, 255: exception
-x86settag $r1, 28, 0: exception
+x86settag $r1, 28, 0: rd ^= 1
 x86settag $r1, 28, 1: exception
 x86settag $r1, 28, 2: exception
 x86settag $r1, 28, 3: exception
 x86settag $r1, 28, 4: exception
-x86settag $r1, 28, 5: exception
+x86settag $r1, 28, 5: rd ^= 33
 x86settag $r1, 28, 6: exception
 x86settag $r1, 28, 7: exception
 x86settag $r1, 28, 8: exception
@@ -7206,12 +7206,12 @@ x86settag $r1, 28, 36: exception
 x86settag $r1, 28, 37: exception
 x86settag $r1, 28, 38: exception
 x86settag $r1, 28, 39: exception
-x86settag $r1, 28, 40: exception
+x86settag $r1, 28, 40: rd ^= 33
 x86settag $r1, 28, 41: exception
 x86settag $r1, 28, 42: exception
 x86settag $r1, 28, 43: exception
 x86settag $r1, 28, 44: exception
-x86settag $r1, 28, 45: exception
+x86settag $r1, 28, 45: rd ^= 32
 x86settag $r1, 28, 46: exception
 x86settag $r1, 28, 47: exception
 x86settag $r1, 28, 48: exception
@@ -7230,12 +7230,12 @@ x86settag $r1, 28, 60: exception
 x86settag $r1, 28, 61: exception
 x86settag $r1, 28, 62: exception
 x86settag $r1, 28, 63: exception
-x86settag $r1, 28, 64: exception
+x86settag $r1, 28, 64: rd ^= 1
 x86settag $r1, 28, 65: exception
 x86settag $r1, 28, 66: exception
 x86settag $r1, 28, 67: exception
 x86settag $r1, 28, 68: exception
-x86settag $r1, 28, 69: exception
+x86settag $r1, 28, 69: rd ^= 33
 x86settag $r1, 28, 70: exception
 x86settag $r1, 28, 71: exception
 x86settag $r1, 28, 72: exception
@@ -7270,12 +7270,12 @@ x86settag $r1, 28, 100: exception
 x86settag $r1, 28, 101: exception
 x86settag $r1, 28, 102: exception
 x86settag $r1, 28, 103: exception
-x86settag $r1, 28, 104: exception
+x86settag $r1, 28, 104: rd ^= 33
 x86settag $r1, 28, 105: exception
 x86settag $r1, 28, 106: exception
 x86settag $r1, 28, 107: exception
 x86settag $r1, 28, 108: exception
-x86settag $r1, 28, 109: exception
+x86settag $r1, 28, 109: rd ^= 32
 x86settag $r1, 28, 110: exception
 x86settag $r1, 28, 111: exception
 x86settag $r1, 28, 112: exception
@@ -7294,12 +7294,12 @@ x86settag $r1, 28, 124: exception
 x86settag $r1, 28, 125: exception
 x86settag $r1, 28, 126: exception
 x86settag $r1, 28, 127: exception
-x86settag $r1, 28, 128: exception
+x86settag $r1, 28, 128: rd ^= 1
 x86settag $r1, 28, 129: exception
 x86settag $r1, 28, 130: exception
 x86settag $r1, 28, 131: exception
 x86settag $r1, 28, 132: exception
-x86settag $r1, 28, 133: exception
+x86settag $r1, 28, 133: rd ^= 33
 x86settag $r1, 28, 134: exception
 x86settag $r1, 28, 135: exception
 x86settag $r1, 28, 136: exception
@@ -7334,12 +7334,12 @@ x86settag $r1, 28, 164: exception
 x86settag $r1, 28, 165: exception
 x86settag $r1, 28, 166: exception
 x86settag $r1, 28, 167: exception
-x86settag $r1, 28, 168: exception
+x86settag $r1, 28, 168: rd ^= 33
 x86settag $r1, 28, 169: exception
 x86settag $r1, 28, 170: exception
 x86settag $r1, 28, 171: exception
 x86settag $r1, 28, 172: exception
-x86settag $r1, 28, 173: exception
+x86settag $r1, 28, 173: rd ^= 32
 x86settag $r1, 28, 174: exception
 x86settag $r1, 28, 175: exception
 x86settag $r1, 28, 176: exception
@@ -7358,12 +7358,12 @@ x86settag $r1, 28, 188: exception
 x86settag $r1, 28, 189: exception
 x86settag $r1, 28, 190: exception
 x86settag $r1, 28, 191: exception
-x86settag $r1, 28, 192: exception
+x86settag $r1, 28, 192: rd ^= 1
 x86settag $r1, 28, 193: exception
 x86settag $r1, 28, 194: exception
 x86settag $r1, 28, 195: exception
 x86settag $r1, 28, 196: exception
-x86settag $r1, 28, 197: exception
+x86settag $r1, 28, 197: rd ^= 33
 x86settag $r1, 28, 198: exception
 x86settag $r1, 28, 199: exception
 x86settag $r1, 28, 200: exception
@@ -7398,12 +7398,12 @@ x86settag $r1, 28, 228: exception
 x86settag $r1, 28, 229: exception
 x86settag $r1, 28, 230: exception
 x86settag $r1, 28, 231: exception
-x86settag $r1, 28, 232: exception
+x86settag $r1, 28, 232: rd ^= 33
 x86settag $r1, 28, 233: exception
 x86settag $r1, 28, 234: exception
 x86settag $r1, 28, 235: exception
 x86settag $r1, 28, 236: exception
-x86settag $r1, 28, 237: exception
+x86settag $r1, 28, 237: rd ^= 32
 x86settag $r1, 28, 238: exception
 x86settag $r1, 28, 239: exception
 x86settag $r1, 28, 240: exception

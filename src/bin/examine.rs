@@ -41,6 +41,7 @@ fn examine(inst: u32) {
         la_inst::ProbeResult::IllegalInstruction => println!("Ptrace: Illegal instruction"),
         la_inst::ProbeResult::SegmentationFault => println!("Ptrace: Segmentation fault"),
         la_inst::ProbeResult::BusError => println!("Ptrace: Bus error"),
+        la_inst::ProbeResult::BinaryTranslationException => println!("Ptrace: Binary Translation Error"),
         la_inst::ProbeResult::RegisterUnchaged => println!("Ptrace: Registers unchanged"),
         la_inst::ProbeResult::RegisterChanged(info) => {
             println!("Ptrace: Register changed");

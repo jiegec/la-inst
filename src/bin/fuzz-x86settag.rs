@@ -18,10 +18,12 @@ fn main() {
         let rd = 1;
         let inst = 0x00580000 | (imm1 << 5) | (imm2 << 10) | rd;
 
+        let value = 0x87654321;
         let result =
-            inst_legal_ptrace(inst, &[RegisterPreset::GeneralRegister(rd as usize, 0x0)]).unwrap();
+            inst_legal_ptrace(inst, &[RegisterPreset::GeneralRegister(rd as usize, value)])
+                .unwrap();
         write!(file, "x86settag $r1, {}, {}: ", imm1, imm2).unwrap();
-        match result {
+        match &result {
             ProbeResult::IllegalInstruction => todo!(),
             ProbeResult::SegmentationFault => todo!(),
             ProbeResult::BusError => todo!(),
@@ -34,6 +36,88 @@ fn main() {
                     info.new.gpr[rd as usize] ^ info.old.gpr[rd as usize]
                 )
                 .unwrap();
+            }
+        }
+
+        // verify
+        let mask = 1 << (imm2 & 0x7);
+        let mut should_throw = false;
+        let mut expected_result = value;
+        match imm1 % 8 {
+            0 => {
+                if (value & mask) == 0 {
+                    expected_result |= mask;
+                } else {
+                    should_throw = true;
+                }
+            }
+            1 => {
+                if (value & mask) != 0 {
+                    expected_result &= !mask;
+                } else {
+                    should_throw = true;
+                }
+            }
+            2 => {
+                if 8 <= (imm2 & 63) && (imm2 & 63) < 40 {
+                    should_throw = true;
+                } else if 48 <= (imm2 & 63) && (imm2 & 63) < 64 {
+                    should_throw = true;
+                } else if (value & mask) == 0 {
+                    should_throw = true;
+                }
+            }
+            3 => {
+                if 8 <= (imm2 & 63) && (imm2 & 63) < 40 {
+                    should_throw = true;
+                } else if 48 <= (imm2 & 63) && (imm2 & 63) < 64 {
+                    should_throw = true;
+                } else if (value & mask) != 0 {
+                    expected_result &= !mask;
+                } else {
+                    should_throw = true;
+                }
+            }
+            4 => {
+                if 8 <= (imm2 & 63) && (imm2 & 63) < 40 {
+                    should_throw = true;
+                } else if 48 <= (imm2 & 63) && (imm2 & 63) < 64 {
+                    should_throw = true;
+                } else if (value & mask) != 0 {
+                    if (imm2 & 63) < 8 {
+                        expected_result &= !mask;
+                        expected_result &= !1;
+                    } else {
+                        expected_result &= !mask;
+                        expected_result &= !32;
+                    }
+                } else {
+                    should_throw = true;
+                }
+            }
+            5 => {}
+            6 => {}
+            7 => {}
+            _ => unreachable!(),
+        }
+
+        if should_throw {
+            assert_eq!(result, ProbeResult::BinaryTranslationException);
+        } else {
+            match &result {
+                ProbeResult::RegisterChanged(info) => {
+                    assert_eq!(info.new.gpr[rd as usize], expected_result);
+                }
+                ProbeResult::RegisterUnchaged => {
+                    assert_eq!(expected_result, value);
+                }
+                ProbeResult::BinaryTranslationException => {
+                    assert!(should_throw);
+                }
+                _ => {
+                    println!("Unknown result: {:?}", result);
+                    assert!(false)
+                }
             }
         }
     }

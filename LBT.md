@@ -336,10 +336,10 @@ x86settag(rd, imm1, imm2) {
         }
     } else if (imm1 == 2) {
         // do not change rd if 1, throw if 0
-        if (8 <= (imm2 & 0x63) && (imm2 & 0x63) < 40) {
+        if (8 <= (imm2 & 63) && (imm2 & 63) < 40) {
             throw BTE();
         }
-        if (48 <= (imm2 & 0x63) && (imm2 & 0x63) < 64) {
+        if (48 <= (imm2 & 63) && (imm2 & 63) < 64) {
             throw BTE();
         }
         if ((GPR[rd] & mask) == 0) {
@@ -347,10 +347,10 @@ x86settag(rd, imm1, imm2) {
         }
     } else if (imm1 == 3) {
         // only allow 1->0
-        if (8 <= (imm2 & 0x63) && (imm2 & 0x63) < 40) {
+        if (8 <= (imm2 & 63) && (imm2 & 63) < 40) {
             throw BTE();
         }
-        if (48 <= (imm2 & 0x63) && (imm2 & 0x63) < 64) {
+        if (48 <= (imm2 & 63) && (imm2 & 63) < 64) {
             throw BTE();
         }
         if ((GPR[rd] & mask) != 0) {
@@ -360,15 +360,20 @@ x86settag(rd, imm1, imm2) {
         }
     } else if (imm1 == 4) {
         // only allow 1->0
-        if (8 <= (imm2 & 0x63) && (imm2 & 0x63) < 40) {
+        if (8 <= (imm2 & 63) && (imm2 & 63) < 40) {
             throw BTE();
         }
-        if (48 <= (imm2 & 0x63) && (imm2 & 0x63) < 64) {
+        if (48 <= (imm2 & 63) && (imm2 & 63) < 64) {
             throw BTE();
         }
         if ((GPR[rd] & mask) != 0) {
-            GPR[rd] &= ~mask;
-            GPR[rd] &= ~1;
+            if ((imm2 & 63) < 8) {
+                GPR[rd] &= ~mask;
+                GPR[rd] &= ~1;
+            } else {
+                GPR[rd] &= ~mask;
+                GPR[rd] &= ~32;
+            }
         } else {
             throw BTE();
         }
