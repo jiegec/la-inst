@@ -168,11 +168,30 @@ LBT4 changed (eflags), GPR unchanged
 - x86settm
 - x86clrtm
 
-tm = floating point stack mode
+tm = floating point stack mode, when enabled, add TOP offset to fpr.
 
-related to x87 FPU as well?
+thanks @xen0n.
 
-TODO
+```c
+// x86settm
+x86settm() {
+    TM = 1;
+}
+
+// x86clrtm
+x86clrtm() {
+    TM = 0;
+}
+
+// offset fpr by TOP
+mappedFPR(fpr) {
+    if (TM) {
+        return FPR[fpr + TOP];
+    } else {
+        return FPR[fpr];
+    }
+}
+```
 
 ### setj
 

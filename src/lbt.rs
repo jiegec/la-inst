@@ -427,6 +427,65 @@ mod test {
         assert_eq!(b, 0x4320);
     }
 
+    #[test]
+    fn test_x86settm() {
+        // reset
+        unsafe {
+            asm!(
+                "x86clrtm
+                 x86mttop 0"
+            );
+        }
+
+        let a: usize = 0x12345678;
+        let b: usize;
+        unsafe {
+            asm!("movgr2fr.d $f0, {a}
+                  x86settm
+                  x86mttop 0
+                  movfr2gr.d {b}, $f0
+                  ",
+                b = out(reg) b,
+                a = in(reg) a);
+        }
+        assert_eq!(b, 0x12345678);
+
+        // f0 becomes f1 after x86mttop=1
+        let a: usize = 0x12345678;
+        let b: usize;
+        unsafe {
+            asm!("movgr2fr.d $f1, {a}
+                  x86mttop 1
+                  movfr2gr.d {b}, $f0
+                  ",
+                b = out(reg) b,
+                a = in(reg) a);
+        }
+        assert_eq!(b, 0x12345678);
+
+        // f0 becomes f7 after x86mttop=7
+        let a: usize = 0x87654321;
+        let b: usize;
+        unsafe {
+            asm!("x86mttop 0
+                  movgr2fr.d $f7, {a}
+                  x86mttop 7
+                  movfr2gr.d {b}, $f0
+                  ",
+                b = out(reg) b,
+                a = in(reg) a);
+        }
+        assert_eq!(b, 0x87654321);
+
+        // reset
+        unsafe {
+            asm!(
+                "x86clrtm
+                 x86mttop 0"
+            );
+        }
+    }
+
     macro_rules! setarmj {
         ($nzcv:expr, $condition:literal) => {
             {
