@@ -66,8 +66,8 @@ All set: 0x8d5
 
 - x86mttop imm
 - x86mftop rd
-- x86inctop
-- x86dectop
+- x86inctop: FINCSTP
+- x86dectop: FDECSTP
 
 ftop = floating point stack top pointer
 
@@ -289,6 +289,12 @@ LBT4 changed (eflags), GPR unchanged
 
 some computation based on imm1, imm2 and EFLAGS?
 
+might trigger reserved exception (according to spec, BTE, binary translation exception):
+
+```
+[17108.293593] Caught reserved exception 21 on pid:86379 [examine] - should not happen
+```
+
 ### flag
 
 - x86mfflag rd, mask: read from EFLAGS
@@ -417,4 +423,5 @@ for MIPS style unaligned load/stores
 ## references
 
 - https://web.archive.org/web/20190713073150/http://www.loongson.cn/uploadfile/cpumanual/LoongsonGS264_user.pdf
+- https://mirrors.cloud.tencent.com/loongson/docs/English-translation-of-Loongson-manual/Loongson3A3000_3B3000usermanual2.pdf
 - 龙芯指令系统架构技术

@@ -303,6 +303,7 @@ mod test {
 pub fn inst_assemble_binutils(inst: &str) -> anyhow::Result<u32> {
     let mut file = NamedTempFile::new()?;
     file.write(inst.as_bytes())?;
+    file.write("\n".as_bytes())?;
     let path = file.into_temp_path();
 
     let elf_file = NamedTempFile::new()?;
