@@ -367,4 +367,63 @@ mod test {
         // PF(0x004) | CF(0x001)
         assert_eq!(b, 0x855);
     }
+
+    #[test]
+    fn test_x86settag() {
+        let mut b: usize = 0;
+        unsafe {
+            asm!("x86settag {b}, 0, 0",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 1);
+
+        let mut b: usize = 0;
+        unsafe {
+            asm!("x86settag {b}, 0, 1",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 2);
+
+        let mut b: usize = 0;
+        unsafe {
+            asm!("x86settag {b}, 0, 2",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 4);
+
+        let mut b: usize = 0;
+        unsafe {
+            asm!("x86settag {b}, 0, 3",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 8);
+
+        let mut b: usize = 0x4321;
+        unsafe {
+            asm!("x86settag {b}, 0, 3",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 0x4329);
+
+        let mut b: usize = 0x4321;
+        unsafe {
+            asm!("x86settag {b}, 0, 7",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 0x43a1);
+
+        let mut b: usize = 0x4321;
+        unsafe {
+            asm!("x86settag {b}, 1, 8",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 0x4320);
+
+        let mut b: usize = 0x4321;
+        unsafe {
+            asm!("x86settag {b}, 1, 8",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 0x4320);
+    }
 }
