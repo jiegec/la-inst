@@ -9,6 +9,7 @@ fn main() {
     let mut file = OpenOptions::new()
         .write(true)
         .create(true)
+        .truncate(true)
         .open("x86settag.txt")
         .unwrap();
     for i in (0..8192).progress_with_style(style) {
