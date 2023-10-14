@@ -4,3 +4,4 @@ loongarch-opc.c
 # Added by cargo
 
 /target
+x86settag.txt

@@ -18,7 +18,7 @@ fn main() {
         let rd = 1;
         let inst = 0x00580000 | (imm1 << 5) | (imm2 << 10) | rd;
 
-        let value = 0x12345678;
+        let value = 0xab16cdef;
         let result =
             inst_legal_ptrace(inst, &[RegisterPreset::GeneralRegister(rd as usize, value)])
                 .unwrap();
