@@ -153,7 +153,105 @@ related to x87 FPU as well?
 
 - setx86j rd, imm
 
-j = jump? conditional jump by comparing to EFLAGS?
+According to 龙芯指令系统架构技术:
+
+```asm
+# x86
+SUB ECX, EDX
+JE X86_target
+
+# lbt in paper
+SUB.W Result, Recx, Redx    # compute result
+X86SUB.W Reflag, Recx, Redx # update eflags
+SETX86J Rtmp, Reflag, EQ    # generate jump condition
+BNE Rtmp, R0, LA_target     # actual jump
+
+# actual lbt where Reflag is implicit
+SUB.W Result, Recx, Redx    # compute result
+X86SUB.W Recx, Redx         # update eflags
+SETX86J Rtmp, EQ            # generate jump condition
+BNE Rtmp, R0, LA_target     # actual jump
+```
+
+According to http://unixwiz.net/techtips/x86-jumps.html, x86 jump variants:
+
+- jo: OF=1
+- jno: OF=0
+- js: SF=1
+- jns: SF=0
+- je/jz: ZF=1
+- jne/jnz: ZF=0
+- jb/jnae/jc: CF=1
+- jnb/jze/jnc: CF=0
+- jbe/jna: CF=1 || ZF=1
+- ja/jnbe: CF=0 && ZF=0
+- jl/jnge: SF != OF
+- jge/jnl: SF == OF
+- jle/jng: ZF=1 || SF != OF
+- jg/jnle: ZF=0 && SF == OF
+- jp/jpe: PF=1
+- jnp/jpo: PF=0
+
+```c
+// setx86j $rd, imm
+setx86j(rd, imm) {
+    CF = (EFLAGS & 0x001) != 0;
+    PF = (EFLAGS & 0x004) != 0;
+    ZF = (EFLAGS & 0x040) != 0;
+    SF = (EFLAGS & 0x080) != 0;
+    OF = (EFLAGS & 0x800) != 0;
+    switch(imm) {
+        case 0:
+            GPR[rd] = CF == 0 && ZF == 0;
+            break;
+        case 1:
+            GPR[rd] = CF == 0;
+            break;
+        case 2:
+            GPR[rd] = CF == 1;
+            break;
+        case 3:
+            GPR[rd] = CF == 1 || ZF == 1;
+            break;
+        case 4:
+            GPR[rd] = ZF == 1;
+            break;
+        case 5:
+            GPR[rd] = ZF == 0;
+            break;
+        case 6:
+            GPR[rd] = ZF == 0 && SF == OF;
+            break;
+        case 7:
+            GPR[rd] = SF == OF;
+            break;
+        case 8:
+            GPR[rd] = SF != OF;
+            break;
+        case 9:
+            GPR[rd] = ZF == 1 || SF != OF;
+            break;
+        case 10:
+            GPR[rd] = SF == 1;
+            break;
+        case 11:
+            GPR[rd] = SF == 0;
+            break;
+        case 12:
+            GPR[rd] = OF == 1;
+            break;
+        case 13:
+            GPR[rd] = OF == 0;
+            break;
+        case 14:
+            GPR[rd] = PF == 1;
+            break;
+        case 15:
+            GPR[rd] = PF == 0;
+            break;
+    }
+}
+```
 
 ### mul/add/sub/adc/sbc/sll/sra/rotr/rotl/rcr/rcl/and/or/xor
 
@@ -253,4 +351,5 @@ for MIPS style unaligned load/stores
 
 ## references
 
-https://web.archive.org/web/20190713073150/http://www.loongson.cn/uploadfile/cpumanual/LoongsonGS264_user.pdf
+- https://web.archive.org/web/20190713073150/http://www.loongson.cn/uploadfile/cpumanual/LoongsonGS264_user.pdf
+- 龙芯指令系统架构技术
