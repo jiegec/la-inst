@@ -3,7 +3,7 @@ use opcode::OPCODES;
 use ptrace::*;
 use rand::Rng;
 use std::arch::asm;
-use std::io::Write;
+use std::io::{Read, Write};
 use std::process::Command;
 use tempfile::NamedTempFile;
 
@@ -293,4 +293,35 @@ mod test {
     fn test_illegal() {
         assert_eq!(inst_decode_binutils(0x0).unwrap(), None);
     }
+}
+
+/* Assemble instruction */
+pub fn inst_assemble_binutils(inst: &str) -> anyhow::Result<u32> {
+    let mut file = NamedTempFile::new()?;
+    file.write(inst.as_bytes())?;
+    let path = file.into_temp_path();
+
+    let elf_file = NamedTempFile::new()?;
+    let elf_path = elf_file.into_temp_path();
+
+    let bin_file = NamedTempFile::new()?;
+    let bin_path = bin_file.path();
+
+    Command::new("as")
+        .args([path.to_str().unwrap(), "-o", elf_path.to_str().unwrap()])
+        .status()?;
+    Command::new("objcopy")
+        .args([
+            "-O",
+            "binary",
+            elf_path.to_str().unwrap(),
+            bin_path.to_str().unwrap(),
+        ])
+        .status()?;
+
+    let mut content = vec![];
+    bin_file.as_file().read_to_end(&mut content)?;
+
+    let bytes: [u8; 4] = [content[0], content[1], content[2], content[3]];
+    Ok(u32::from_le_bytes(bytes))
 }

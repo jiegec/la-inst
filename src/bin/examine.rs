@@ -1,5 +1,5 @@
 use colored::Colorize;
-use la_inst::{inst_decode_binutils, inst_legal_ptrace};
+use la_inst::{inst_assemble_binutils, inst_decode_binutils, inst_legal_ptrace};
 use std::{fmt::Debug, mem::transmute_copy};
 
 fn colored_output<T: Debug>(old: T, new: T) -> String {
@@ -116,15 +116,25 @@ fn examine(inst: u32) {
 }
 
 fn main() {
+    let mut assemble = false;
     for arg in std::env::args().skip(1) {
-        // replace spaces
-        let arg = arg.replace(" ", "");
+        if arg == "-s" {
+            assemble = true;
+            continue;
+        }
 
-        let inst = if arg.len() == 8 {
-            u32::from_str_radix(&arg, 16).unwrap()
+        let inst = if assemble {
+            inst_assemble_binutils(&arg).unwrap()
         } else {
-            u32::from_str_radix(&arg, 2).unwrap()
+            // replace spaces
+            let arg = arg.replace(" ", "");
+            if arg.len() == 8 {
+                u32::from_str_radix(&arg, 16).unwrap()
+            } else {
+                u32::from_str_radix(&arg, 2).unwrap()
+            }
         };
+
         examine(inst);
     }
 }
