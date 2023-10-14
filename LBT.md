@@ -308,8 +308,6 @@ LBT4 changed (eflags), GPR unchanged
 
 - x86settag rd, imm1, imm2
 
-some computation based on imm1, imm2 and EFLAGS?
-
 might trigger reserved exception (according to spec, BTE, binary translation exception):
 
 ```
