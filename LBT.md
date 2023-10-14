@@ -17,7 +17,7 @@ scratch registers:
 - $scr2: LBT2
 - $scr3: LBT3
 
-```
+```c
 // movgr2scr $scrd, $rj
 movgr2scr(scrd, rj) {
     LBT[scrd] = GPR[rj];
@@ -34,7 +34,7 @@ movgr2scr(rd, scrj) {
 - jiscr0 imm
 - jiscr1 imm
 
-```
+```c
 jiscr0(imm) {
     PC = LBT[0] + imm;
 }
@@ -58,7 +58,23 @@ ftop = floating point stack top pointer
 
 Intel x87 FPU: eigth level deep stack
 
-8 FTOP registers
+```c
+x86mttop(imm) {
+    TOP = imm;
+}
+
+x86mftop(rd) {
+    GPR[rd] = TOP;
+}
+
+x86inctop(rd) {
+    TOP = (TOP + 1) & 0x7;
+}
+
+x86dectop(rd) {
+    TOP = (TOP - 1) & 0x7;
+}
+```
 
 linux lbt.S:
 

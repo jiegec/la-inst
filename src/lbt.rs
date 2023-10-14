@@ -30,4 +30,47 @@ mod test {
         }
         assert_eq!(b, 2);
     }
+
+    #[test]
+    fn test_x86ftop() {
+        // test x86 ftop
+        let mut b: u64;
+        unsafe {
+            asm!("x86mttop 0
+                  x86mftop {b}", b = out(reg) b);
+        }
+        assert_eq!(b, 0);
+
+        unsafe {
+            asm!("x86mttop 1
+                  x86mftop {b}", b = out(reg) b);
+        }
+        assert_eq!(b, 1);
+
+        unsafe {
+            asm!("x86inctop
+                  x86mftop {b}", b = out(reg) b);
+        }
+        assert_eq!(b, 2);
+
+        unsafe {
+            asm!("x86dectop
+                  x86mftop {b}", b = out(reg) b);
+        }
+        assert_eq!(b, 1);
+
+        unsafe {
+            asm!("x86dectop
+                  x86dectop
+                  x86mftop {b}", b = out(reg) b);
+        }
+        assert_eq!(b, 7);
+
+        unsafe {
+            asm!("x86mttop 7
+                  x86inctop
+                  x86mftop {b}", b = out(reg) b);
+        }
+        assert_eq!(b, 0);
+    }
 }
