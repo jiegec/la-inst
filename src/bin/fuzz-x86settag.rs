@@ -1,5 +1,5 @@
 use indicatif::{ProgressIterator, ProgressStyle};
-use la_inst::{inst_legal_ptrace, ProbeResult, inst_decode_binutils};
+use la_inst::{inst_legal_ptrace, ProbeResult, RegisterPreset};
 use std::fs::OpenOptions;
 use std::io::Write;
 
@@ -16,9 +16,9 @@ fn main() {
         let imm2 = i & 255;
         let rd = 1;
         let inst = 0x00580000 | (imm1 << 5) | (imm2 << 10) | rd;
-        writeln!(file, "{:?}", inst_decode_binutils(inst)).unwrap();
 
-        let result = inst_legal_ptrace(inst, &[]).unwrap();
+        let result =
+            inst_legal_ptrace(inst, &[RegisterPreset::GeneralRegister(rd as usize, 0x0)]).unwrap();
         write!(file, "x86settag $r1, {}, {}: ", imm1, imm2).unwrap();
         match result {
             ProbeResult::IllegalInstruction => todo!(),
