@@ -377,6 +377,13 @@ mod test {
         }
         assert_eq!(b, 1);
 
+        let mut b: usize = 0x12345678;
+        unsafe {
+            asm!("x86settag {b}, 0, 0",
+                b = inout(reg) b);
+        }
+        assert_eq!(b, 0x12345679);
+
         let mut b: usize = 0;
         unsafe {
             asm!("x86settag {b}, 0, 1",

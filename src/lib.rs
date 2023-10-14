@@ -118,6 +118,7 @@ pub enum ProbeResult {
     IllegalInstruction,
     SegmentationFault,
     BusError,
+    BinaryTranslationException,
     RegisterUnchaged,
     RegisterChanged(RegisterInfo),
 }
@@ -242,6 +243,9 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
     } else if libc::WSTOPSIG(status) == libc::SIGBUS {
         // bus error
         ProbeResult::BusError
+    } else if libc::WSTOPSIG(status) == libc::SIGSYS {
+        // binary translation exception
+        ProbeResult::BinaryTranslationException
     } else if libc::WSTOPSIG(status) == libc::SIGTRAP {
         // normal trap
 
