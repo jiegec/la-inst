@@ -320,64 +320,48 @@ might trigger reserved exception (according to spec, BTE, binary translation exc
 ```c
 x86settag(rd, imm1, imm2) {
     mask = 1 << (imm2 & 0x7);
-    if (imm1 == 0) {
+    low = imm2 ^ 63;
+    if ((imm1 % 8) == 0) {
         // only allow 0->1
         if ((GPR[rd] & mask) == 0) {
             GPR[rd] |= mask;
         } else {
             throw BTE();
         }
-    } else if (imm1 == 1) {
+    } else if ((imm1 % 8) == 1) {
         // only allow 1->0
         if ((GPR[rd] & mask) != 0) {
             GPR[rd] &= ~mask;
         } else {
             throw BTE();
         }
-    } else if (imm1 == 2) {
+    } else if ((imm1 % 8) == 2) {
         // do not change rd if 1, throw if 0
-        if (8 <= (imm2 & 63) && (imm2 & 63) < 40) {
+        if ((GPR[rd] & (1 << (low / 8))) == 0) {
+            throw BTE();
+        } else if ((GPR[rd] & mask) == 0) {
             throw BTE();
         }
-        if (48 <= (imm2 & 63) && (imm2 & 63) < 64) {
-            throw BTE();
-        }
-        if ((GPR[rd] & mask) == 0) {
-            throw BTE();
-        }
-    } else if (imm1 == 3) {
+    } else if ((imm1 % 8) == 3) {
         // only allow 1->0
-        if (8 <= (imm2 & 63) && (imm2 & 63) < 40) {
+        if ((GPR[rd] & (1 << (low / 8))) == 0) {
             throw BTE();
-        }
-        if (48 <= (imm2 & 63) && (imm2 & 63) < 64) {
-            throw BTE();
-        }
-        if ((GPR[rd] & mask) != 0) {
+        } else if ((GPR[rd] & mask) != 0) {
             GPR[rd] &= ~mask;
         } else {
             throw BTE();
         }
-    } else if (imm1 == 4) {
+    } else if ((imm1 % 8) == 4) {
         // only allow 1->0
-        if (8 <= (imm2 & 63) && (imm2 & 63) < 40) {
+        if ((GPR[rd] & (1 << (low / 8))) == 0) {
             throw BTE();
-        }
-        if (48 <= (imm2 & 63) && (imm2 & 63) < 64) {
-            throw BTE();
-        }
-        if ((GPR[rd] & mask) != 0) {
-            if ((imm2 & 63) < 8) {
-                GPR[rd] &= ~mask;
-                GPR[rd] &= ~1;
-            } else {
-                GPR[rd] &= ~mask;
-                GPR[rd] &= ~32;
-            }
+        } else if ((GPR[rd] & mask) != 0) {
+            GPR[rd] &= ~mask;
+            GPR[rd] &= ~(1 << (low / 8));
         } else {
             throw BTE();
         }
-    } else if (imm1 == 5 || imm1 == 6 || imm1 == 7) {
+    } else {
         // unchanged
     }
 }

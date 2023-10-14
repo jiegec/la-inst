@@ -18,7 +18,7 @@ fn main() {
         let rd = 1;
         let inst = 0x00580000 | (imm1 << 5) | (imm2 << 10) | rd;
 
-        let value = 0x87654321;
+        let value = 0x12345678;
         let result =
             inst_legal_ptrace(inst, &[RegisterPreset::GeneralRegister(rd as usize, value)])
                 .unwrap();
@@ -41,6 +41,7 @@ fn main() {
 
         // verify
         let mask = 1 << (imm2 & 0x7);
+        let low = imm2 & 63;
         let mut should_throw = false;
         let mut expected_result = value;
         match imm1 % 8 {
@@ -59,18 +60,14 @@ fn main() {
                 }
             }
             2 => {
-                if 8 <= (imm2 & 63) && (imm2 & 63) < 40 {
-                    should_throw = true;
-                } else if 48 <= (imm2 & 63) && (imm2 & 63) < 64 {
+                if value & (1 << (low / 8)) == 0 {
                     should_throw = true;
                 } else if (value & mask) == 0 {
                     should_throw = true;
                 }
             }
             3 => {
-                if 8 <= (imm2 & 63) && (imm2 & 63) < 40 {
-                    should_throw = true;
-                } else if 48 <= (imm2 & 63) && (imm2 & 63) < 64 {
+                if value & (1 << (low / 8)) == 0 {
                     should_throw = true;
                 } else if (value & mask) != 0 {
                     expected_result &= !mask;
@@ -79,18 +76,11 @@ fn main() {
                 }
             }
             4 => {
-                if 8 <= (imm2 & 63) && (imm2 & 63) < 40 {
-                    should_throw = true;
-                } else if 48 <= (imm2 & 63) && (imm2 & 63) < 64 {
+                if value & (1 << (low / 8)) == 0 {
                     should_throw = true;
                 } else if (value & mask) != 0 {
-                    if (imm2 & 63) < 8 {
-                        expected_result &= !mask;
-                        expected_result &= !1;
-                    } else {
-                        expected_result &= !mask;
-                        expected_result &= !32;
-                    }
+                    expected_result &= !mask;
+                    expected_result &= !(1 << (low / 8));
                 } else {
                     should_throw = true;
                 }
