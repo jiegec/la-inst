@@ -172,6 +172,8 @@ tm = floating point stack mode
 
 related to x87 FPU as well?
 
+TODO
+
 ### setj
 
 - setx86j rd, imm
@@ -295,6 +297,8 @@ might trigger reserved exception (according to spec, BTE, binary translation exc
 [17108.293593] Caught reserved exception 21 on pid:86379 [examine] - should not happen
 ```
 
+TODO
+
 ### flag
 
 - x86mfflag rd, mask: read from EFLAGS
@@ -392,7 +396,9 @@ V = (EFLAGS & 0x800) != 0; // same as OF
 
 - armmove rd, rj, imm
 
-TODO
+conditional move: rd = condition(imm) ? rd : rj
+
+for `condition(imm)`, check setarmj below.
 
 ### setj
 
@@ -480,6 +486,8 @@ writes LBT4 (FLAGS), GPR unchanged
 ### rrx
 
 - armrrx.w rd, imm
+
+rrx: Rotate Right with Extend
 
 writes LBT4 (FLAGS), GPR unchanged
 
