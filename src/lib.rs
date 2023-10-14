@@ -173,6 +173,9 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
             // so we can access LASX registers later, instead of seeing filled 0xff
             // asm!("xvadd.b $xr0, $xr0, $xr0");
             asm!(".word 0x740a0000");
+            // activate LBT as well
+            // asm!("movgr2scr $scr2, $r2");
+            asm!(".word 0x00000842");
 
             // ask parent to ptrace me
             libc::ptrace(libc::PTRACE_TRACEME, 0, 0, 0);
