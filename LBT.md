@@ -29,6 +29,11 @@ movgr2scr(rd, scrj) {
 }
 ```
 
+### jiscr
+
+- jiscr0 imm
+- jiscr1 imm
+
 ## x86
 
 ### ftop
@@ -157,3 +162,62 @@ kernel lbt.S:
 - fcvt.d.ld
 
 for x87 80-bit extended precision
+
+## arm
+
+### move
+
+- armmove rd, rj, imm
+
+TODO
+
+### setj
+
+- setarmj rd, imm
+
+TODO
+
+### add/sub/adc/sbc/and/or/xor/sll/srl/sra/rotr
+
+- armadd.w rd, rj, imm
+
+writes LBT4 (FLAGS), GPR unchanged
+
+### slli/srli/srai/rotri
+
+- armslli.w rd, imm1, imm2
+
+writes LBT4 (FLAGS), GPR unchanged
+
+### not
+
+- armnot.w rd, imm
+
+writes LBT4 (FLAGS), GPR unchanged
+
+### mov
+
+- armmov.w/d rd, imm
+
+writes LBT4 (FLAGS), GPR unchanged
+
+### rrx
+
+- armrrx.w rd, imm
+
+writes LBT4 (FLAGS), GPR unchanged
+
+### fflag
+
+- armmfflag rd, imm
+- armmtflag rd, imm
+
+## mips
+
+### ldl/ldr/stl/str
+
+for MIPS style unaligned load/stores
+
+## references
+
+https://web.archive.org/web/20190713073150/http://www.loongson.cn/uploadfile/cpumanual/LoongsonGS264_user.pdf
