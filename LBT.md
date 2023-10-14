@@ -49,6 +49,16 @@ jiscr1(imm) {
 
 ## x86
 
+### eflags
+
+```c
+CF = (EFLAGS & 0x001) != 0;
+PF = (EFLAGS & 0x004) != 0;
+ZF = (EFLAGS & 0x040) != 0;
+SF = (EFLAGS & 0x080) != 0;
+OF = (EFLAGS & 0x800) != 0;
+```
+
 ### ftop
 
 - x86mttop imm
@@ -131,7 +141,17 @@ SYM_FUNC_END(_restore_ftop_context)
 - setx86loope rd, rj
 - setx86loopne rd, rj
 
-conditional loop according to rj and EFLAGS?
+match x86 LOOPE and LOOPNE instructions, see https://www.felixcloutier.com/x86/loop:loopcc, thanks @xen0n.
+
+```c
+setx86loope(rd, rj) {
+    GPR[rd] = GPR[rj] != 0 && ZF == 1;
+}
+
+setx86loopne(rd, rj) {
+    GPR[rd] = GPR[rj] != 0 && ZF == 0;
+}
+```
 
 ### inc/dec
 
@@ -195,11 +215,6 @@ According to http://unixwiz.net/techtips/x86-jumps.html, x86 jump variants:
 ```c
 // setx86j $rd, imm
 setx86j(rd, imm) {
-    CF = (EFLAGS & 0x001) != 0;
-    PF = (EFLAGS & 0x004) != 0;
-    ZF = (EFLAGS & 0x040) != 0;
-    SF = (EFLAGS & 0x080) != 0;
-    OF = (EFLAGS & 0x800) != 0;
     switch(imm) {
         case 0:
             GPR[rd] = CF == 0 && ZF == 0;

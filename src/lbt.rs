@@ -233,4 +233,47 @@ mod test {
         assert_eq!(setx86j!(sf, 15), 1);
         assert_eq!(setx86j!(of, 15), 1);
     }
+
+    fn setx86loope(rj: usize, zf: bool) -> usize {
+        let eflags = if zf { 0x40 } else { 0x0 };
+        let mut res: usize;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x3f
+                  setx86loope {res}, {rj}",
+                  res = out(reg) res,
+                  rj = in(reg) rj,
+                  eflags = in(reg) eflags);
+        }
+        res
+    }
+
+    fn setx86loopne(rj: usize, zf: bool) -> usize {
+        let eflags = if zf { 0x40 } else { 0x0 };
+        let mut res: usize;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x3f
+                  setx86loopne {res}, {rj}",
+                  res = out(reg) res,
+                  rj = in(reg) rj,
+                  eflags = in(reg) eflags);
+        }
+        res
+    }
+
+    #[test]
+    fn test_setx86loope() {
+        // test x86 loope/loopne
+
+        // loope: a != 0 && zf == 1
+        assert_eq!(setx86loope(1, true), 1);
+        assert_eq!(setx86loope(0, true), 0);
+        assert_eq!(setx86loope(0, false), 0);
+        assert_eq!(setx86loope(1, false), 0);
+
+        // loopne: a != 0 && zf == 0
+        assert_eq!(setx86loopne(1, true), 0);
+        assert_eq!(setx86loopne(0, true), 0);
+        assert_eq!(setx86loopne(0, false), 0);
+        assert_eq!(setx86loopne(1, false), 1);
+    }
 }
