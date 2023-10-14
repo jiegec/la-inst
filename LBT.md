@@ -54,10 +54,13 @@ jiscr1(imm) {
 ```c
 CF = (EFLAGS & 0x001) != 0;
 PF = (EFLAGS & 0x004) != 0;
+AF = (EFLAGS & 0x010) != 0;
 ZF = (EFLAGS & 0x040) != 0;
 SF = (EFLAGS & 0x080) != 0;
 OF = (EFLAGS & 0x800) != 0;
 ```
+
+All set: 0x8d5
 
 ### ftop
 
@@ -136,7 +139,7 @@ SYM_FUNC_START(_restore_ftop_context)
 SYM_FUNC_END(_restore_ftop_context)
 ```
 
-### setloop
+### setloope/setloopne
 
 - setx86loope rd, rj
 - setx86loopne rd, rj
@@ -290,6 +293,53 @@ some computation based on imm1, imm2 and EFLAGS?
 
 - x86mfflag rd, mask: read from EFLAGS
 - x86mtflag rd, mask: write to EFLAGS
+
+```
+// x86mfflag $rd, imm
+x86mfflag(rd, imm) {
+    GPR[rd] = 0;
+    if ((imm & 0x01) != 0) {
+        GPR[rd] |= CF * 0x001;
+    }
+    if ((imm & 0x02) != 0) {
+        GPR[rd] |= PF * 0x004;
+    }
+    if ((imm & 0x04) != 0) {
+        GPR[rd] |= AF * 0x010;
+    }
+    if ((imm & 0x08) != 0) {
+        GPR[rd] |= ZF * 0x040;
+    }
+    if ((imm & 0x10) != 0) {
+        GPR[rd] |= SF * 0x080;
+    }
+    if ((imm & 0x20) != 0) {
+        GPR[rd] |= OF * 0x800;
+    }
+}
+
+// x86mtflag $rd, imm
+x86mtflag(rd, imm) {
+    if ((imm & 0x01) != 0) {
+        CF = (GPR[rd] & 0x001) != 0;
+    }
+    if ((imm & 0x02) != 0) {
+        PF = (GPR[rd] & 0x004) != 0;
+    }
+    if ((imm & 0x04) != 0) {
+        AF = (GPR[rd] & 0x010) != 0;
+    }
+    if ((imm & 0x08) != 0) {
+        ZF = (GPR[rd] & 0x040) != 0;
+    }
+    if ((imm & 0x10) != 0) {
+        SF = (GPR[rd] & 0x080) != 0;
+    }
+    if ((imm & 0x20) != 0) {
+        OF = (GPR[rd] & 0x800) != 0;
+    }
+}
+```
 
 kernel lbt.S:
 

@@ -276,4 +276,95 @@ mod test {
         assert_eq!(setx86loopne(0, false), 0);
         assert_eq!(setx86loopne(1, false), 1);
     }
+
+    #[test]
+    fn test_eflags() {
+        // test x86 mfflag/mtflag
+        let eflags: u64 = 0xffffffffffffffff;
+        let mut b: u64;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x3f
+                  x86mfflag {b}, 0x3f",
+                  b = out(reg) b,
+                  eflags = in(reg) eflags);
+        }
+        // 0x8d5 = OF(0x800) |
+        // SF(0x080) | ZF(0x040) | AF(0x010) |
+        // PF(0x004) | CF(0x001)
+        assert_eq!(b, 0x8d5);
+
+        // different imm
+        unsafe {
+            asm!("x86mfflag {b}, 0x00",
+                  b = out(reg) b);
+        }
+        assert_eq!(b, 0);
+
+        // different imm
+        unsafe {
+            asm!("x86mfflag {b}, 0x01",
+                  b = out(reg) b);
+        }
+        // CF
+        assert_eq!(b, 0x1);
+
+        unsafe {
+            asm!("x86mfflag {b}, 0x02",
+                  b = out(reg) b);
+        }
+        // PF
+        assert_eq!(b, 0x4);
+
+        unsafe {
+            asm!("x86mfflag {b}, 0x03",
+                  b = out(reg) b);
+        }
+        // CF | PF
+        assert_eq!(b, 0x5);
+
+        unsafe {
+            asm!("x86mfflag {b}, 0x07",
+                  b = out(reg) b);
+        }
+        // CF | PF | AF
+        assert_eq!(b, 0x15);
+
+        unsafe {
+            asm!("x86mfflag {b}, 0x0f",
+                  b = out(reg) b);
+        }
+        // CF | PF | AF | ZF
+        assert_eq!(b, 0x55);
+
+        unsafe {
+            asm!("x86mfflag {b}, 0x30",
+                  b = out(reg) b);
+        }
+        // SF | OF
+        assert_eq!(b, 0x880);
+
+        // partial set
+        let eflags = 0;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x30
+                  x86mfflag {b}, 0x3f",
+                  b = out(reg) b,
+                  eflags = in(reg) eflags);
+        }
+        // 0x8d5 = ZF(0x040) | AF(0x010) |
+        // PF(0x004) | CF(0x001)
+        assert_eq!(b, 0x55);
+
+        let eflags = 0x800;
+        unsafe {
+            asm!("x86mtflag {eflags}, 0x30
+                  x86mfflag {b}, 0x3f",
+                  b = out(reg) b,
+                  eflags = in(reg) eflags);
+        }
+        // 0x8d5 = OF(0x800) |
+        // ZF(0x040) | AF(0x010) |
+        // PF(0x004) | CF(0x001)
+        assert_eq!(b, 0x855);
+    }
 }
