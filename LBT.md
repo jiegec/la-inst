@@ -226,9 +226,9 @@ x86settag(rd, imm1, imm2) {
 
 #### long double
 
-- fcvt.ld.d
-- fcvt.ud.d
-- fcvt.d.ld
+- fcvt.ld.d: convert from double to long double, low part
+- fcvt.ud.d: convert from double to long double, high part
+- fcvt.d.ld: convert from long double (saved in two fpr) to double
 
 for x87 80-bit extended precision
 
