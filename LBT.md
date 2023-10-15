@@ -49,20 +49,14 @@ jiscr1(imm) {
 
 ## x86
 
-### eflags
+lbt_x86 consists of two parts:
 
-```c
-CF = (EFLAGS & 0x001) != 0;
-PF = (EFLAGS & 0x004) != 0;
-AF = (EFLAGS & 0x010) != 0;
-ZF = (EFLAGS & 0x040) != 0;
-SF = (EFLAGS & 0x080) != 0;
-OF = (EFLAGS & 0x800) != 0;
-```
+- x87 fpu emulation
+- eflags emulation
 
-All set: 0x8d5
+### x87
 
-### ftop
+#### ftop
 
 - x86mttop imm
 - x86mftop rd
@@ -139,31 +133,7 @@ SYM_FUNC_START(_restore_ftop_context)
 SYM_FUNC_END(_restore_ftop_context)
 ```
 
-### setloope/setloopne
-
-- setx86loope rd, rj
-- setx86loopne rd, rj
-
-match x86 LOOPE and LOOPNE instructions, see https://www.felixcloutier.com/x86/loop:loopcc, thanks @xen0n.
-
-```c
-setx86loope(rd, rj) {
-    GPR[rd] = GPR[rj] != 0 && ZF == 1;
-}
-
-setx86loopne(rd, rj) {
-    GPR[rd] = GPR[rj] != 0 && ZF == 0;
-}
-```
-
-### inc/dec
-
-- x86inc.b/h/w/d rj
-- x86dec.b/h/w/d rj
-
-LBT4 changed (eflags), GPR unchanged
-
-### tm
+#### tm
 
 - x86settm
 - x86clrtm
@@ -193,7 +163,113 @@ mappedFPR(fpr) {
 }
 ```
 
-### setj
+#### settag
+
+- x86settag rd, imm1, imm2
+
+might trigger reserved exception (according to spec, BTE, binary translation exception):
+
+```
+[17108.293593] Caught reserved exception 21 on pid:86379 [examine] - should not happen
+```
+
+
+```c
+x86settag(rd, imm1, imm2) {
+    mask = 1 << (imm2 & 0x7);
+    low = imm2 & 63;
+    if ((imm1 % 8) == 0) {
+        // only allow 0->1
+        if ((GPR[rd] & mask) == 0) {
+            GPR[rd] |= mask;
+        } else {
+            throw BTE();
+        }
+    } else if ((imm1 % 8) == 1) {
+        // only allow 1->0
+        if ((GPR[rd] & mask) != 0) {
+            GPR[rd] &= ~mask;
+        } else {
+            throw BTE();
+        }
+    } else if ((imm1 % 8) == 2) {
+        // do not change rd if 1, throw if 0
+        if ((GPR[rd] & (1 << (low / 8))) == 0) {
+            throw BTE();
+        } else if ((GPR[rd] & mask) == 0) {
+            throw BTE();
+        }
+    } else if ((imm1 % 8) == 3) {
+        // only allow 1->0
+        if ((GPR[rd] & (1 << (low / 8))) == 0) {
+            throw BTE();
+        } else if ((GPR[rd] & mask) != 0) {
+            GPR[rd] &= ~mask;
+        } else {
+            throw BTE();
+        }
+    } else if ((imm1 % 8) == 4) {
+        // only allow 1->0
+        if ((GPR[rd] & (1 << (low / 8))) == 0) {
+            throw BTE();
+        } else if ((GPR[rd] & mask) != 0) {
+            GPR[rd] &= ~mask;
+            GPR[rd] &= ~(1 << (low / 8));
+        } else {
+            throw BTE();
+        }
+    } else {
+        // unchanged
+    }
+}
+```
+
+#### long double
+
+- fcvt.ld.d
+- fcvt.ud.d
+- fcvt.d.ld
+
+for x87 80-bit extended precision
+
+### eflags
+
+```c
+CF = (EFLAGS & 0x001) != 0;
+PF = (EFLAGS & 0x004) != 0;
+AF = (EFLAGS & 0x010) != 0;
+ZF = (EFLAGS & 0x040) != 0;
+SF = (EFLAGS & 0x080) != 0;
+OF = (EFLAGS & 0x800) != 0;
+```
+
+All set: 0x8d5
+
+#### setloope/setloopne
+
+- setx86loope rd, rj
+- setx86loopne rd, rj
+
+match x86 LOOPE and LOOPNE instructions, see https://www.felixcloutier.com/x86/loop:loopcc, thanks @xen0n.
+
+```c
+setx86loope(rd, rj) {
+    GPR[rd] = GPR[rj] != 0 && ZF == 1;
+}
+
+setx86loopne(rd, rj) {
+    GPR[rd] = GPR[rj] != 0 && ZF == 0;
+}
+```
+
+#### inc/dec
+
+- x86inc.b/h/w/d rj
+- x86dec.b/h/w/d rj
+
+LBT4 changed (eflags), GPR unchanged
+
+#### setj
 
 - setx86j rd, imm
 
@@ -292,80 +368,19 @@ setx86j(rd, imm) {
 }
 ```
 
-### mul/add/sub/adc/sbc/sll/sra/rotr/rotl/rcr/rcl/and/or/xor
+#### mul/add/sub/adc/sbc/sll/sra/rotr/rotl/rcr/rcl/and/or/xor
 
 all accept rj, rk args
 
 LBT4 changed (eflags), GPR unchanged
 
-### slli/srli/srai/rotri/rcri/rotli/rcli
+#### slli/srli/srai/rotri/rcri/rotli/rcli
 
 all accept rj, imm args
 
 LBT4 changed (eflags), GPR unchanged
 
-### settag
-
-- x86settag rd, imm1, imm2
-
-might trigger reserved exception (according to spec, BTE, binary translation exception):
-
-```
-[17108.293593] Caught reserved exception 21 on pid:86379 [examine] - should not happen
-```
-
-
-```c
-x86settag(rd, imm1, imm2) {
-    mask = 1 << (imm2 & 0x7);
-    low = imm2 & 63;
-    if ((imm1 % 8) == 0) {
-        // only allow 0->1
-        if ((GPR[rd] & mask) == 0) {
-            GPR[rd] |= mask;
-        } else {
-            throw BTE();
-        }
-    } else if ((imm1 % 8) == 1) {
-        // only allow 1->0
-        if ((GPR[rd] & mask) != 0) {
-            GPR[rd] &= ~mask;
-        } else {
-            throw BTE();
-        }
-    } else if ((imm1 % 8) == 2) {
-        // do not change rd if 1, throw if 0
-        if ((GPR[rd] & (1 << (low / 8))) == 0) {
-            throw BTE();
-        } else if ((GPR[rd] & mask) == 0) {
-            throw BTE();
-        }
-    } else if ((imm1 % 8) == 3) {
-        // only allow 1->0
-        if ((GPR[rd] & (1 << (low / 8))) == 0) {
-            throw BTE();
-        } else if ((GPR[rd] & mask) != 0) {
-            GPR[rd] &= ~mask;
-        } else {
-            throw BTE();
-        }
-    } else if ((imm1 % 8) == 4) {
-        // only allow 1->0
-        if ((GPR[rd] & (1 << (low / 8))) == 0) {
-            throw BTE();
-        } else if ((GPR[rd] & mask) != 0) {
-            GPR[rd] &= ~mask;
-            GPR[rd] &= ~(1 << (low / 8));
-        } else {
-            throw BTE();
-        }
-    } else {
-        // unchanged
-    }
-}
-```
-
-### flag
+#### flag
 
 - x86mfflag rd, mask: read from EFLAGS
 - x86mtflag rd, mask: write to EFLAGS
@@ -426,14 +441,6 @@ kernel lbt.S:
     x86mfflag   t1, 0x3f        # save eflags
     EX  st.w    t1, a1, 0
 ```
-
-### long double
-
-- fcvt.ld.d
-- fcvt.ud.d
-- fcvt.d.ld
-
-for x87 80-bit extended precision
 
 ## arm
 
