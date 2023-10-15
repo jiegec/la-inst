@@ -42,6 +42,7 @@ jiscr0(imm) {
 
 // jiscr1 imm
 jiscr1(imm) {
+    SCR[0] = PC;
     PC = SCR[1] + imm;
 }
 ```
