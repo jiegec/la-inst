@@ -27,8 +27,13 @@ int main() {
   printf("  EP=0b%01lb\n", (cpucfg1 >> 22) & 0b1);
   printf("  RPLV=0b%01lb\n", (cpucfg1 >> 23) & 0b1);
   printf("  HP=0b%01lb\n", (cpucfg1 >> 24) & 0b1);
+
+  // previously IOCSR_BRD, changed to CRC in v1.03
   printf("  CRC=0b%01lb\n", (cpucfg1 >> 25) & 0b1);
+
   printf("  MSG_INT=0b%01lb\n", (cpucfg1 >> 26) & 0b1);
+
+  // undefined
   printf("  RSV27=0b%05lb\n", cpucfg1 >> 27);
 
   uint32_t cpucfg2 = cpucfg(2);
@@ -50,8 +55,11 @@ int main() {
   printf("  LBT_MIPS=0b%01lb\n", (cpucfg2 >> 20) & 0b1);
   printf("  LSPW=0b%01lb\n", (cpucfg2 >> 21) & 0b1);
   printf("  LAM=0b%01lb\n", (cpucfg2 >> 22) & 0b1);
+
   // CPUCFG2[23] undefined
   printf("  RSV23=0b%01lb\n", (cpucfg2 >> 23) & 0b1);
+
+  // added in v1.1
   printf("  HPTW=0b%01lb\n", (cpucfg2 >> 24) & 0b1);
   printf("  FRECIPE=0b%01lb\n", (cpucfg2 >> 25) & 0b1);
   printf("  DIV32=0b%01lb\n", (cpucfg2 >> 26) & 0b1);
@@ -59,6 +67,8 @@ int main() {
   printf("  LAMCAS=0b%01lb\n", (cpucfg2 >> 28) & 0b1);
   printf("  LLACQ_SCREL=0b%01lb\n", (cpucfg2 >> 29) & 0b1);
   printf("  SCQ=0b%01lb\n", (cpucfg2 >> 30) & 0b1);
+
+  // undefined
   printf("  RSV31=0b%01lb\n", (cpucfg2 >> 31) & 0b1);
 
   uint32_t cpucfg3 = cpucfg(3);
@@ -75,10 +85,17 @@ int main() {
   printf("  SPW_HP_HF=0b%01lb\n", (cpucfg3 >> 10) & 0b1);
   printf("  RVA=0b%01lb\n", (cpucfg3 >> 12) & 0b1);
   printf("  RVAMAX_MINUS_1=0b%01lb\n", (cpucfg3 >> 13) & 0b11111);
+
+  // added in v1.1
   printf("  DBAR_hints=0b%01lb\n", (cpucfg3 >> 17) & 0b1);
+
   // CPUCFG3[22:18] undefined
   printf("  RSV18=0b%03lb\n", (cpucfg3 >> 18) & 0b11111);
+
+  // added in v1.1
   printf("  LD_SEQ_SA=0b%01lb\n", (cpucfg3 >> 23) & 0b1);
+
+  // undefined
   printf("  RSV24=0b%03lb\n", cpucfg3 >> 24);
   return 0;
 }
