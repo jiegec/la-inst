@@ -11,10 +11,6 @@ binutils limits fcsr to 2 bits, instead of 5 bits
 0x06493000: ?
 0000 0110 0100 1001 0011 0000 0000 0000
 
-0x3857xxxx: memory
-0011 1000 0101 0111 0 xxxxx rj rd ?
-0011 1000 0101 0111 1 000xx rj rd ?
-
 0x714[45]xxxx: LSX
 0111 0001 0100 0100 1 rk rj rd vf?.s
 0111 0001 0100 0101 0 rk rj rd vf?.d
@@ -42,6 +38,13 @@ xvindex.w imm10=1: 0403020103020100, 0605040305040302, 0403020103020100, 0605040
 0x01148xxx: frsqrte.s/d documented in LoongArch v1.1
 0000 0001 0001 0100 1000 01 rj rd frsqrte.s
 0000 0001 0001 0100 1000 10 rj rd frsqrte.d
+
+0x3857xxxx: memory documented in LoongArch v1.1
+0011 1000 0101 0111 0 rk rj rd sc.q
+0011 1000 0101 0111 1 00000 rj rd llacq.w
+0011 1000 0101 0111 1 00001 rj rd screl.w
+0011 1000 0101 0111 1 00010 rj rd llacq.d
+0011 1000 0101 0111 1 00011 rj rd screl.d
 
 0x385[8-b]xxxx: amcas{_db}.[bhwd], documented in LoongArch v1.1
 0011 1000 0101 1000 0 rk rj rd amcas.b
@@ -82,8 +85,8 @@ xvindex.w imm10=1: 0403020103020100, 0605040305040302, 0403020103020100, 0605040
 ## LoongArch v1.1
 
 - 之前已发现：新增近似求解浮点数开根和浮点数开根求倒数指令，包括标量运算的 FRECIPE.S、FRECIPE.D、FRSQRTE.S、FRSQRTE.D 指令，128 位 SIMD 运算的 VFRECIPE.S、VFRECIPE.D、VFRSQRTE.S、VFRSQRTE.D 指令和 256 位 SIMD 运算的 XVFRECIPE.S、XVFRECIPE.D、XVFRSQRTE.S、 XVFRSQRTE.D 指令。
-- 之前未发现：新增 SC.Q 指令。
-- 之前未发现：新增 LLACQ.W、SCREL.W、LLACQ.D、SCREL.D 指令。
+- 之前已发现，未判断出语义：新增 SC.Q 指令。
+- 之前已发现，未判断出语义：新增 LLACQ.W、SCREL.W、LLACQ.D、SCREL.D 指令。
 - 之前已发现，判断为 LD，实际上是 AMCAS：新增 AMCAS.B、AMCAS.H、AMCAS.W、AMCAS.D、AMCAS_DB.B、AMCAS_DB.H、AMCAS_DB.W、AMCAS_DB.D 指令。
 - 之前已发现：新增 AMADD.B、AMADD.H、AMSWAP.B、AMSWAP.H、AMSWAP_DB.B、AMSWAP_DB.H、AMADD_DB.B、AMADD_DB.H 指令。
 - 从近期 GCC/LLVM 变更中已发现：增加 dbar 指令部分非零 hint 值的功能定义。
