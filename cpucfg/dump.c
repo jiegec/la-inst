@@ -14,11 +14,14 @@ int main() {
 
   uint32_t cpucfg1 = cpucfg(1);
   printf("CPUCFG1=0x%08lx\n", cpucfg1);
-  printf("  ARCH=0b%02lb\n", cpucfg1 & 0b11);
+  char *arch[] = {"LA32R", "LA32", "LA64", "RSV"};
+  printf("  ARCH=0b%02lb(%s)\n", cpucfg1 & 0b11, arch[cpucfg1 & 0b11]);
   printf("  PGMMU=0b%01lb\n", (cpucfg1 >> 2) & 0b1);
   printf("  IOCSR=0b%01lb\n", (cpucfg1 >> 3) & 0b1);
-  printf("  PALEN=0x%03lx\n", (cpucfg1 >> 4) & 0b11111111);
-  printf("  VALEN=0x%03lx\n", (cpucfg1 >> 12) & 0b11111111);
+  uint32_t palen = (cpucfg1 >> 4) & 0b11111111;
+  printf("  PALEN=0x%03lx(%d)\n", palen, palen + 1);
+  uint32_t valen = (cpucfg1 >> 12) & 0b11111111;
+  printf("  VALEN=0x%03lx(%d)\n", valen, valen + 1);
   printf("  UAL=0b%01lb\n", (cpucfg1 >> 20) & 0b1);
   printf("  RI=0b%01lb\n", (cpucfg1 >> 21) & 0b1);
   printf("  EP=0b%01lb\n", (cpucfg1 >> 22) & 0b1);
