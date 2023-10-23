@@ -84,7 +84,8 @@ int main() {
   printf("  SPW_LVL=0b%01x\n", (cpucfg3 >> 9) & 0b111);
   printf("  SPW_HP_HF=0b%01b\n", (cpucfg3 >> 10) & 0b1);
   printf("  RVA=0b%01b\n", (cpucfg3 >> 12) & 0b1);
-  printf("  RVAMAX_MINUS_1=0b%05b\n", (cpucfg3 >> 13) & 0b11111);
+  uint32_t rvamax_minus_1 = (cpucfg3 >> 13) & 0b11111;
+  printf("  RVAMAX_MINUS_1=0b%05b(%d)\n", rvamax_minus_1, rvamax_minus_1 + 1);
 
   // added in v1.1
   printf("  DBAR_hints=0b%01b\n", (cpucfg3 >> 17) & 0b1);
