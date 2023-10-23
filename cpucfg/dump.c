@@ -44,7 +44,7 @@ int main() {
   printf("  LVZ=0b%01lb\n", (cpucfg2 >> 10) & 0b1);
   printf("  LVZ_ver=0b%01lx\n", (cpucfg2 >> 11) & 0b111);
   printf("  LLFTP=0b%01lb\n", (cpucfg2 >> 14) & 0b1);
-  printf("  LLFTOP_ver=0b%01lx\n", (cpucfg2 >> 15) & 0b111);
+  printf("  LLFTP_ver=0b%01lx\n", (cpucfg2 >> 15) & 0b111);
   printf("  LBT_X86=0b%01lb\n", (cpucfg2 >> 18) & 0b1);
   printf("  LBT_ARM=0b%01lb\n", (cpucfg2 >> 19) & 0b1);
   printf("  LBT_MIPS=0b%01lb\n", (cpucfg2 >> 20) & 0b1);
