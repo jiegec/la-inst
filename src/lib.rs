@@ -242,6 +242,8 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
         ProbeResult::SegmentationFault
     } else if libc::WSTOPSIG(status) == libc::SIGBUS {
         // bus error
+        let regs_new = read_gpr(pid);
+        println!("badv = {:?}", regs_new.csr_badv);
         ProbeResult::BusError
     } else if libc::WSTOPSIG(status) == libc::SIGSYS {
         // binary translation exception
