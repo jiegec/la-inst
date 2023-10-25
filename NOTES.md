@@ -1,3 +1,8 @@
+## Undocumented instructions in LS3C5000
+
+0x06492xxx: ?
+0000 0110 0100 1001 0010 xx rj rd
+
 ## Undocumented instructions in LS3A6000
 
 0x0114cxxx: movgr2fcsr
