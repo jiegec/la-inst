@@ -22,19 +22,19 @@ pub fn inst_legal_binutils(inst: u32) -> bool {
 
 // Discovered undocumented opcodes
 pub const KNOWN_OPCODES: &[(u32, u32)] = &[
-    (0x01147400, 0xfffffc00), // frecip.s
-    (0x01147800, 0xfffffc00), // frecip.d
-    (0x01148400, 0xfffffc00), // frsqrt.s
-    (0x01148800, 0xfffffc00), // frsqrt.d
+    (0x01147400, 0xfffffc00), // frecipe.s
+    (0x01147800, 0xfffffc00), // frecipe.d
+    (0x01148400, 0xfffffc00), // frsqrte.s
+    (0x01148800, 0xfffffc00), // frsqrte.d
     (0x0114c000, 0xfffffc00), // movgr2fcsr
     (0x0114c800, 0xfffffc00), // movfcsr2gr
     (0x06493000, 0xffffffff), // unknown
     (0x38570000, 0xffff8000), // unknown memory
     (0x38578000, 0xfffff000), // unknown memory
-    (0x38580000, 0xfffd8000), // ld.b
-    (0x38588000, 0xfffd8000), // ld.h
-    (0x38590000, 0xfffd8000), // ld.w
-    (0x38598000, 0xfffd8000), // ld.d
+    (0x38580000, 0xfffd8000), // amcas.b
+    (0x38588000, 0xfffd8000), // amcas.h
+    (0x38590000, 0xfffd8000), // amcas.w
+    (0x38598000, 0xfffd8000), // amcas.d
     (0x385c0000, 0xfffd8000), // amswap.b
     (0x385c8000, 0xfffd8000), // amswap.h
     (0x385d0000, 0xfffd8000), // amadd.b
@@ -42,17 +42,17 @@ pub const KNOWN_OPCODES: &[(u32, u32)] = &[
     (0x71448000, 0xffff8000), // unknown lsx
     (0x71450000, 0xffff8000), // unknown lsx
     (0x729b8000, 0xffff8000), // lsx vindex
-    (0x729d1400, 0xfffffc00), // lsx vfrecip.s
-    (0x729d1800, 0xfffffc00), // lsx vfrecip.d
-    (0x729d2400, 0xfffffc00), // lsx vfrsqrt.s
-    (0x729d2800, 0xfffffc00), // lsx vfrsqrt.d
+    (0x729d1400, 0xfffffc00), // lsx vfrecipe.s
+    (0x729d1800, 0xfffffc00), // lsx vfrecipe.d
+    (0x729d2400, 0xfffffc00), // lsx vfrsqrte.s
+    (0x729d2800, 0xfffffc00), // lsx vfrsqrte.d
     (0x75448000, 0xffff8000), // unknown lasx
     (0x75450000, 0xffff8000), // unknown lasx
     (0x769b8000, 0xffff8000), // lasx xvindex
-    (0x769d1400, 0xfffffc00), // lasx xvfrsqrt.s
-    (0x769d1800, 0xfffffc00), // lasx xvfrsqrt.d
-    (0x769d2400, 0xfffffc00), // lasx xvfrsqrt.s
-    (0x769d2800, 0xfffffc00), // lasx xvfrsqrt.d
+    (0x769d1400, 0xfffffc00), // lasx xvfrsqrte.s
+    (0x769d1800, 0xfffffc00), // lasx xvfrsqrte.d
+    (0x769d2400, 0xfffffc00), // lasx xvfrsqrte.s
+    (0x769d2800, 0xfffffc00), // lasx xvfrsqrte.d
 ];
 
 pub fn inst_discovered(inst: u32) -> bool {
