@@ -104,7 +104,11 @@ pub fn inst_decode_binutils(inst: u32) -> anyhow::Result<Option<String>> {
 pub struct RegisterSet {
     pub gpr: [u64; 32],
     pub lasx: [[u64; 4]; 32],
-    pub lbt: [u64; 5],
+    // LBT
+    pub scr: [u64; 4],
+    pub flags: u32,
+    pub ftop: u32,
+    // FP
     pub fcc: u64,
     pub fcsr: u32,
 }
@@ -274,12 +278,17 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
             let mut info = RegisterInfo::default();
             info.old.gpr = regs.regs;
             info.old.lasx = lasx_regs;
-            info.old.lbt = lbt_regs;
+            info.old.scr.copy_from_slice(&lbt_regs[0..4]);
+            info.old.ftop = (lbt_regs[4] >> 32) as u32;
+            info.old.flags = lbt_regs[4] as u32;
             info.old.fcc = fp_regs.fcc;
             info.old.fcsr = fp_regs.fcsr;
+
             info.new.gpr = regs_new.regs;
             info.new.lasx = lasx_regs_new;
-            info.new.lbt = lbt_regs_new;
+            info.new.scr.copy_from_slice(&lbt_regs_new[0..4]);
+            info.old.ftop = (lbt_regs_new[4] >> 32) as u32;
+            info.old.flags = lbt_regs_new[4] as u32;
             info.new.fcc = fp_regs_new.fcc;
             info.new.fcsr = fp_regs_new.fcsr;
 

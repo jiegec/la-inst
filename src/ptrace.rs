@@ -5,9 +5,10 @@ fn read_regs<T>(pid: libc::c_int, regs: &mut T, core_note: libc::c_int) {
         iov_base: regs as *mut T as *mut libc::c_void,
         iov_len: size_of::<T>(),
     };
-    assert_eq!(unsafe {
-        libc::ptrace(libc::PTRACE_GETREGSET, pid, core_note, &iovec)
-    }, 0);
+    assert_eq!(
+        unsafe { libc::ptrace(libc::PTRACE_GETREGSET, pid, core_note, &iovec) },
+        0
+    );
 }
 
 pub fn read_gpr(pid: libc::c_int) -> libc::user_regs_struct {
@@ -61,9 +62,10 @@ fn write_regs<T>(pid: libc::c_int, mut regs: T, core_note: libc::c_int) {
         iov_base: &mut regs as *mut T as *mut libc::c_void,
         iov_len: size_of::<T>(),
     };
-    assert_eq!(unsafe {
-        libc::ptrace(libc::PTRACE_SETREGSET, pid, core_note, &iovec)
-    }, 0);
+    assert_eq!(
+        unsafe { libc::ptrace(libc::PTRACE_SETREGSET, pid, core_note, &iovec) },
+        0
+    );
 }
 
 pub fn write_gpr(pid: libc::c_int, regs: libc::user_regs_struct) {

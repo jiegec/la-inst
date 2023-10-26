@@ -93,30 +93,37 @@ fn examine(inst: u32) {
             }
 
             // lbt
-            for i in 0..5 {
-                if info.old.lbt[i] != info.new.lbt[i] {
+            for i in 0..4 {
+                if info.old.scr[i] != info.new.scr[i] {
                     println!(
-                        "LBT {}: {}",
+                        "LBT SCR {}: {}",
                         i,
-                        colored_output(info.old.lbt[i], info.new.lbt[i])
+                        colored_output(info.old.scr[i], info.new.scr[i])
                     );
                     changed = true;
                 }
             }
 
-            if info.old.fcc != info.new.fcc {
+            if info.old.ftop != info.new.ftop {
+                println!("LBT FTOP: {}", colored_output(info.old.ftop, info.new.ftop));
+                changed = true;
+            }
+
+            if info.old.flags != info.new.flags {
                 println!(
-                    "FCC: {}",
-                    colored_output(info.old.fcc, info.new.fcc)
+                    "LBT FLAGS: {}",
+                    colored_output(info.old.flags, info.new.flags)
                 );
                 changed = true;
             }
 
+            if info.old.fcc != info.new.fcc {
+                println!("FCC: {}", colored_output(info.old.fcc, info.new.fcc));
+                changed = true;
+            }
+
             if info.old.fcsr != info.new.fcsr {
-                println!(
-                    "FCSR: {}",
-                    colored_output(info.old.fcsr, info.new.fcsr)
-                );
+                println!("FCSR: {}", colored_output(info.old.fcsr, info.new.fcsr));
                 changed = true;
             }
 
