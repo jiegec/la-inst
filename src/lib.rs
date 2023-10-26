@@ -180,6 +180,11 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
             // activate LBT as well
             // asm!("movgr2scr $scr2, $r2");
             asm!(".word 0x00000842");
+            // activate TM mode so that kernel saves FTOP
+            // asm!("x86settm");
+            asm!(".word 0x00008008");
+            // asm!("x86mttop 0");
+            asm!(".word 0x00007000");
 
             // ask parent to ptrace me
             libc::ptrace(libc::PTRACE_TRACEME, 0, 0, 0);
