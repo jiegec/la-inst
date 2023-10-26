@@ -105,6 +105,8 @@ pub struct RegisterSet {
     pub gpr: [u64; 32],
     pub lasx: [[u64; 4]; 32],
     pub lbt: [u64; 5],
+    pub fcc: u64,
+    pub fcsr: u32,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Default)]
@@ -197,6 +199,7 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
     let mut regs = read_gpr(pid);
     let mut lasx_regs = read_lasx(pid);
     let lbt_regs = read_lbt(pid);
+    let fp_regs = read_fpr(pid);
 
     // randomize all regs
     let mut rng = rand::thread_rng();
@@ -253,7 +256,13 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
         let regs_new = read_gpr(pid);
         let lasx_regs_new = read_lasx(pid);
         let lbt_regs_new = read_lbt(pid);
-        if regs.regs == regs_new.regs && lasx_regs == lasx_regs_new && lbt_regs == lbt_regs_new {
+        let fp_regs_new = read_fpr(pid);
+        if regs.regs == regs_new.regs
+            && lasx_regs == lasx_regs_new
+            && lbt_regs == lbt_regs_new
+            && fp_regs.fcc == fp_regs_new.fcc
+            && fp_regs.fcsr == fp_regs_new.fcsr
+        {
             ProbeResult::RegisterUnchaged
         } else {
             // collect regs
@@ -261,9 +270,13 @@ pub fn inst_legal_ptrace(inst: u32, presets: &[RegisterPreset]) -> anyhow::Resul
             info.old.gpr = regs.regs;
             info.old.lasx = lasx_regs;
             info.old.lbt = lbt_regs;
+            info.old.fcc = fp_regs.fcc;
+            info.old.fcsr = fp_regs.fcsr;
             info.new.gpr = regs_new.regs;
             info.new.lasx = lasx_regs_new;
             info.new.lbt = lbt_regs_new;
+            info.new.fcc = fp_regs_new.fcc;
+            info.new.fcsr = fp_regs_new.fcsr;
 
             ProbeResult::RegisterChanged(info)
         }

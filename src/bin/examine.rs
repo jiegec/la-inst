@@ -41,7 +41,9 @@ fn examine(inst: u32) {
         la_inst::ProbeResult::IllegalInstruction => println!("Ptrace: Illegal instruction"),
         la_inst::ProbeResult::SegmentationFault => println!("Ptrace: Segmentation fault"),
         la_inst::ProbeResult::BusError => println!("Ptrace: Bus error"),
-        la_inst::ProbeResult::BinaryTranslationException => println!("Ptrace: Binary Translation Error"),
+        la_inst::ProbeResult::BinaryTranslationException => {
+            println!("Ptrace: Binary Translation Error")
+        }
         la_inst::ProbeResult::RegisterUnchaged => println!("Ptrace: Registers unchanged"),
         la_inst::ProbeResult::RegisterChanged(info) => {
             println!("Ptrace: Register changed");
@@ -100,6 +102,22 @@ fn examine(inst: u32) {
                     );
                     changed = true;
                 }
+            }
+
+            if info.old.fcc != info.new.fcc {
+                println!(
+                    "FCC: {}",
+                    colored_output(info.old.fcc, info.new.fcc)
+                );
+                changed = true;
+            }
+
+            if info.old.fcsr != info.new.fcsr {
+                println!(
+                    "FCSR: {}",
+                    colored_output(info.old.fcsr, info.new.fcsr)
+                );
+                changed = true;
             }
 
             // print rd, rj & rk

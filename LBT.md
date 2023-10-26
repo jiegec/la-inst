@@ -141,6 +141,8 @@ SYM_FUNC_END(_restore_ftop_context)
 
 tm = floating point stack mode, when enabled, add TOP offset to fpr.
 
+TM mode flag is stored in FCSR0[6].
+
 thanks @xen0n.
 
 ```c
