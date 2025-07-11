@@ -19,4 +19,7 @@ with open('latx-opc.json', 'r') as f:
         opc = int(data[inst]['opcode'], 16)
         if opc in opcodes or opc == 0 or opc < 0:
             continue
-        print(f"0x{opc:08x} {inst}")
+        opnds = []
+        for opnd in data[inst]['opnd']:
+            opnds.append(opnd)
+        print(f"0x{opc:08x} {inst} {','.join(opnds)}")
