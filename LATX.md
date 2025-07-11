@@ -53,7 +53,7 @@ See [issue #2](https://github.com/jiegec/la-inst/issues/2).
 - vshuf4.w
 - vshufi{1,2}.{b,h}
 - vshufi3.b
-- vshufio.b
+- vshufi4.b
 - vsignsel.{d,w}
 
 ### Dot product
