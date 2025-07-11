@@ -8,6 +8,7 @@ fn main() {
         ProgressStyle::with_template("{bar:40} {pos:>7}/{len:7} [{per_sec}] [ETA {eta}]").unwrap();
     let mut file = OpenOptions::new()
         .append(true)
+        .create(true)
         .open("mismatch.txt")
         .unwrap();
     let max = u32::MAX >> 10;
