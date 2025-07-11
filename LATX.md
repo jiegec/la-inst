@@ -23,16 +23,16 @@ See [issue #2](https://github.com/jiegec/la-inst/issues/2).
 
 ### Widening
 
-- v{add,sub}w.{d.d.w,d.d.wu,h.h.b,h.h.bu,w.w.h,w.w.hu}
-- v{add,sub}w{h,l}.{d.w,d.wu,d.wu.w,h.b,h.bu,h.bu.b,q.d,q.du,q.du.d,w.h,w.hu,w.hu.h}
-- vmaddw{h,l}.{d.w,d.wu,d.wu.w,h.b,h.bu,h.bu.b,q.d,q.du,q.du.d,w.h,w.hu,w.hu.h}
-- vmulw{hl}.{d.w,d.wu,d.wu.w,h.b,h.bu,h.bu.b,q.d,q.du,q.du.d,w.h,w.hu,w.hu.h}
+- v{add,sub}w.{d.d.w,d.d.wu,h.h.b,h.h.bu,w.w.h,w.w.hu}: add x-bit element and 2x-bit element, get 2x-bit sum
+- v{add,sub}w{h,l}.{d.w,d.wu,d.wu.w,h.b,h.bu,h.bu.b,q.d,q.du,q.du.d,w.h,w.hu,w.hu.h}: add x-bit element and x-bit element, get 2x-bit sum
+- vmaddw{h,l}.{d.w,d.wu,d.wu.w,h.b,h.bu,h.bu.b,q.d,q.du,q.du.d,w.h,w.hu,w.hu.h}: multiply x-bit element and x-bit element, add to 2x-bit sum
+- vmulw{hl}.{d.w,d.wu,d.wu.w,h.b,h.bu,h.bu.b,q.d,q.du,q.du.d,w.h,w.hu,w.hu.h}: multiply x-bit element and x-bit element, get 2x-bit product
 - vmulxw.{d.w,d.wu,h.b,h.bu,w.h,w.hu}
 - vaccsadw.{d.w,d.wu,h.b,h.bu,w.h,w.hu}
 - vsadw.{d.w,d.wu,h.b,h.bu,w.h,w.hu}
-- vs{add,sub}w.{d.d.w,du.du.wu,h.h.b,hu.hu.bu,w.w.h,wu.wu.hu}
-- vsadda.{b,d,h,w}
-- vssub.{b.bu.bu,bu.b.bu,bu.bu.b,d.du.du,du.d.du,du.du.d,h.hu.hu,hu.h.hu,hu.hu.h,w.wu.wu,wu.w.wu,wu.wu.w}
+- vs{add,sub}w.{d.d.w,du.du.wu,h.h.b,hu.hu.bu,w.w.h,wu.wu.hu}: saturated add/subtract x-bit element and 2x-bit element, get 2x-bit sum
+- vsadda.{b,d,h,w}: saturated add absolute value
+- vssub.{b.bu.bu,bu.b.bu,bu.bu.b,d.du.du,du.d.du,du.du.d,h.hu.hu,hu.h.hu,hu.hu.h,w.wu.wu,wu.w.wu,wu.wu.w}: saturated subtract with different signedness
 - v{sra,srl}rneni.{b.h,d.q,h.w,w.d}
 - vs{sra,srl}rneni.{b.h,bu.h,d.q,du.q,h.w,hu.w,w.d,wu.d}
 
@@ -41,9 +41,8 @@ See [issue #2](https://github.com/jiegec/la-inst/issues/2).
 - vextl.{d.b,d.bu,d.h,d.hu,w.b,w.bu}
 - vhalfd.{b,bu,d,du,h,hu,w,wu}
 - vhminpos.{d.hu,q.hu,w.hu}
-- vmaxa.{b,d,h,w}
-- vmepatmsk.v
-- vmina.{b,d,h,w}
+- v{min,max}a.{b,d,h,w}: minimum/maxmium absolute value
+- vmepatmsk.v: make pattern mask
 - vmsk{copy,fill}.b
 - vmuh.{bu.b,du.d,hu.h,wu.w}
 - vrandsign{,i}.{b,h}
