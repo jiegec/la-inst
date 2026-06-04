@@ -24,8 +24,8 @@ movgr2scr(scrd, rj) {
 }
 
 // movscr2gr $rd, $scrj
-movgr2scr(rd, scrj) {
-    SCR[rd] = GPR[scrj];
+movscr2gr(rd, scrj) {
+    GPR[rd] = SCR[scrj];
 }
 ```
 
