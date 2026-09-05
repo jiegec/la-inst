@@ -1,10 +1,13 @@
 ## Undocumented instructions in LS3C5000
 
+```
 0x06492xxx: ?
 0000 0110 0100 1001 0010 xx rj rd
+```
 
 ## Undocumented instructions in LS3A6000
 
+```
 0x0114cxxx: movgr2fcsr
 0000 0001 0001 0100 1100 00 fcsr rd movgr2fcsr
 binutils limits fcsr to 2 bits, instead of 5 bits
@@ -33,9 +36,11 @@ vindex.w imm10=1: 0403020103020100, 0605040305040302
 0111 0110 1001 1011 1 imm10 rd xvmepatmsk.v
 xvindex.w imm10=0: 0302010003020100, 0302010003020100, 0302010003020100, 0302010003020100
 xvindex.w imm10=1: 0403020103020100, 0605040305040302, 0403020103020100, 0605040305040302
+```
 
 ## Discovered LoongArch v1.1 instructions
 
+```
 0x01147xxx: frecipe.s/d documented in LoongArch v1.1
 0000 0001 0001 0100 0111 01 rj rd frecipe.s
 0000 0001 0001 0100 0111 10 rj rd frecipe.d
@@ -86,6 +91,7 @@ xvindex.w imm10=1: 0403020103020100, 0605040305040302, 0403020103020100, 0605040
 0x769d2xxx: xvfrsqrte.s/d documented in LoongArch v1.1
 0111 0110 1001 1101 0010 01 rj rd xvfrsqrte.s
 0111 0110 1001 1101 0010 10 rj rd xvfrsqrte.d
+```
 
 ## LoongArch v1.1
 
